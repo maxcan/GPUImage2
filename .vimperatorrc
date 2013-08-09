@@ -1,0 +1,15 @@
+"3.6 (created: 2012/12/24 13:05:56)
+
+source! /Users/max/.vimperatorrc.local
+autocmd LocationChange .*                             js modes.passAllKeys = false
+autocmd LocationChange mail\\.google\\.com            js modes.passAllKeys = true
+autocmd LocationChange www\\.google\\.com/calendar    js modes.passAllKeys = true
+autocmd LocationChange docs\\.google\\.com            js modes.passAllKeys = true
+autocmd LocationChange app\\.asana\\.com              js modes.passAllKeys = true
+" autocmd LocationChange www\\.github\\.com              js modes.passAllKeys = true
+" autocmd LocationChange github\\.com              js modes.passAllKeys = true
+autocmd LocationChange www\\.google\\.com/reader      js modes.passAllKeys = true
+autocmd LocationChange mail\\.google\\.com/tasks      js modes.passAllKeys = false
+
+" vim: set ft=vimperator:
+nmap "\\bm" <Esc>:tabopen<Space>https://docs.google.com/a/daggerboardinc.com/spreadsheet/viewform?formkey=dExhTUY2VGtsUVhYSHE0Z3Vab3ZMaHc6MQ&ifq<Space><Return>

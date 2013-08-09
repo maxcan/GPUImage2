@@ -1,0 +1,14 @@
+[user]
+	name = Max Cantor (MBPr)
+	email = i@cantor.mx
+[alias]
+	standup = log --since yesterday
+	purr = pull --rebase
+	ready = rebase -i @{u}
+	lg = log --pretty=format:\"%Cgreen %h%Creset %C(white)%s%Creset %Cblue%ar%Creset %C(bold white)%an%Creset\" --graph
+[log]
+	decorate = full
+[push]
+	default = upstream
+[core]
+	editor = vim

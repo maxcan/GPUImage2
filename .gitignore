@@ -1,0 +1,14 @@
+[^.]*
+.Trash
+.Xauthority
+.ssh
+*tmp*
+*.bak
+.bower
+.jitsu
+.ivy2
+.gem
+.cabal
+*cache*
+.vim/
+.zhistory
