@@ -12,3 +12,6 @@
 *cache*
 .vim/
 .zhistory
+.zcompdump
+.dshell
+.viminfo

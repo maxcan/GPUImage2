@@ -1,6 +1,5 @@
 .less-history-file:
 .search
-"nv-pa
 "line.
 "line\.js
 "nv-pa
@@ -100,4 +99,5 @@
 "pushd
 "master
 "--- 
+"---
 .shell
