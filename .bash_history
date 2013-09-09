@@ -55,3 +55,4 @@ mv maxcan-vim-bundle bundle
 cd bundle/
 ls
 git submodule update --init
+AP=e echo $AP

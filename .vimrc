@@ -6,6 +6,9 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-markdown'
 Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-fugitive'
@@ -14,12 +17,11 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kshenoy/vim-signature'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'jnurmine/Zenburn'
 Bundle 'mattn/zencoding-vim'
 Bundle 'Twinside/vim-haskellConceal'
 Bundle 'pbrisbin/html-template-syntax'
-
 " Bundle 'eagletmt/ghcmod-vim'
 " Bundle 'pbrisbin/html-template-syntax'
 " Bundle 'Shougo/neocomplcache'
@@ -31,7 +33,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'wgibbs/vim-irblack'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'Shougo/vimproc'
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'epeli/slimux'
@@ -61,7 +62,37 @@ nnoremap ` '
 " let mapleader = " "
 let mapleader = '\'
 inoremap jj <Esc>
+" nno <leader>p :<C-u>Unite file_mru file_rec/async:! -start-insert -buffer-name=files<CR>
+
+" Unite
+
+" Unite
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>q :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
+nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
+" nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
+" nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
+" nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
+" nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+"
+" " Custom mappings for the unite buffer
+" autocmd FileType unite call s:unite_settings()
+" function! s:unite_settings()
+"   " Play nice with supertab
+"   let b:SuperTabDisabled=1
+"   " Enable navigation with control-j and control-k in insert mode
+"   imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+"   imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+" endfunction
+
+" Control-P Mappings
+imap <Leader>bb <Esc>:CtrlPBuffer<cr>
+imap <Leader>pp <Esc>:CtrlP<cr>
+map <Leader>b :CtrlPBuffer<cr>
+map <Leader>p :CtrlP<cr>
 cnoremap jj <C-c>
+
 " Syntastic stuff
 let g:syntastic_auto_loc_list=1
 let g:syntastic_auto_jump=0
@@ -73,6 +104,11 @@ au FileType json setlocal equalprg=python\ -m\ json.tool
 au Bufenter *.ts setlocal smartindent
 au Bufenter *.ts setlocal cinkeys=0{,0},0),0#,!^F,o,O,e
 " let g:SlimuxUseNodeReplForCoffee = 1
+
+" Because definitely typed was crushing vimgrep
+set wildignore+=**/DefinitelyTyped/**
+set wildignore+=**/test/fixtures/*tree/**
+set wildignore+=**/cabal-dev/**
 
 com W w
 com Wa wa
@@ -91,9 +127,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set hi=1000
 set relativenumber
+set number
 map <Home> :w\|:bp<CR>
 map <End> :w\|:bn<CR>
-map <Leader>vr :vertical resize  
+map <Leader>vr :vertical resize
 map <Leader><Left> <Left>
 map <Leader><Right> <Right>
 map <Leader><Down> <Down>
@@ -102,10 +139,10 @@ map <D-Left> <Left>
 map <D-Right> <Right>
 map <D-Down> <Down>
 map <D-Up> <Up>
-"----  Haskell stuf PROJECT 
+"----  Haskell stuf PROJECT
 command! Hasktags !find Com -name "*.hs" | xargs hasktags -c
 map <Leader>8 o--------  --------F i
-abbr impt import          
+abbr impt import
 abbr imqu import qualified
 abbr imdt import qualified Data.Text                   as T
 abbr imbs import qualified Data.ByteString             as B
@@ -124,7 +161,7 @@ map <Leader>oc 00I-- _OLDCODE 0>>>>j
 abbr drv deriving (Show, Eq, Ord, Data, Typeable, Read)
 "swap tuples:
 "map <Leader>st F(wdwf)i, pF(ldf,
-"----  END EKC PROJECT 
+"----  END EKC PROJECT
 set guioptions=g
 "let &cpo=s:cpo_save
 color ir_black
@@ -136,8 +173,10 @@ set autowrite
 set shiftwidth=2
 set softtabstop=2
 
+" strip WS command
+map <Leader>ws :%s/ \+$//<CR>
 
-au BufRead *.hs setlocal softtabstop=4
+au Bufenter *.hs setlocal softtabstop=4
 au Bufenter *.hs setlocal shiftwidth=4
 
 set expandtab
@@ -172,12 +211,6 @@ map <Leader>v_ :vimgrep " _[A-Z]" **/*.%:e<CR>
 map <Leader>vg :vimgrep // **/*.%:e<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 map <Leader>lg :lvimgrep //" **/*.%:e<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 imap <Leader>cl  console.log('');  // _DEBUG<Esc>F'i
-imap <Leader>p <Esc>:CtrlP<cr>
-map <Leader>p :CtrlP<cr>
-imap <Leader>b <Esc>:CtrlPBuffer<cr>
-map <Leader>b :CtrlPBuffer<cr>
-" imap <Leader>B <Esc>:CommandT<cr>
-" map <Leader>B :CommandT<cr>
 "let $BASH_ENV="/Users/mxcantor/.profile"
 "let $PATH="/opt/local/bin:/opt/local/sbin:/Users/mxcantor/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"
 au BufRead *.julius set filetype=javascript
@@ -185,7 +218,7 @@ au Bufenter *.julius set filetype=javascript
 
   " configure browser for haskell_doc.vim
   let g:haddock_browser = "/Applications/Safari.app/Contents/MacOS/Safari"
-  
+
 "Better mapping for sparkit
 au BufEnter *.html inoremap \s <Esc><C-e>
 

@@ -1,22 +1,5 @@
 .less-history-file:
 .search
-"line.
-"line\.js
-"nv-pa
-"nv-point-
-"tool
-"---
-"+++
-"branch
-"controll
-"_con
-"curren
-"page n
-"retur
-"csv
-"jque
-"application.js
-"name-o
 "jque
 "fontspec
 "text.*>
@@ -100,4 +83,21 @@
 "master
 "--- 
 "---
+"idx
+"^diff --git
+"^diff --git.*$
+"Queue
+"page
+"e2e
+"US026874BZ97
+"class
+"basic-
+"extr
+"bas
+"-f
+"textboxr
+"TextB
+"ugl
+"deinit
+"running t
 .shell

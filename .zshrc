@@ -47,7 +47,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/max/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/max/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin
+export PATH=$PATH:./.cabal-sandbox/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/max/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/max/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin
 
 
 
@@ -66,6 +66,7 @@ compinit
 
 # Asana stuff
 asanachore()   {echo "Subject:$*\n\n ...from CLI" | sendmail -f max@docmunch.com x+4588376538871@mail.asana.com }
+asanasprint()  {echo "Subject:$*\n\n ...from CLI" | sendmail -f max@docmunch.com x+4563229279749@mail.asana.com }
 asanabug()     {echo "Subject:$*\n\n ...from CLI" | sendmail -f max@docmunch.com x+4561988334439@mail.asana.com }
 asanaroadmap() {echo "Subject:$*\n\n ...from CLI" | sendmail -f max@docmunch.com x+4561988334433@mail.asana.com }
 # asanabugs()    {echo "...from CLI" | mail -s "$*" x+4561988334439@mail.asana.com }
@@ -116,6 +117,7 @@ alias gch='git checkout'
 alias gd='git diff'
 alias gdc='git diff --color'
 alias gcam='git commit -a -m'
+alias glp='git log --color -w -p'
 alias pull='git pull origin'
 alias push='git push origin'
 alias exo='expresso'
