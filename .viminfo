@@ -8,55 +8,615 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<debugBoxStyle\>
+~MSle0~/binar
 
 # Last Substitute Search Pattern:
-~MSle0&long
+~MSle0&bson-0.2.3
 
 # Last Substitute String:
-$
+$bson-0.2.2
 
 # Command Line History (newest to oldest):
 :qa
+:wqa
+:split .git/config
+:w
+:qa!
+:diffget 4
+:SyntasticToggleMode
 :clo
+:85
+:cn
+:%s/ 
+:SyntasticCheck
+:split ../.gitmodules
+:e .gitmoc
+:e ../README.md
+:74
+:%s/bson-0.2.3/bson-0.2.2/gc
+:e ../koality.yml
+:e %:h
+:e Test/performance/corpus/
+:cd ../workers/
+:vimgrep /testjson/ **/*.%:e
+:cd ../docmunch/
+:cli
+:417
+:e!
+:spl
+:vimgrep /titlerows/ **/*.%:e
+:bw
+:e bin/webapp
+:110
+:247
 :vs
+:Vs
+:w! 525a29cc2f368be1b6000009.json
+:w! 000000000000000000000001.json
+:w 000000000000000000000001.json
+:Qa
+:bn
+:'<,'>!json
+:e 525524ed319f2fe02f00000c.json
+:diffget 2
+:W
+:diffget 3
+:diffget 3Ã§
+:'<,'>d
+:vertical resize66
+:'<,'>
+:vertical resize60
+:e Test/README.md
+:vimgrep /tshow/ **/*.%:e
+:cc 4
+:clas
+:vimgrep /runmongotestm/ **/*.%:e
+:182
+:ew
+:201
+:196
+:wa
+:vimgrep /dlist/ **/*.%:e
+:138
+:183
+:180
+:161
+:155
+:s!/!.!g
+:sav Webapp/Doc/UploadOldPdf2HtmlForGreg.hs
+:e Webapp/Doc/Upload.old.pdf2html.forgreg.hs
+:153
+:cla
+:vimgrep /\<insertPageDataSets\>/ **/*.%:e
+:vimgrep /writer/ **/*.%:e
+:Wa
+:vimgrep /\<DataSetPopulated\>/ **/*.%:e
+:s/ref/new/gc
+:S/ref/new/gc
+:vimgrep /populateda/ **/*.%:e
+:sw
+:vimgrep /decodeSt/ **/*.%:e
+:vimgrep /decodeD/ **/*.%:e
+:338
+:107
+:93
+:207
+:48
+:vimgrep /_.eac/ **/*.%:e
+:vimgrep /models.*\<in/ **/*.%:e
+:q
+:vimgrep /models.*in/ **/*.%:e
+:vimgrep /elem/ **/*.%:e
+:vimgrep /models.*elem/ **/*.%:e
+:vimgrep /async.para/ **/*.%:e
+:C
+:tabe
+:s/`
+:vimgrep /import.*webapp.models/ **/*.%:e
+:vertical resize50
+:e
+:!git checkout %
+:split Webapp/Models.hs
+:vimgrep /newdocu/ **/*.%:e
+:vimgrep /runmongote/ **/*.%:e
+:vimgrep /rumongote/ **/*.%:e
+:cl
+:vimgrep /\<processRawPdfWithInk\>/ **/*.%:e
+:w! willfaill.json
+:w willfaill.json
+:e .
+:pwd
+:e 
+:vimgrep /'o'/ **/*.%:e
+:vimgrep /unknown p/ **/*.%:e
+:cd ../persistent-1.2.3.0/
+:c
+:vimgrep /genObjectId/ **/*.%:e
+:71
+:101
+:vimgrep /newdocument/ **/*.%:e
+:e Test/Env.hs
+:e Test/
+:E Te
+:e Webapp/models
+:cc 3
+:vimgrep /\<parseInkscapeSvg\>/ **/*.%:e
+:411
+:vimgrep /apperrort/ **/*.%:e
+:vimgrep /runmongotest/ **/*.%:e
+:90
+:e ca
+:e cabal.sandbox.config
+:vertical resize88
+:%g/^\S/normal A json
+:'<,'>s/Generic//
+:53
+:60
+:e Webap
+:399
+:cc 16
+:vimgrep /impo.*model/ **/*.%:e
+:vimgrep / **/*.%:e
+:e Webapp/Model/Json.hs
+:bw!
+:%s/JSON id /JSON def /gc
+:%s/ JSON id / JSON def /gc
+:vimgrep /derive.* id / **/*.%:e
+:%s/ JSON id / JSON def
+:59
+:%s/aeson .*$/aeson >= 0.6.2.0/gc
+:%s/hspec *$/hspec >= 1.7.2.1/gc
+:%s/ *$/Generic)
+:%s/ *$//
+:%
+:'<,'>%s/ *$/Generic)
+:%s/ .*$//
+:'<,'>!sort
+:%g/^ /normal dd
+:ene
+:split 
+:cc 12
+:vimgrep /derivefromj/ **/*.%:e
+:%s/  *json *$//gc
+:e persistent-1.2.3.0/
+:vimgrep /unknown prefix/ **/*.%:e
+:vimgrep /prefix/ **/*.%:e
+:vimgrep /\<o\>/ **/*.%:e
+:70
+:61
+:vimgrep /droprecordpre.* =/ **/*.%:e
+:vimgrep /data rect/ **/*.%:e
+:cc
+:cc 10
+:vimgrep /extractta/ **/*.%:e
+:vimgrep /documentstat/ **/*.%:e
+:e Webapp/Doc/doc-upload.hs
+:vimgrep /\<rect\>/ **/*.%:e
+:e Webapp/Models.hs
+:%g/^\S/normal A JSON
+:tabe %
+:A
+:76
+:69
+:64
+:75
+:72
+:68
+:65
+:62
+:54
+:vimgrep /\<runMongoTestM\>/ **/*.%:e
+:t fro
+:38
+:vimgrep /fromlist/ **/*.%:e
+:vimgrep /throwne/ **/*.%:e
+:e Test/performance/corpus/524b74090d6f3a9c14000008.json
+:vimgrep /mkdi.*p/ **/*.%:e
+:vimgrep /\<generateHtmlDisplay\>/ **/*.%:e
+:s/all/rev/g
+:vimgrep /\<dropRecordPrefix\>/ **/*.%:e
+:vimgrep /derive.*jso/ **/*.%:e
+:vimgrep /yaml/ **/*.hs
+:vimgrep /aeson/ **/*.%:e
+:vimgrep /yaml/ **/*.%:e
+:e ../workers/table-ext/test/test.hs
+:e ../workers/Test/
+:e test/
+:E te
+:vimgrep /disposit/ **/*.%:e
+:E ../..
+:vimgrep /replace/ **/*.%:e
+:vertical resize70
+:!open -a marked %
+:!open %
+:open %
+:e ../workers/Test/README.md
+:e test/RE
+:e test/ex
+:e ../workers/bin/webapp
+:e ../docmunch/bi
+:e bin/we
+:282
+:260
+:e %
+:vimgrep /getBlob/ **/*.%:e
+:vimgrep /raw/ **/*.%:e
+:vimgrep /getRawDo/ **/*.%:e
+:vimgrep /getrawdo/ **/*.%:e
+:vimgrep /{{.*raw/ **/*.%:e
+:cc 6
+:vimgrep /saving.*to/ **/*.%:e
+:vimgrep /saving/ **/*.%:e
+:vimgrep /saving file/ **/*.%:e
+:cc 29
+:vimgrep /query/ **/*.%:e
+:19
+:vimgrep /\<user\>/ **/*.%:e
+:vimgrep /ch.*admin/ **/*.%:e
+:E 
+:vimgrep /routec/ **/*.%:e
+:vimgrep /iuser/ **/*.%:e
+:vimgrep /rootscope/ **/*.%:e
+:vimgrep /report/ **/*.%:e
+:vertical resize90
+:vertical resize83
+:cc 8
+:vimgrep /checkadmi/ **/*.%:e
+:vimgrep /chkad/ **/*.%:e
+:vimgrep // **/*.%:e
+:cc 55
+:vimgrep /datagr/ **/*.%:e
+:vimgrep /pat.*doc.*datag/ **/*.%:e
+:vimgrep /getblob/ **/*.%:e
+:22
+:e routes/admin.coffee
+:vimgrep /datag.*list/ **/*.%:e
+:vimgrep /datagroup.sho/ **/*.%:e
+:vimgrep /show/ **/*.%:e
+:vimgrep /pa.*datag.*show/ **/*.%:e
+:abbr jstr JSON.stringify
+:e routes.coffee
+:e app.coffee
+:vimgrep /pdfpath/ **/*.%:e
+:vimgrep /savetoazu/ **/*.%:e
+:e ../workers/Import.hs
+:336
+:e ../workers/workers.cabal
+:e ../workers/Webapp/models
+:e ../workers/Webapp/Model/
+:e ../workers/Webapp/Doc/Upload.hs
+:172
+:vimgrep /requi.*azu/ **/*.%:e
+:vimgrep /requi.azu/ **/*.%:e
+:vimgrep /require azu/ **/*.%:e
+:cc 28
+:vimgrep /azur/ **/*.%:e
+:e config.coffee
+:e test/e2e/newUpload.js
+:e package.json
+:e scripts/test-e2e
+:%s/ \+$//g
+:vimgrep /rollbar/ **/*.%:e
+:vimgrep /newdoc/ **/*.%:e
+:w! ~/development/docmunch/MAIN_REPO/workers/Webmunch/Citi/Emaxx/corp-cusips_2013-09-15.csv
+:vimgrep /scope.stat/ **/*.%:e
+:vimgrep /estate/ **/*.%:e
+:vimgrep /pollfo/ **/*.%:e
+:vimgrep /pendingdoc/ **/*.%:e
+:vimgrep /uploaderct/ **/*.%:e
+:s/uploads/Docs/g
+:vimgrep /pendingdo/ **/*.%:e
+:tave
+:41
+:vimgrep /random/ **/*.%:e
+:!rm %
+:e /tmp/debug2.json
+:e /tmp/debug3.json
+:'<,'>E
+:vs /tmp/
+:qw
+:enew
+:s/,/\r  ,/g
+:5s/
+:split ~/development/docmunch/MAIN_REPO/workers/Test/performance/corpus/524b74090d6f3a9c14000008.json
+:splt
+:vimgrep /data colu/ **/*.%:e
+:572
+:e persistent-mysql/Database/Persist/MySQL.hs
+:e persistent-test/*cabal
+:E per
+:vimgrep /persistent\>.*1.2/ **/*.%:e
+:vimgrep /persistent/ **/*.%:e
+:vimgrep /persistent *1.2/ **/*.%:e
+:294
+:e persistent-template/persistent-template.cabal
+:e persistent/Database/Persist/Types/Base.hs
+:vimgrep /unsupported type/ **/*.%:e
+:vimgrep /serialize/ **/*.%:e
+:e persistent-mongoDB.cabal
+:vimgrep /\<o\</ **/*.%:e
+:'<,'>vs
+:e mongoDB.cabal
+:vimgrep /Bso/ **/*.%:e
+:vimgrep /Seriali/ **/*.%:e
+:vimgrep /json/ **/*.%:e
+:vimgrep /ObjectId/ **/*.hs
+:sli
+:vimgrep /ObjectId/ **/*.%:e
+:vimgrep /objectid/ **/*.%:e
+:vimgrep /tojson/ **/*.%:e
+:vimgrep /FromJ/ **/*.%:e
+:cd per
+:cd ..
+:vimgrep /nonempty/ **/*.%:e
+:vimgrep /\<estate\>/ **/*.%:e
+:vimgrep /\<state\>/ **/*.%:e
+:vimgrep /state/ **/*.jade
+:vimgrep /scope.stat/ **/*.jade
+:vimgrep /on.*newdoc/ **/*.%:e
+:vimgrep /newDoc/ **/*.%:e
+:vimgrep /uploaderc/ **/*.%:e
+:cp
+:vimgrep /securely/ **/*.%:e
+:%s/ \+$//gc
+:s/bootstrap/toastr/g
+:e assets/ts/_all.ts
+:vimgrep /declare/ **/*.%:e
+:vimgrep /jquery/ **/*.%:e
+:vimgrep /scrip.*jqu/ **/*.%:e
+:vimgrep /script.*vendor/ **/*.%:e
+:vimgrep /script.*ventor/ **/*.%:e
+:cc 27
+:vimgrep /apply/ **/*.%:e
+:vimgrep /our automat/ **/*.jade
+:vimgrep /our automat/ **/*.%:e
+:vimgrep /upload/ **/*.%:e
+:vimgrep /info_ms/ **/*.%:e
+:%s/ \+$//
+:%s/bug/issue/gc
+:syn
+:'<,'>w
+:vimgrep /owner.*==/ **/*.%:e
+:vimgrep /==.*owner/ **/*.%:e
+:!coffee %
+:vimgrep /unauthor/ **/*.%:e
+:73
+:vimgrep /unauthoro/ **/*.%:e
+:we
+:vimgrep /flash/ **/*.%:e
+:vimgrep /reporttab/ **/*.%:e
+:254
+:vimgrep /resolve/ **/*.%:e
+:abbr retrun return
+:s/bug/issue/g
+:cc 11
+:vimgrep /issue/ **/*.%:e
+:vimgrep /issuereport/ **/*.%:e
+:5s
+:vimgrep /models.bug/ **/*.%:e
+:e routes/issue.coffee
+:sunmap
+:vimgrep /paths.bug/ **/*.%:e
+:'<,'>s/bug/issue/g
+:vimgrep /paths./ **/*.%:e
+:'<,'>s/bug/issue/
+:'<,'>s/ng-if/ui-if/g
+:vimgrep /ui-if/ **/*.%:e
+:vimgrep /imainscop/ **/*.%:e
+:res 40
+:vimgrep /docctrl/ **/*.%:e
+:vimgrep /modal/ **/*.jade
+:vimgrep /modal/ **/*.%:e
+:s
+:vimgrep /ribbon/ **/*.%:e
+:vimgrep /ribbon-bod/ **/*.%:e
+:vimgrep /grid-gut/ **/*.%:e
+:cc 7
+:vimgrep /jump to/ **/*.%:e
+:vimgrep /datasets/ **/*.%:e
+:vimgrep /reporttable/ **/*.%:e
+:e views/partials/
+:cd doc
+::
+:e models.coffee
+:e mongoDB.yaml
+:E models
+:'<,'>s/ , /, /gc
+:e Test/extraction-health.hs
+:vimgrep /test.webapp/ **/*.%:e
+:Wqa
+:help vimdiff
+:e Webmunch/
+:e run-citi-webmunch.sh
+:b2
+:b1
+:sav %:h/emaxx-corp.yaml
+:e Webmunch/Citi/Emaxx/
+:!open %:h
+:%s/l/-export-plain-svg
+:s/1/5/g
+:s/1/4/g
+:s/1/3/g
+:s/1/2/g
+:e ~/Google\ Drive/Docmunch/Demo\ PDFs/Public/Calpers/script.txt
+:vimgrep /pageent/ **/*.%:e
+:'<,'>e
+:e ../ops/install/
+:vertical resize120
+:vertical resize99
+:e ../ops/
+:vimgrep /recurseno/ **/*.%:e
+:vimgrep /command: / **/*.%:e
+:`
+:vimgrep /what happened to/ **/*.%:e
+:vimgrep /\<rawCmd\>/ **/*.%:e
+:vimgrep /b\<rawCmd\>/ **/*.%:e
+:e ../docmunch/test/e2e/
+:e ../docmunch/package.json
+:E ../doc
+:e ..
+:vimgrep /foo.pdf/ **/*.%:e
+:vimgrep /sp_shell/ **/*.%:e
+:vimgrep /\<SP_ARG_SHELL\>/ **/*.%:e
+:%g/^pick.*progress/normal 0cws
+:%s/^pick.*progress/
+:%s/^pick/f/gc
+:vimgrep /uploaddoc wor/ **/*.%:e
+:e Webapp/Doc/Upload/test/test.hs
+:co
+:vimgrep /totexti/ **/*.%:e
+:390
+:vimgrep /all done/ **/*.%:e
+:vimgrep /mapconcurrently/ **/*.%:e
+:vimgrep /replacetable/ **/*.%:e
+:vimgrep /edittable/ **/*.%:e
+:vimgrep /about to conver/ **/*.%:e
+:vimgrep /changeDeleted/ **/*.%:e
+:vimgrep /showcell/ **/*.%:e
+:vimgrep /screendims/ **/*.%:e
+:vimgrep /datagroupid/ **/*.%:e
+:vimgrep /datagroupto/ **/*.%:e
+:buf ~/development/docmunch/REPO_mc61/docmunch/assets/ts/main/main-ctrl.ts
+:split ../docmunch/models.coffee
+:vimgrep /datasetcolde/ **/*.%:e
+:vimgrep /sourcedocid/ **/*.%:e
+:vertical resize80
+:vimgrep /totable/ **/*.%:e
+:e ../docmunch/
+:e ../docmunch/models.coffee
+:w ~/development/docmunch/MAIN_REPO/workers/Webmunch/Citi/Emaxx/corp-cusips_2013-09-15.csv
+:set fileformat=dos
+:sav ~/Desktop/cusips.txt
+:%s/,/ 
+:e /tmp
+:e /tm
+:clos
+:vimgrep /addboxes/ **/*.%:e
+:vimgrep /cell.*rect/ **/*.%:e
+:cn\
+:vimgrep /selectcell/ **/*.%:e
+:vimgrep /selectta/ **/*.%:e
+:vimgrep /showtab/ **/*.%:e
+:vimgrep /showt/ **/*.%:e
+:s/top/left/g
+:'<,'>s/cell/table/g
+:s/top/height/g
+:s/top/width/g
+:s/top/left
+:S
+:vimgrep /select cell/ **/*.%:e
+:.ll
+:vimgrep /datagrouptot/ **/*.%:e
+:! git checkout %
+:66
+:e table-ext/test/Visualization.hs
+:5s/ 
+:%s/\<stcParsedX\>/stcXChain/gc
+:res 30
+:141
+:530
+:e Webapp/Doc/Upload.hs
+:151
+:156
+:148
+:154
+:177
+:vimgrep /pretty/ **/*.%:e
+:230
+:clp
+:vimgrep /threadDelay/ **/*.%:e
+:vimgrep /imp.*data.ti/ **/*.%:e
+:bp
+:e smart.lock
+:vimgrep /unauthori/ **/*.%:e
+:vimgrep /\<echo\>/ **/*.coffee
+:vimgrep /\<echo\>/ **/*.%:e
+:vimgrep /newaccountfo/ **/*.%:e
+:vimgrep /passwordconfirm/ **/*.%:e
+:vimgrep /newaccountfor/ **/*.%:e
+:412
+:d
+:102
+:248
+:221
+:e ../docmunch/assets/css/ingest.less
+:set ft=xml
+:'<,'>!tidy -xml
+:!t
+:sav short.svg
+:!open *png
+:!open -a Firefox %
+:diffget 1
+:diffget 0
+:wq
+:e ../docmunch/Gruntfile.coffee
+:tabe /tmp/dm-uploads
+:e ../docmunch/assets/ts/ingest/ingest-ctrl.ts
+:e ../docmunch/assets/css/debug.less
+:e ../docmunch/views/
+:e ../docmunch/assets/css/
+:e ../docmunch/assets/css/main.less
+:e ./bin/webapp
+:32
+:276
+:1
+:s/width/height/g
+:e Test/fixtures/
+:217
+:218
+:246
+:184
+:188
+:189
+:abbr return return
+:219
+:114
+:((
+:99
+:120
+:vertical resize94
+:111
+:83
+:116
+:109
+:78
+:117
+:%s/\<paths.static\>/Paths.staticPages/gc
+:vimgrep /paths\.static\>/ **/*.jade
+:vimgrep // **/*.%:
+:vimgrep /exec\>/ **/*.%:e
+:vimgrep /paths\.static\>/ **/*.ts
+:vimgrep /paths\.admin\>/ **/*.ts
+:vimgrep /paths\.static\>/ **/*.%:e
+:%s/\<paths.static\>/Paths/staticPages/gc
+:vimgrep /paths\.static/ **/*.%:e
+:e Gruntfile.coffee
 :vimgrep /debugboxstyle/ **/*.%:e
 :e angular-app.ts
 :cd ../ts/
 :set norelativenumber
 :set nonumber
 :vimgrep /box-debug-box/ **/*.%:e
-:wqa
-:w
 :vertical resize  80
 :vertical resize  90
-:wa
-:e
 :vs lib/
 :vs lib/for
-:bw
 :e common/forms.coffee
 :e smart.json
 :vimgrep /methods/ **/*.%:e
 :set number
 :'<,'>s/long/label
 :'<,'>s/key/value
-:SyntasticToggleMode
 :gt
-:spl
 :e ~/.vimrc
 :set nu
 :set rnu
 :help 'relativenumber'
-:tabe
-:res 30
-:e smart.lock
 :split client/view_helpers/header.coffee
 :split
 :vimgrep /validatenew/ **/*.%:e
 :'<,'>s/row-fluid/row/g
 :%s
-:Wa
 :CtrlPClearAllCaches
 :3
 :e client/lib/view_helpers/header.hamlet
@@ -66,12 +626,10 @@ $
 :!
 :e client/lib/view
 :vimgrep /template name="he/ **/*.%:e
-:abbr jstr JSON.stringify
 :'<,'>s/ *{ *$//
 :'<,'>s/, *$//
 :vimgrep /validate/ **/*.%:e
 :vimgrep /\.validate/ **/*.%:e
-:cli
 :!git add .
 :e README.md
 :E sm
@@ -80,33 +638,24 @@ $
 :e plugin/compile-hamlet-templates.js
 :e package.js.old
 :vimgrep /\<_autoFormCheckFirst\>/ **/*.%:e
-:W
 :blc
 :e client/lib/layout.hamlet
 :vimgrep /postslist/ **/*.%:e
 :vimgrep /{{.*url/ **/*.%:e
-:cc 3
 :vimgrep /details/ **/*.%:e
 :vimgrep /template.*events/ **/*.%:e
-:cn
 :vimgrep /newevent/ **/*.%:e
 :vimgrep /{{.*events/ **/*.%:e
 :%s/{{ *\([a-zA-Z]\+\)Path\>/{{pathFor '\1'/gc
 :/^\(.*\)$\r\1
 :%s/{{ *\([a-zA-Z]\)Path\>/{{pathFor '\1'/gc
-:vertical resize70
 :'<,'>s/'\//'
 :'<,'>s/  '/  @route '
 :vimgrep /meteor.router/ **/*.%:e
 :E smar
 :clo\\badmin
-:vertical resize80
-:tabe %
-:cla
 :vimgrep /verificationadd/ **/*.%:e
-:clas
 :vimgrep /fppolicy/ **/*.%:e
-:%s/ \+$//
 :4
 :2
 :e collections/images.coffee
@@ -117,7 +666,6 @@ $
 :'<,'>s/\.span/.col-md-/g
 :vimgrep /meteor.users/ **/*.%:e
 :vertical resize100
-:48
 :20
 :vimgrep /meteor.methods/ **/*.%:e
 :synntas
@@ -127,14 +675,11 @@ $
 :vimgrep /http.*get.*use/ **/*.%:e
 :vimgrep /http.*get/ **/*.%:e
 :e assets/ts/main/main-ctrl.ts
-:qa!
 :r /tmp/h.json
 :r /tmp/hackage.json
 :86
 :89
-:70
 :vimgrep /connpool/ **/*.%:e
-:cp
 :vimgrep /appLogg/ **/*.%:e
 :vimgrep /getstatic/ **/*.%:e
 :vimgrep /analy/ **/*.%:e
@@ -142,9 +687,6 @@ $
 :vimgrep /copyright/ **/*.%:e
 :split .
 :set wildignore+=fixtures
-:66
-:68
-:we
 :82
 :set softtabstop=4
 :set tagbsea
@@ -152,7 +694,6 @@ $
 :set
 :Lw
 :e Import.hs
-:e ../README.md
 :e ../.gitignore
 :e CabalUtil.hs
 :cc 5
@@ -162,35 +703,25 @@ $
 :vertical resize
 :e shackage.cabal
 :87
-:188
-:180
 :s/:/", "/g
 :s/;/"), ("/g
 :130
-:69
 :m -P
 :51
 :vimgrep /{\.\.}/ **/*.%:e
-:99
 :67
 :58
-:s
 :s/x\>/style/g
 :/
 :s/x/y/g
 :50
 :'<,'>s/Reader/Writer/g
-:71
-:62
 :s/mat/scl/g
 :s/ma
 :vimgrep /parsec/ **/*.%:e
 :e Test/fixtures/inkscape-simple.pdf.svg
-:!rm %
 :sav Test/fixtures/super-simple.svg
-:e Test/fixtures/
 :37
-:41
 :49
 :17
 :vimgrep /mkdir/ **/*.%:e
@@ -198,39 +729,29 @@ $
 :s/svg/png/g
 :s/svg/pdf/g
 :G
-:vimgrep /\<rawCmd\>/ **/*.%:e
 :vimgrep /insertnewdoc/ **/*.%:e
 :set tabstop=8
 :set sf
 :r Webapp/Doc/Upload/test/test.hs
 :split Test/test-inkscape.hs
-:bw!
 :e Webapp/Doc/test-inkscape.hs
 :!mkdir Webapp/Doc/Inkscape
 :e Webapp/Doc/Inkscape.hs
 :!open Setup.hs
 :121
-:wq
 :vimgrep /insertnewdo/ **/*.%:e
 :e table-ext/test/test.hs
 :vimgrep /processRawPdf/ **/*.%:e
-:vertical resize88
 :vimgrep /col count/ **/*.%:e
 :124
 :vimgrep /processrawpdf/ **/*.%:e
-:e Webapp/Doc/Upload/test/test.hs
 :eWebapp/Doc/Upload/test/tes
 :F
 :vimgrep /\<runForkMongoM\>/ **/*.%:e
 :'<,'>s/ *$/, required: true }
-:vimgrep /data rect/ **/*.%:e
-:e ../docmunch/models.coffee
-:E ../doc
 :517
 :vimgrep /azure.yaml/ **/*.%:e
 :vimgrep /savexmltodb/ **/*.%:e
-:e ../docmunch/package.json
-:q
 :355
 :376
 :354
@@ -239,7 +760,6 @@ $
 :307
 :307\
 :375
-:vertical resize90
 :365
 :342
 :345
@@ -251,37 +771,29 @@ $
 :316
 :312
 :308
-:19
-:32
 :e Webapp/Model/Document.hs
 :293
 :tabe workers.cabal
 :w!
 :w /tmp/u.hs
 :E
-:e!
 :299
 :'<,'>s/<.>/=<<
 :e table-ext/*cabal
 :s/Left/Height
 :s/Left/Top
 :s/Left/Width/g
-:e Webapp/models
 :tabe 
 :vimgrep /extracttab/ **/*.%:e
 :open .
 :!op
 :sav ~/development/docmunch/REPO_mc61/workers/Test/fixtures/inkscape-simple.pdf.svg
-:!open %
 :!open .
 :!open -a Chrome %
 ::sav 
 :sav ~/Documents/About\ Stacks.lpdf/
-:set ft=xml
 :set fileformat=unix
-:'<,'>!tidy -xml
 :'<,'>!tidy
-:vertical resize99
 :e lib/workers.coffee
 :e deploy/workers.coffee
 :e lib/remote.coffee
@@ -290,51 +802,32 @@ $
 :cd ../ops/
 :! open -a MacVim %
 :! open %
-:e ../ops/
 :e Setup.hs
 :vimgrep /mismatch/ **/*.%:e
-:e Webapp/Doc/Upload.hs
-:cl
-:vimgrep /\<generateHtmlDisplay\>/ **/*.%:e
-:e Test/
 :e ../ops/README.md
-:!git checkout %
 :e views/static/welcome.jade
 :E vi
-:diffget 4
 :!chmod u+x %
 :r! ls 
 :r! which fontforge
 :e ff
 :split 08.css
-:bn
 :e 08.svg
 :'<,'>s/'//g
 :sav 08.html
 :e 09.html
-:pwd
-:e package.json
-:e ../koality.yml
 :vsa
 :e Webapp/
-:Vs
-:'<,'>!sort
 :'<,'>s/\.hs *$//
 :'<,'>s!/!.!g
 :'<,'>s/^\.\//    , 
 :%s/^\(.*\)\n\1/\1/g
 :%s/^\(.*\)\r\1/\1/g
 :noremap <Leader>dg4 <Esc>:diffget 4<cr>
-:d
 :DataColDef sql=datacoldef name            Text Maybe isIndex         Bool DataPoint sql=datapoint valRaw          Text valInt          Int Maybe valDouble       Double Maybe textBoxes       [TextBoxId]c
 :buffers
-:diffget 0
-:diffget 2
-:diffget 3
 :dg 3
-:diffget 1
 :dp 4
-:help vimdiff
 :%s/^pick/s
 :e assets/css/master.less
 :e mas
@@ -346,13 +839,11 @@ $
 :e koality.yml
 :e ops/install/bootstrap.sh
 :split ops/install/haskell-sudo.sh
-:e run-citi-webmunch.sh
 :e run-citi-webmunch.server.sh
 :e MongoEnv.hs
 :e Webmunch.hs
 :vimgrep /getconf/ **/*.%:e
 :e ../ops/deploy/build-server.coffee
-:e Webmunch/Citi/Emaxx/
 :e Webapp/Ci
 :e Webmunch/Citi/Emaxx/cdo_cusips_2013-08-21.csv
 :map <Leader>ws :%s/ \+$//<CR>
@@ -362,29 +853,24 @@ $
 :e ../ops/lib/remote.coffee
 :36
 :cd workers/
-:e .
 :e Set
 :228
-:vimgrep /pdfpath/ **/*.%:e
 :vimgrep /pdfpath/ **/*.hs
 :cd 
 :167
 :"w
 :help globpath()
-:co
 :help 'wildignore'
 :help :wildignore
 :e Webapp/Doc/Table/test/test.hs
 :vimgrep /finds a single table/ **/*.%:e
 :vimgrep /describe.*find2x2t/ **/*.%:e
 :e dist/test/docmunch-workers-0.1.0.0-table-test.log
-:qw
 :vimgrep /find2x2tables/ **/*.hs
 :b
 :spl ~/.vimrc
 :e c
 :set wildignore+=**/cabal-dev/**
-:cd ../workers/
 :vimgrep /find2x2tables/ **/*.%:e
 :35
 :ws
@@ -392,15 +878,12 @@ $
 :e routes/doc.coffee
 :274
 :spl package.json
-:e app.coffee
 :520
 :45
 :vimgrep /savetoazure/ **/*.%:e
 :vimgrep /datagroup/ **/*.%:e
-:vimgrep // **/*.%:e
 :712
 :'<,'>s/col/row/g
-:cc
 :vimgrep /waterfall/ **/*.%:e
 :split ../workers/Webapp/models
 :cc 18
@@ -454,7 +937,6 @@ $
 :'<,'>s/  \(\S\+\) /  \1:
 :help pattern
 :w
-:enew
 :'<,'>s/\<\(\S\+Id\)\>/Types.ObjectId, ref: '\1'
 :'<,'>s/: Maybe *$/: false
 :'<,'>s/: *$/: true
@@ -466,14 +948,11 @@ $
 :'<,'>s/\(: *\)\(\S\+\) /\1type: \2, required: 
 :'<,'>s/\(: *\)\(\S\+\) /\1type: \1, required: 
 :'<,'>s/ sql=.*$/ = new mongoose.Schema
-:e models.coffee
-:cd ../docmunch/
 :52
 :44
 :e ~/.zshrc
 :split scrape.coffee
 :r ~/development/docmunch/MAIN_REPO/docmunch/package.json
-:'<,'>vs
 :%g/^ *$/normal dd
 :e rev.
 :w sc.sh
@@ -482,7 +961,6 @@ $
 :e r
 :%s/[",]/ /g
 :sav /tmp/emaxx-isi8n.txt
-:Qa
 :'qa!
 :'<,'>qa!
 :s/,/\r  ,/gc
@@ -497,7 +975,6 @@ $
 :E Set
 : cd ../..
 :cd %:h
-:sunmap
 :cpre
 :vimgrep /events/ **/*.%:e
 :vimgrep /control-group/ **/*.coffee
@@ -516,7 +993,6 @@ $
 :vimgrep /sti-test/ **/*.%:e
 :vimgrep /filepicker/ **/*.%:e
 :set wr
-:141
 :e client/css/master.less
 :!mkdir client/css
 :e client/view_helpers/accounts.coffee
@@ -524,13 +1000,8 @@ $
 :vimgrep /getDefaultPage/ **/*.%:e
 :Unite file
 :e docmunch/Gruntfile.coffee
-:85
 :e ../
 :vimgrep /b\.page/ **/*.%:e
-:cd ..
-:65
-:SyntasticCheck
-:cc 12
 :vimgrep /get/ **/*.%:e
 :vimgrep /itextbo/ **/*.%:e
 :cd dm-spare/
@@ -540,12 +1011,10 @@ $
 :cc 53
 :vimgrep /datagroup/ **/*.%:ec
 :set wildignore+=**/DefinitelyTyped/**
-:vimgrep /datagroupto/ **/*.%:e
 :vimgrep /info  *[a-zA-Z]/ **/*.co
 :ci
 :vimgrep /loadedTa/ **/*.%:e
 :vimgrep /\<lookupTextBox\>/ **/*.jade
-:c
 :vimgrep /\<lookupTextBox\>/ **/*.ts
 :cd ../
 :vimgrep /\<lookupTextBox\>/ **/*.%:e
@@ -559,477 +1028,767 @@ $
 :Unite file_rec/async -default-action=tabopen
 :help vimproc.txt
 :VimProcBang
-:Unite file_rec/async
-:'<,'>clo
-:help :Unite
-:Unite file buffer
-:e assets/js/util/data.coffee
-:E
-:%s/","/"\r  - "/g
-:%s/","/"\r  - "
-:%s/\]/]\r/g
-:%s/\]/]\r\r/g
-:e /tmp
-:e  /tmp/all-
-:'<,'>e 
-:e /t
-:cc 8
-:vimgrep /drop/ **/*.%:e
-:sav Webmunch/Citi/Emaxx/shortlist.csv
-:set fileformat=dos
-:bp
-:vimgrep /mongom/ **/*.%:e
-:vimgrep /monadl/ **/*.%:e
-:vimgrep /monadlogg/ **/*.%:e
-:vimgrep /\<runCasper\>/ **/*.%:e
-:vimgrep /no new f/ **/*.%:e
-:vimgrep /<<"/ **/*.%:e
-:118
-:8
-:88
-:vimgrep /"<<"/ **/*.%:e
-:vimgrep /">>"/ **/*.%:e
-:39
-:vimgrep /fpc.totext/ **/*.%:e
-:vimgrep /shelly/ **/*.%:e
-:vimgrep /either id id/ **/*.%:e
-:vimgrep /liftio.*print/ **/*.%:e
-:vimgrep /logdeb/ **/*.%:e
-:%s/"lcd"/lcd/gc
-:vimgrep /"lcd"/ **/*.%:e
-:e ../ops/deploy/citi.coffee
-:vimgrep /lib\// **/*.%:e
-:vs 
-:%s/^\(.*\)$\n\1/\1/g
-:%s/^\(.*\)$\r\1/\1/g
-:e /tmp/log
-:vimgrep /\<handleException\>/ **/*.%:e
-:spol
-:split /tmp/t.hamlet
-:E .
-:ls
-:e ./ham
-:!sh %
-:147
-:142
-:set ft=html
-:set ft=hamlet
-:e client/views/events/newEvent.hamlet
-:r client/views/accounts/new.coffee
-:e client/views/events/events.coffee
-:E cli
-:sav collections/events.coffee
-:Sav cl
-:E clic
-:e %:h/allEvents.html
-:split client/test.hamlet
-:e client/views/events/newEvent.html
-:!mkdir client/views/events
-:e client/views/
-:s/dashboard/newEvent/g
-:s/dashboard/events/g
-:s/dashboard/editProfile/g
-:s/dashboard/welcome/g
-:e client/views/test.hamlet
-:E clivi
-:!mv client/test.hamlet client/views/
-:com Wa wa
-:com W w
-:e install/phantomjs.sh
-:help CTRL-O
-:help c_<C-R>_<C-O>
-:help C-o
-:e deploy/all.sh
-:wn
-:'<,'>s/ =/-- =
-:'<,'>s/ .*$/
-:'<,'>g/^ *$/normal dd
-:'<,'>g/^  */normal dd
-:!git commit -m 'cleaner withConnComp' %
-:93
-:'<,'>s/Ptr BOX/BOX/gc
-:'<,'>s/ ::.*$//
-:212
-:218
-:'<,'>s/$/undefined
-:'<,'>s/$/ =
-:'<,'>s/$/=
-:'<,'>$s/$/=
-:'<,'>s/#define *\</    |
-:e /usr/local/Cellar/leptonica/1.69/include/leptonica/pix.h
-:s/boxa/pixa/g
-:e %:h/
-:%s/ 
-:e TesseractH.hs
-:res 50
-:162
-:%s/^\(.*\)$\n\1/\1
-:%g/'_$/normal dd
-:set nopaste
-:%s/TesseractH.CAPI.\([^ ]*\)\> ::.*$/, \1/
-:%s/TesseractH.CAPI.\([^ ]*\)\> :: .*$/, \1/
-:%s/TesseractH.CAPI.\(.*\)\> :: .*$/, \1/
-:%g/^   */normal dd
-:%g/^ */normal dd
-:%s/TesseractH.CAPI.\(.*\)\> :: .*$/, \1 (..)/
-:%s/data TesseractH.CAPI.\(.*\)\> *$/, \1 (..)/
-:%s/data TesseractH.CAPI.\(.*\) =.*$/, \1 (..)/
-:%s/type TesseractH.CAPI.\(.*\) =.*$/, \1/
-:%s/type TesseractH.CAPI.\(.*\) =.*$/\1/
-:%s/data TesseractH.CAPI.\(.*\) =.*$/\1/
-:%s/data \(.*\) =.*$/\1/
-:%s/type \(.*\) =.*$/\1/
-:set paste
-:161
-:e ../tesseractH.cabal
-:e /usr/local/Cellar/leptonica/1.69/include/leptonica/imageio.h
-:103
-:'<,'>s/  */ /g
-:'<,'>s/ *$/ -}
-:'<,'>s/ =/ {- 
-:'<,'>s/ =/-- 
-:'<,'>s/,/\r|/g
-:63
-:e /usr/local/include/leptonica/allheaders.h
-:e log
-:vimgrep /=====/ **/*.%:e
-:vsp
-:46
-:vimgrep /Applications// **/*.%:e
-:vg
-:set readonly
-:'<,'>s/BoxW/BoxY/g
-:'<,'>s/BoxW/BoxX/g
-:'<,'>s/BoxW/BoxH/g
-:vertical resize  160
-:vertical resize  140
-:vertical resize  120
-:e CAPI.chs
-:cd lib/TesseractH/
-:cd  ~/development/docmunch/daggerboard-fund-reporting-app-v1/vendor/tesseractH
-:tabe config.coffee
-:bufdo
-:e tesseractH.caba
-:cd ~/development/docmunch/daggerboard-fund-reporting-app-v1/vendor/tesseractH/
-:g
-:sw
-:vsplit models2.coffee
-:!git commit -a -m 'added production configs for casper'
-:e ../ops/install/sftp-citi.sh
-:cd ops
-:e install/
-:vimgrep /apt-get/ **/*.%:e
-:vimgrep /@slate/ **/*.%:e
-:!git commit % -m 'preliminary draft of API spec in README.md'
-:%s/````/`/gc
-:!open -a Marked %
-:help vim-mark
-:SyntasticCheck :
-:s/how/privacy/g
-:tabe models.coffee
-:Tabe mode
-:e routes.coffee
-:split routes/admin.coffee
-:e 
-:e routes/user.coffee
-:vs models.coffee
-:s/how/terms/g
-:s/ \([0-9]\)\./\r\1/g
-:s/ \([a-z]\)\./\r\1/g
-:s/ \(a-z\)\./\r\1/g
-:e Webmunch/Citi/scripts/README.md
-:e .gitignore
-:A;
-:%s/Scraper.super_/this/gc
-:$s/Scraper.super_/this/gc
-:%s/__super__/super_/g
-:'<,'>s/,/\r,/
-:e Webmunch/Citi/scripts/lcd.js
-:res 40
-:split %:h/lcd.coffee
-:98
-:s/"/'/g
-:close
-:b10
-:r Webmunch/Citi/Emaxx/universcusips_20120612.txt
-:e %:h
-:sav Webmunch/Citi/Emaxx/short_universe.txt
-:e Webmunch/Citi/Emaxx/universcusips_20120612.txt
-:buf Webmunch/Citi/scripts/emaxx.coffee
-:buf Webmunch/Citi/Emaxx.hs
-:123
-:!23
-:"set numb
-:e /tmp/wb.log
-:e /tmp/wb.
-:b1
-:cc 1
-:e Webmunch/
-:vimgrep /catt/ **/*.%:e
-:e Webmunch/casper.yaml
-:vimgrep /getboxhtml/ **/*.jade
-:'<,'>s/1/1.
-:spli
-:vertical resize  150
-:vertical resize  130
-:vertical resize  110
-:b2
-:e /usr/local/include/tesseract/ltrresultiterator.h
-:e /usr/local/include/tesseract/capi.h
-:e /usr/local/include/tesseract/baseapi.h
-:e ../vendor/tesseractH/lib/TesseractH/CAPI.chs
-:!open /Users/max/Library/Haskell/doc/index.html
-:e cabal-dev/cabal.config
-:r Webapp/Doc/Upload.hs
-:r Webapp/Doc/doc-upload.hs
-:e Webapp/Doc/Ocr.hs
-:!grep git ~/.vimrc
-:sav templates/app2.ts
-:cd ../../workers/
-:cd /tmp/emaxx/downloads/test/
-:set list
-:sav t.CSV
-:help ctrlp-options
-:Q
-:echo g:ctrlp_working_path_mode
-:split ~/.vimrc
-:%s/	""	/	" "	/g
-:r ../J79692.eMAXX\ Standard_20130616.CSV
-:e t.csv
-:e ~/.vim/
-:vertical resize  100
-:bu Webmunch/Citi/Scrapers.hs
-:v
-:e Webmunch/Parsers/EmaxxTsv.hs
-:!mkdir Webmunch/Parsers
-:e Webmunch/Parsers.hs
-:set ff=unix
-:split %:h/Fixtures.hs
-:97
-:buf MongoEnv.hs
-:vimgrep /route/ **/*.%:e
-:vimgrep /juliu/ **/*.%:e
-:'<,'>s/ *,* */:set -X
-:e .ghci
-:84
-:108
-:114
-:112
-:107
-:78
-:s/Text/BS.ByteString/g
-:%s/|/\r- /g
-:%s/|/\r- 
-:57
-:59
-:47
-:27
-:'<,'>s/" /", 
-:e Webmunch/Citi/Scrapers
-:'<,'>s/'.*'/''
-:'<,'>s/'.*'//
-:s/,/\r,/g
-:e MongoEnv.imports
-:e MongoEnv.i
-:%s/Azure/Scraper/gc
-:s/Just//
-:Tabe
-:vimgrep /droprecordpr/ **/*.%:e
-:vimgrep /droprecordr/ **/*.%:e
-:split scrape-emaxx.yaml
-:e app.js
-:'<,'>s/\/*>/)
-:'<,'>w /tmp/t
-:'<,'>w /tmp/d
-:!cp % ../../docmunch/assets/js/
-:CommandTFlush
-:sav Webmunch/Citi.hs
-:!mkdir 
-:echo ../webmunch/scripts/citi/emaxx.coffee
-:e ../webmunch/scripts/citi/emaxx.coffee
-:%s/EitherT/ErrorT/gc
-:split .ghci
-:%s/\<runWorkerM\>/runMongoM/gc
-:%s/\<WorkerM\>/MongoM/gc
-:e Import.im
-:%s/\<WorkerConf\>/MongoEnv/gc
-:%s/\<WorkerConf\>MongoEnv/gc
-:q!
-:%g/() *$/normal dd
-:e! %
-:e %
-:split .gitignore
-:!git add
-:vs .ghci
-:bqw
-:vs ,ghci
-:340
-:set shiftwidth=2
-:e ~/Desktop/UploadedDoc.imports
-:vimgrep /statusText/ **/*.%:e
-:wNex
-:so %
-:s/\<decodeString\>/FP.decodeString/gc
-:%s/\<encodeString\>/FP.encodeString/gc
-:458
-:r doc/upload/UploadedDoc.hs
-:r doc/up
-:r
-:lo
-:split doc/upload/mongoDB.yaml
-:split Model
-:split doc/upload/
-:split $:h
-:e doc/upload/
-:open w
-:vimgrep /widgetfi/ **/*.%:e
-:set filetype=haskell
-:22
-:e models
-:28
-:e UtilHelper.hs
-:e Models.hs
-:e webmunch.hs
-:e UploadedDoc.imports
-:e Util.hs
-:cf
-:cc 2
-:clui
-:vimgrep /yaml/ **/*.%:e
-:e scripts/install.sh
-:vimgrep /textbox/ **/*.%:e
-:e.
-:E 
-:vimgrep /\<getPageContent\>/ **/*.%:e
-:!mkdir scripts
-:'<,'>s/tdele/trEle
-:vimgrep /azureuti/ **/*.%:e
-:vimgrep /dagge/ **/*.%:e
-:e vendor/DefinitelyTyped/node/node.d.ts
-:e Gruntfile.js
-:314
-:e vendor/typescript-node-definitions/node.d.ts
-:140
-:e node_modules/connect-assets/lib/assets.js
-:\b
-:e ~/.config/fish/config.fish
-:set nocursorcolumn
-:help 'cuc'
-:e /tmp/raw.json
-:vimgrep /queue/ **/*.%:e
-:vimgrep /docutils.queue/ **/*.%:e
-:'<,'>g/,/normal J
-:'<,'>s/,/\r    ,/
-:'<,'>%s/,/\r    ,/
-:vimgrep /log.debug  *[a-zA-Z]/ **/*.%:e
-:vs _all.ts
-::bn
-:vw
-:.ll
-:r ~/development/docmunch/daggerboard-fund-reporting-app-v1/docmunch/.gitignore
-:split ../jQuery-File-Upload/angularjs.html
-:%s/'/"/g
-:r ~/development/docmunch/daggerboard-fund-reporting-app-v1/docmunch/routes.coffee
-:s/'/"/g
-:vimgrep /require.*routes/ **/*.%:e
-:r ~/development/docmunch/daggerboard-fund-reporting-app-v1/docmunch/log.coffee
-:r routes/
-:e log.coffee
-:clos
-:Wqa
-:vimgrep /css.*master/ **/*.%:e
-:qwa
-:'<,'>s/'/"/g
-:.,.+13!
-:%s!'/v!'v
-:'<,'>s
-:r assets/js/app.js
-:vimgrep /js.*app'/ **/*.%:e
-:vs assets/app.js
-:vs app.coffe
-:Vs app
-:'<,'>s/\${/{$/g
-:'<,'>s/:/ /g
-:'<,'>s/"//g
-:'<,'>s/{//g
-:'<,'>s/}//g
-:'<,'>s/}//
-:'<,'>s/{//
-:'<,'>s/ *$/"
-:'<,'>s/  *$/"
-:'<,'>s/=/ /
-:'<,'>s/export/set -x
-:set filetype=conf
-:%g!/export/normal dd
-:vimgrep /info  *[a-zA-Z]/ **/*.coffee
-:vimgrep /debug  *[a-zA-Z]/ **/*.coffee
-:vimgrep /debug  *[a-zA-Z]/ **/*.%:e
-:vimgrep /olark.*identify/ **/*.%:e
-:vimgrep /olark/ **/*.%:e
-:vimgrep /report/ **/*.%:e
-:vimgrep /paths.doc.raw/ **/*.%:e
-:vimgrep /azure/ **/*.%:e
-:vimgrep /checkadmin/ **/*.%:e
-:vimgrep /admin/ **/*.%:e
-:vimgrep /isadmin/ **/*.%:e
-:vimgrep /\<gs\>/ **/*.%:e
-:vimgrep /ghostscrip/ **/*.%:e
-:vimgrep /uti/ **/*.%:e
-:vimgrep /log.erro/ **/*.%:e
-:vimgrep /log.errot/ **/*.%:e
-:vimgrep /_cio.tr/ **/*.%:e
-:346
-:e views/static/password-reset-confirm.jade
-:e routes/home.coffee
-:vimgrep /fieldset/ **/*.%:e
-:sav views/static/password-reset.jade
-:tabe routes.coffee
-:tabe ~/.viminfo
-:Tabe 
-:319
-:e m
-:vimgrep /customer.*io/ **/*.%:e
-:e stat
-:e node_modules/passport-local-mongoose/lib/passport-local-mongoose.js
-:e assets/css/
-:285
-:'<,'>s/login/register/gc
-:E rou
-:E rouu
-:vimgrep /fullpage/ **/*.%:e
-:res 60
-:vertical resize  12-
-:vertical resize  50
-:spl routes/user.coffee
-:e routes/admin.coffee
-:e computeCost.m
-:441
-:!coffee %
-:vimgrep /\<makeDemoDoc\>/ **/*.%:e
-:E app.
-:105
-:219
-:'<,'>s!//.*$!// fix this type sig
-:155
-:75
-:%s/PATHS
-:vertical resize  104
-:vimgrep /iuser/ **/*.%:e
-:cc 6
-:set autoindent
-:set nosmartindent
-:set noautoindent
-:s/boolean/bool/g
-:'<,'>!coffee -s  -c
-:'<,'>!coffee -s -i -c
-:'<,'>!coffee -s -i
-:r! compi
-:s/main/admin/g
-:split assets/ts/_all.ts
-:r assets/ts/main/main-ctrl.ts
-:e assets/ts/admin/admin-ctrl.ts
 
 # Search String History (newest to oldest):
+?/binar
+?/type
+?/^<
+?/^==
+?/===
+? \<\$routeParams\>
+?/>>
+?/typesc
+?/install
+?/instal
+?/intall
+?/>>>
+?/temp
+? \<SHA\>
+?/sha
+? bson-0.2.3
+?/bson
+?/binary
+?/valraw
+?/name
+?/coldef
+?/titker
+?/dataset
+?/titler
+?/titlero
+?/perform
+?/confi
+? \<ext\>
+? \<mPdfPath\>
+?/{-
+?/<<<
+?/---
+?/loadra
+?/>>>>
+?/<<<nn
+?/owner
+?/coldefIds
+? {
+?/colde
+? \<stripWhiteSpace\>
+? \<toTextIgnore\>
+? \<tshow\>
+?/rorr
+? \<Text\>
+?/^datap
+? \<getTrimmedCells\>
+?/toLis
+? \<testCase\>
+? \<allPopulatedDataSets\>
+? \<refDsp\>
+?/populateda
+? \<pullFirst\>
+?/T\.
+?/data.te
+?/strip
+?/data.
+?/^dataro
+? \<dsNew\>
+? \<dsRef\>
+?/unpa
+? \<testXmlToPage\>
+? \<pageEnts\>
+? /
+?/weba
+? \<insertPageDataSets\>
+?/insertpa
+?/flatten
+?/as dm
+?/tell
+?/dli
+?/recurse
+?/resu
+? \<DataSetPopulated\>
+? ref
+?/testca
+? \<generateTableData\>
+?/populateds
+?/write
+?/print
+?/putstr
+?/dataset\>
+?/perfo
+?/map
+?/\$in
+?/ina
+? \<popDs\>
+?/testjs
+?/datagroup
+?/mongom
+?/hspec
+? \<namePrefix\>
+?/\<insertPageDataSets\>
+?/mkper
+?/userid
+?/new
+?/^doc
+?/rundb
+?/\<processrawpdf\>
+? \<processrawpdf\>
+?/inser
+? \<processRawPdfWithInk\>
+? \<processPage\>
+?/parseinksc
+?/extract
+?/name":
+?/name:
+?/colde.*name
+?/ids"
+?/\<insert\>'
+? \<insert\>
+?/insert
+?/db.insert
+?/as db
+?/'o'
+?/genObj
+?/objectid
+?/genob
+?/doco
+?/genO
+?/doc
+? \<docEnt\>
+? \<mTmpPath\>
+? \<parseInkscapeSvg\>
+?/rund
+? \<contents\>
+?/inksc
+?/runmongote
+?/rollba
+?/sdf
+? ^\S
+?/1.2.3
+? Generic
+?/persis
+? \<dataSetRaw\>
+?/models
+?/datase
+? JSON id 
+?  JSON id 
+? \<dropRecordPrefix\>
+?/defau
+?/aeson
+? aeson .*$
+? hspec *$
+?/hsp
+?  *$
+?  .*$
+? ^ 
+?   *json *$
+?/persiste
+?/pathpi
+?/ne ne
+? \<refDataSets\>
+? \<DataSet\>
+?/eitehrd
+? \<uncapiatalize\>
+?/no
+?/generate
+?/writefi
+? \<encode\>
+? \<ds\>
+?/malfor
+? \<putStrLn\>
+?/missing 
+?/missingj
+?/aeso
+? \<Rect\>
+?/rect
+?/show,
+?/json
+?/docum
+?/xml
+? \<runInkscape\>
+?/runink
+?/xml\.
+? \<hasExtension\>
+?/splitp
+?/runim
+?/runi\\bink
+?/mongm
+? \<throwNE\>
+?/is
+? \<runMongoTestM\>
+?/runmongo
+? \<PerformanceResult\>
+?/azurec
+? \<decodeEither\>
+?/decode
+? \<Models\>
+?/pretty
+?/visual
+?/perfor
+?/sdfds
+?/\/*
+?/hspec 
+?/perf
+?/inks
+? \<NonEmpty\>
+?/ne\.
+?/as ne
+?/mono
+?/sequ
+?/semi
+? \<testId\>
+?/splitpd
+?/parseink
+?/split
+? \<generateHtmlDisplay\>
+?/e2e
+? all
+?/dropre
+? \<getConf\>
+?/getcon
+?/dm-up
+?/local file
+?/heal
+?/\<show\>
+?/show
+? \<throwError\>
+?/showT
+?/upload
+?/classy
+?/ae
+?/bifun
+?/semig
+?/exports.ra
+?/raw
+?/saving to
+?/saving to az
+?/req.que
+?/user
+?/checkadm
+?/rootsc
+?/repo
+?/doc.datag
+?/datagrou
+?/exports.data
+?/s\.data
+?/\.data
+?/\.list
+?/datag.*list
+?/dgs
+? \<res\>
+? \<stream\>
+?/getblo
+?/dco
+?/req\.
+?/req.para
+? \<query\>
+?/adminro
+?/admin
+?/adming
+?/list
+?/datagr
+?/paths.datagrou
+?/datag.*show
+?/check
+?/chk
+? \<saveToAzure\>
+?/savi
+?/savingt
+?/filesys
+? \<pdfPathS\>
+? \<docPdfPath\>
+? \<t\>
+?/pdfpat
+? \<loadRawPdf\>
+?/-- 
+?/hspe
+?/upload-doc
+?/health
+?/^Doc
+? \<path\>
+?/loadrawp
+? \<getFromAzure\>
+? \<Azure\>
+?/azure
+?/savetoa
+?/pdfpa
+? \<pdfPath\>
+? \<azureUtils\>
+? \<NO_AZURE\>
+?/prdse
+?/fileuplo
+?/\<upload\>:
+? \<upload\>
+?/click
+?/small-
+?/onclick
+?  \+$
+? \<processedName\>
+? \<pollForNewDoc\>
+?/loaddoc
+?/click to
+? \<pollForReady\>
+?/pollforre
+? \<onDocImgsReady\>
+?/scope.stat
+?/\<pollForReady\>
+? \<loadDocSets\>
+?/newdoc
+?/_.filter
+?/location.p
+?/path
+?/ondoc
+?/docsets
+? \<onDocDataReady\>
+?/emit
+?/poll
+?/debugg
+? \<pendingUpload\>
+? \<pendingDocs\>
+?/pendingdoc
+? \<pendingUploads\>
+?/pendingup
+?/pending
+? \<UploaderCtrl\>
+? uploads
+?/genOb
+?/debug
+? ,
+?/fromjs
+?/tojson
+? \<Column\>
+?/column
+?/persis.*mo
+?/ -- 
+?/1\.2
+?/pers
+?/'d'
+?/'b'
+? \<withType\>
+?/mongoback
+?/1.2.3.
+?/\<o\>
+?/seria
+?/seriali
+?/cere
+?/as se
+? \<persistObjectIdToDbOid\>
+?/topath
+?/keytote
+? \<Objectid\>
+?/obje
+?/prefi
+?/fromjso
+?/unkn
+?/prefix
+?/vgprefix
+?/unknown pr
+?/issequ
+?/nonemp
+? \<Show\>
+?/params
+? \<b\>
+?/state
+?/iupload
+?/repeat
+? bootstrap
+? \<\$apply\>
+? \<message\>
+?/re
+? \<text\>
+?/contro
+?/info_ms
+?/temppa
+? \<randomPass\>
+?/uuid
+?/change
+?/====
+??L:
+?/issues
+?/resolve
+?/bugs
+?/yeay
+?/bugId
+?/url
+?/popula
+? \<deletedDate\>
+? \<type\>
+? bug
+?/ref.*us
+?/fordoc
+?/^issue
+?/^docsc
+?/newissu
+?/issue:
+?/newis
+?/submi
+?/forcea
+?/error
+?/reportt
+? \<resolveIssue\>
+? \<Bug\>
+? \<report\>
+? \<reportIssue\>
+?/issuere
+? \<IssueReportSchema\>
+?/bugsc
+? \<new\>
+?/ex
+? \<issueRoutes\>
+?/bugrou
+?/bug
+? ng-if
+? \<IMainScope\>
+?/scope.doc
+?/report
+?/ribbo
+? \<ribbon-height\>
+?/ribbon
+?/grid
+?/gutte
+?/\<reportTable\>
+? \<reportTable\>
+?/enum
+?  , 
+?/^test
+?/6test
+?/test
+?/\<bug\>
+?/\<resolveBug\>
+? \<bug\>
+? \<resolveBug\>
+?/spli
+?/thread
+?/acon-
+?/92241ta
+?/\+
+?/logging out 
+? l
+? 1
+?/dist.bu
+? \<binPath\>
+?/cabal
+?/about to pa
+?/recurseno
+?/command: 
+?/unequa
+? \<recurseNode\>
+?/textbo.*<
+?/instance p.*blo
+?/instance p
+? ['"][^'"]*\zs__COMMA__\ze[^'"]*['"]
+?/trace
+? \<toColumns\>
+?/\<toColumns\>
+? \<tableBlockToRowsOfCells\>
+? \<columize\>
+? \<columnizeFromTableBlock\>
+? \<error\>
+? \<rawCmd\>
+?/rawcm
+?/rau
+?/pdfsplit
+?/pdfspli
+? \<sourceDir\>
+?/\<processRawPdfWithInk\>
+? \<splitPdf\>
+?/withink
+?/wihtink
+?/upload.*path
+?/delete
+?/post
+? \<tmp_path\>
+?/splitPdf
+?/owner: 
+?/pdfsep
+?/stdin
+? \<sp_main_shell\>
+? \<sp_shell\>
+? \<SP_ARG_SHELL\>
+?/shell
+?/char
+?/key
+?/read
+?/tty
+?/shel
+?/ 7.934329
+?/7\.7.934329
+?/7\.93
+?/ 7.9
+?/>Acc
+?/>  *<
+?/>  <
+?/"  "
+?/scroll
+? ^pick.*progress
+?/af296
+? ^pick
+? \<s\>
+?/pick.*broken
+?/popp
+?/processrawpdfwi
+? \<pdf\>
+? \<saveXmlToDB\>
+? \<treeToBoxes\>
+?/treetob
+?/treetop
+?/uploaddoc wor
+?/processrawpdf
+?/upload-test
+?/lyn
+? \<\$timeout\>
+? \<width\>
+? \<cellToTextBox\>
+?/textb
+?/about to ge
+?/about to gene
+?/separa
+? \<mapConcurrently\>
+? \<logDebugS\>
+?/generat
+? \<mapConcurrentlyC\>
+?/mapcon
+?/getnum
+?/mapco
+? \<l\>
+? \<m\>
+? \<saveTable\>
+?/save
+?/require
+?/datagroupto
+?/about to 
+? \<dg\>
+?/changede
+?/destro
+? \<selectCell\>
+?/showcell
+?/\$on
+?/datasetto
+?/\<generateTableData\>
+? \<pageId\>
+? \<datagroupToTable\>
+?/ctab
+?/csv
+? \<colDefIds\>
+?/coldefi
+?/award
+?/profil
+?/parsein
+?/sclr
+?/scale\>
+?/inkscape-t
+? \<setVal\>
+?/selectce
+? \<screenDims\>
+? cell
+? top
+? \<boundingBox\>
+?/screendim
+?/select
+? \<addBoxes\>
+?/addbox
+?/class c
+?/textbox
+?/datag
+? \<rect\>
+?/0.01
+?/mergec
+?/dbg
+?/mergece
+?/tran.*size
+?/transla
+? \<transformManyX\>
+?/transform
+?/textboxw
+?/stc
+?/dbg-
+?/db-
+? \<stcParsedX\>
+?/sortw
+?/groupby
+? \<mergeCells\>
+? \<groupBy\>
+? \<groupWith\>
+? \<emptyF\>
+?/group
+?/groupb
+?/groupwith
+? \<sortWith\>
+?/types
+?/prelude
+?/sort
+?/sortwi
+? \<rows\>
+?/textboxhe
+? \<writeTextFile\>
+?/writet
+?/runinksc
+?/>
+?/writete
+?/files
+?/groupcel
+?/stdo
+?/breakc
+?/((Doub
+?/cyint
+?/stcchainx
+? \<ne\>
+?/stc\S
+? \<SvgTextCell\>
+? \<cy\>
+?/y
+? \<getX\>
+? \<getY\>
+? \<stcParsedSize\>
+?/trunca
+? \<stcXChain\>
+? \<stcParsedY\>
+?/stctra
+? \<y\>
+?/\<stcRawY\>
+? \<stcRawY\>
+?/vgt
+?/transfor
+? \<breakCells\>
+?/break
+?/nele
+?/prett
+?/displa
+? \<Prelude\>
+? \<zip\>
+? \<stcContents\>
+?/stccont
+?/xchain
+?/stcpar
+? \<Scale\>
+?/scale 
+?/inksca
+?/ex:
+?/sex
+? \<getCurrentTime\>
+?/getcu
+? \<processPdf\>
+?/processraw
+?/mapm
+?/mapm_
+?/col cou
+?/scales
+?/scale
+?/sca
+?/kkr
+?/stccontent = "[^"]*"
+?/stccontent = "[^"]"
+?/kkt
+?/x="\d.* -\d
+?/x=.* -\d
+?/tspa
+?/capital
+?/information
+?/related
+?/<<<<
+? \<check\>
+?/auto-ex
+?/runmo
+?/all don
+?/col co
+?/count
+?/processpdf
+?/ -
+?/extra
+?/processp
+?/360g
+?/360
+?/3940
+?/3940am
+?/2720semi
+?/2720semo
+?/400 ca
+?/deviation
+? \<text190\>
+? \<tspan192\>
+?/performanceand
+?/performance 
+? \<clipPath18\>
+?/clip
+?/page_
+?/not ru
+? \<transformMany\>
+? \<stcTransforms\>
+?/routes
+?/routs
+? \<transformManyY\>
+?/transformMan
+? \<stcRawStyles\>
+?/size =
+?/-- pu
+? \<size\>
+?/height
+? \<zoom\>
+?/img
+?/\<img\>
+?/mast
+?/\<bs\>
+?/lbs
+?/as bs
+?/pngpa
+?/imgdata
+? \<elemIndex\>
+? \<neSplit\>
+? \<neThrow\>
+?/breakcell
+? \<runStdoutLoggingT\>
+?/runst
+? \<ErrorT\>
+?/processr
+?/process]
+?/\<svg\>
+?/svg\>
+?/log
+?/tr
+?/catch
+? \<handleException\>
+?/process
+? \<processRawPdf\>
+?/processra
+?/table-test
+?/upload-te
+?/table-
+?/wemu
+? width
+?/attr
+?/work
+?/processRAw
+?/parseI
+?/t\.pack
+?/
+?/import
+? \<reutrn\>
+?/parseIn
+?/xml.read
+?/pdfspl
+? \<tmpPath\>
+?/mongoM.*doc
+?/runide
+?/runidex
+?/length
+? \<indexOf\>
+?/indexo
+?/svgtext
+?/errort
+?/svgtextc
+?/readfontsi
+? \<stcRawStyle\>
+? \<readCssStyle\>
+?/readcssst
+?/readcssty
+? \<xChain\>
+?/stcparsedx
+?/readcss
+? \<styles\>
+? \<breakBoxes\>
+?/breakb
+?/^text
+? \<paths.static\>
+? \<Exec\>
+?/\<paths.static\>
+? \<static\>
+?/static
 ? \<debugBoxStyle\>
 ? \<beforeMethod\>
 ? \<OnboardBasicForm\>
@@ -1057,7 +1816,6 @@ $
 ?/valida
 ?/<\/
 ?/hash
-?/user
 ? \<checkAdminOrInvited\>
 ? row-fluid
 ?/newacc
@@ -1093,7 +1851,6 @@ $
 ?/\<FpPolicy\>\C
 ? \<FpPolicy\>
 ?/upload_
-?  \+$
 ?/verific
 ?/-md
 ?/template.da
@@ -1124,7 +1881,6 @@ $
 ? \<readPvp\>
 ?/simplet
 ? \<readP_to_S\>
-?/show
 ?/shopw
 ?/totext
 ? \<catMaybes\>
@@ -1138,38 +1894,29 @@ $
 ? \<Application\>
 ?/MongoM (Do
 ?/Doc, \[en
-? \<styles\>
-? \<cellToTextBox\>
 ?/cellto
 ? \<takeWhile\>
 ? :
 ? ;
 ? \<clipPath48\>
 ?/attopa
-?/putstr
 ?/runwrit
 ?/first
 ? \<Error\>
 ?/{\.\.}
 ? \<emptyOrSingleton\>
 ? \<second\>
-? \<parseInkscapeSvg\>
 ?/dlist
 ?/runwriter
-? \<recurseNode\>
-?/dli
-?/parseIn
 ? \<runWriterT\>
 ?/document
 ? x\>
 ? x
-? \<SvgTextCell\>
 ? \<partitionEithers\>
 ?/either
 ?/DL\.
 ?/cursor
 ?/dl\.
-?/write
 ? Reader
 ? \<ReaderT\>
 ? \<shouldSatisfy\>
@@ -1177,15 +1924,12 @@ $
 ? mat
 ? \<readCssTransform\>
 ?/parsecss
-?/scale
 ?/matrix
 ?/treeto
 ?/treto
 ? \<def\>
 ? \<src\>
 ?/readme-
-? \<sourceDir\>
-?/xml\.
 ?/\.xml
 ?/as xml
 ? \<extractPdfData\>
@@ -1196,42 +1940,29 @@ $
 ?/tolow
 ? svg
 ?/encodes
-? \<rawCmd\>
 ?/pdftoh
-? \<tmpPath\>
 ?/filepat
-?/mongom
 ?/pdfto
 ? \<insertNewDoc\>
 ?/as x
 ?/mongoe
 ?/model
 ?/Uplo
-? \<saveXmlToDB\>
-?/treetob
-? \<treeToBoxes\>
 ? \<opts\>
-? \<insertPageDataSets\>
 ?/insertnew
-? \<generateTableData\>
 ?/handleer
-? \<throwError\>
 ?/throw
 ?/processrawp
 ?/display
-?/pretty
 ? \<display\>
-?/debug
 ?/column c
 ? \<runForkMongoM\>
 ?/runfork
-? \<processRawPdf\>
 ? \<rowsFromTableBlock\>
 ?/^page
 ?/running ta
 ?/rectsc
 ?/sdsdf
-?  *$
 ?/^ *console.
 ?/console.lo
 ?/colidmap.*name
@@ -1253,27 +1984,22 @@ $
 ? \<mkTable\>
 ? \<pageToDataSets\>
 ? \<toText\>
-?/defau
 ?/def
 ?/tab
 ?/defua
 ? \<intercalateCells\>
-?/as ne
 ?/rectain
 ?/\<Import\>\.
 ? \<Import\>
-?/persis
 ?/sql
 ? \<Cell\>
 ?/tcell
 ?/blao
-?/rect
 ?/rowofcell
 ?/non
 ?/extractta
 ?/system-file
 ?/semigr
-?/upload-doc
 ?/extrac
 ? \<rawTables\>
 ?/extracttab
@@ -1289,7 +2015,6 @@ $
 ?/makefie
 ?/\<BlockCells\>
 ? \<TCell\>
-? \<Column\>
 ?/table22
 ?/tabel22
 ?/block
@@ -1304,732 +2029,7 @@ $
 ?/cpp
 ? \<semigroups\>
 ?/semigo
-?/upload-te
-?/semig
 ? Left
-? \<Rect\>
-? \<pages\>
-?/classy
-? \<processDoc\>
-? \<processedDoc\>
-?/savexmlto
-?/\<processRawPdf\>[^"]
-?/extractpdfda
-? \<checkUserBalance\>
-?/docume
-? \<clipPath22\>
-?/\.hs
-?/sdf
-??justenv
-???
-?/asy
-?/runcmd
-?/https
-?/datas
-?/dataset
-?/datase
-?/mismat
-?/col count
-? \<generateHtmlDisplay\>
-?/test-
-?/emailregi
-?/modal
-?/vimeo
-? \<TT1D9t00\>
-? '
-?/font
-?/>>>
-?/definit
-?/wildi
-?/typed
-?/wildig
-?/PATH
-?/oath
-?/^>>>>>
-?/table-ex
-?/victor
-? \.hs *$
-? /
-? ^\.\/
-?/^\(.*\)\n\1
-?/n
-? ^\(.*\)\n\1
-? ^\(.*\)\r\1
-?/d-depen
-?/<<<
-? ^pick
-?/polar
-? \<grayLighter\>
-?/grayli
-?/phanto
-? \<echo\>
-?/azurify
-?/opts.
-?/di
-?/cp\>
-?/decodes
-? \<getConf\>
-?/getco
-? \<getEmaxxConf\>
-?/libra
-?/datagrou
-?/datagoup
-?/ws
-? \<cabalInstallCmd\>
-? \<asText\>
-?/interca
-?/intern
-? \<showPkgInfo\>
-? \<writeTextFile\>
-?/imp.*filesy
-? \<Trace\>
-?/trace
-? \<stripPackageHash\>
-? \<sshCmd\>
-? \<readCusips\>
-?/commandcas
-?/writefile
-? \<splitLength\>
-?/10
-? \<skipHolders\>
-?/holder
-?/_styleradi
-?/bondq-re
-?/bond-res
-?/wait\>
-?/wait
-?/command
-?/writetext
-?/runstd
-?/commands
-?/runcasp
-?/tagged
-?/pdfpa
-? \<fname\>
-?/getfromazu
-?/pdfpath
-?/bsinglet
-?/\<display
-?/displa
-?/fromte
-? \<mkBox\>
-? \<BuildingBlock\>
-? \<Block1\>
-?/\<T\>\C
-? \<T\>
-? \<TextBox\>
-?/textbox
-?/bsingleto
-?/link
-?/finds a sin
-?/print
-? \<box2\>
-? \<find2x2Tables\>
-?/find2x2tab
-?/mkbox
-?/defini
-? \<tbs\>
-? \<toBlock\>
-? \<processPage\>
-?/pagewithbo
-?/processdoc
-?/=====
-?/>>>>>>
-? \<tmp_path\>
-?/====
-?/processpa
-?/  *$
-?/mappe
-?/mapped to
-?/sourcedoc
-?/async.ma
-?/dgs
-?/ts.tag
-?/unimp
-?/popdg
-?/async
-? \<err\>
-?/err
-?/deleted
-?/^ *consol
-?/about to save
-? \<colIds\>
-?/\[null
-?/colIdma
-?/colId
-?/created se
-?/datasetto
-?/about ot
-?/erro\>
-? \<DataRowSchema\>
-?/datarowsch
-?/datarowsci
-?/erro
-?/coldefid
-? \<map\>
-? \<cbAddCol\>
-? \<rowIdx\>
-?/addcol
-? \<owner\>
-?/saving s
-?/datagroup
-?/^\S
-?/models.datagr
-?/models.datag
-? \<TextBoxRef\>
-? col
-? \<cb\>
-??callba
-?/boxre
-?/datasets
-?/^ *\n *$
-?/^ \n *$
-? ^ \r *$
-?/\<DatapointSchema\>\C
-? \<DatapointSchema\>
-? \<aeson\>
-? \<DatagroupSchema\>
-? ^\(\S*\)Schema .*$
-? ^\(\S*\)Schema
-? ^  
-?   *$
-?   \(\S\+\) 
-? \<\([A-Z]\S\+Id\)\>
-?  sql=.*$
-? \<\(\S\+Id\)\>
-? : Maybe \(\]\) *$
-?/ sql=.*$
-?/\(: *\)i\[\(\a\+ \?\)\]
-? \(: *\)i\[\(\a\+ \?\)\]
-? : Maybe *$
-? : *$
-? \(: *\)\(\S\+ \?\)
-? \(: *\)\(\S\+ \?\) 
-?/\(: \+\)\(\S\+\)
-?/\(: \+\)
-?/	
-?/\(: \+\)\(\S\+\) 
-?/\(: \+\)\(\S\+ *\) 
-? \(: \+\)\(\S\+ *\) 
-? \(: *\)\(\S\+ *\) 
-? \(: *\)\(\S\+ ?\) 
-? \(: *\)\(\S\+\) 
-? \<ByteString\>
-? \<DataColDefId\>
-?/test
-?/class
-?/maybe 
-?/currencyu
-?/filepa
-?/^ *--
-?/ *--
-? \<Bool\>
-? \<Boole\>
-? ^ *$
-?/^  base
-? \<StyledText\>
-?/styledt
-?/US026874BZ97
-? [",]
-? \<keypressValidateTimeout\>
-?/keypress
-?/click
-?/relati
-?/font-fam
-?/tt1
-?/\<InstalledPackageId\> "mongodb-que
-? \<InstalledPackageId\>
-?/mongodb-queue
-? ,
-? {
-?/mongodb-queu
-?/queue
-?/io
-?  -> 
-?/build-t
-?/mon.*queu
-?/pageswithbox
-?/popula
-?/tabletoda
-?/Users/max/development/vouch w
-?/eents
-?/ \+$
-?/admin
-?/verifica
-? \<verificationId\>
-?/name=
-? \<options\>
-? \<fpPolicy\>
-?/fpimg
-? \<stiTest\>
-? \<identity\>
-?/verify
-?/new-user
-? \<highlightStage\>
-? \<onboardHeader\>
-? \<verifyId\>
-?/onboardver
-?/onboardrel
-?/session.set
-?/session
-?/template nam
-? \<rendered\>
-? \<onboardBasic\>
-?/create
-?/switch
-?/qunit
-?/receiv
-? \<received\>
-? \<login\>
-?/lookup
-?/-- *textbo
-?/--
-?/\.page\>
-? \<tbIdMap\>
-?/tbid
-?/textboxre
-?/itext
-? \<boxIds\>
-?/idatapo
-? \<lookupTextBox\>
-? \<textBoxDict\>
-?/tb.*id
-?/virtual
-?/1.3.*
-?/==
-? 1.2.0.1
-?/-mongo
-?/\<textBoxId\>
-?/d140eab
-? \<textBoxId\>
-?/objectid
-?/>>>>
-?/===
-?/window\.
-?/confir
-?/leader.*p
-?/vimpro
-?/maplea
-?/control-
-?/table-extra
-?/table-exta
-?/>p
-?/leader
-?/<<<<<<
-? \<setupTextBoxes\>
-?/t.null
-?/US026874BS54
-?/v.null
-? ","
-? \]
-?/filesys
-?/readcusip
-?/writecomm
-?/runcasper
-? \<withVerification\>
-?/with
-?/no new
-?/dry
-?/groups
-?/\<withVerification\>
-? \<runCasper\>
-?/no new f
-?/no new fil
-? \<DataCommand\>
-?/datacomm
-?/DATA
-?/running co
-? \<wait\>
-?/delay
-?/echo.*debu
-?/echo
-?/load faile
-? \<DTE\>
-?/rename
-?/data.eith
-?/data.eir
-?/data.
-?/onresour
-?/onresource
-?/>>
-?/yaml
-? \<lcd\>
-?/onresou
-?/shelly
-?/liftio.*print
-?/star
-? "lcd"
-?/"lcd"
-?/lcd
-? \<_\>
-? ^\(.*\)$\n\1
-?/^\(.*\)$\n\1
-?/^\(.*\)$\r\1
-? ^\(.*\)$\r\1
-?/handleex
-?/tag_stack.push
-?/">"
-? \<emptyTags\>
-? \<tag_stack\>
-?/stack
-?/toxx
-?/tohn
-?/tohtml
-? \<toHtml\>
-?/toH	
-?/creation
-?/parse
-? \<code\>
-? \<editProfile\>
-?/editP
-? dashboard
-?/hml
-?/acc
-?/handlep
-?/ww\.
-??se
-?/pixdes
-?/pixwrite
-?/undefined
-? \<REMOVE_CMAP\>
-?/get.*color
-?  =
-?/pixremovecolo
-? \<withSauvola\>
-?/withsauvol
-?/wihtsau
-?  .*$
-? ^  *
-?/where
-?/default
-?/data.def
-?/pix_su
-?/unde
-? \<boxaGetBox\>
-? \<boxaGetCount\>
-? \<Box\>
-? \<pixConvertRGBToGrayFast\>
-?/sauvo
-?/withSa
-?/withotsu
-?/withotu
-?/otsu
-?/sauvola
-?/settings
-?/_clr
-?/pixclr
-? Ptr BOX
-? \<cBoxW\>
-? \<cBoxToBox\>
-?/cboxtobox
-? \<cBoxX\>
-?/cboxx
-?/pix_sub
-? \<pixRasterop\>
-?/pixraster
-?/boxagetbo
-?/\<pixaGetPix\>
-?/\<boxaGetbo
-?/\<boxaGetx\>
-? \<pixaGetPix\>
-?/pixagetbo
-?/boxaget
-?  ::.*$
-?/rasterop
-? \<Bits\>
-? =
-? $
-? #define *\<
-? \<Rasterop\>
-?/raster
-?/pixrasterop
-?/paint
-?/IFF_P
-? \<ACCESS_TYPE\>
-?/access_t
-? \<pixaGetBox\>
-? boxa
-? \<pixaGetCount\>
-?/\<boxaGetBox\>
-? \<fronEnum\>
-?/pixagetpix
-?/pixa.*count
-?/pixa
-?  
-?/unsafeper
-? \<TessBaseAPI\>
-? '_$
-?/box
-? TesseractH.CAPI.\([^ ]*\)\> ::.*$
-? TesseractH.CAPI.\([^ ]*\)\> :: .*$
-? TesseractH.CAPI.\(.*\)\> :: .*$
-? ^   *
-? ^ *
-? data TesseractH.CAPI.\(.*\)\> *$
-? data TesseractH.CAPI.\(.*\) =.*$
-? type TesseractH.CAPI.\(.*\) =.*$
-? type \(.*\) =.*$
-?/conncomp
-?/left
-?/graypi
-?/pixth
-?/newpix
-?/pix_ff
-?/relea
-?/free
-?/pixconvertr
-?/8bpp
-?/monogr
-?/pix[a-zA-z]*depth
-?/depth
-?/pix.*bpp
-?/bpp
-?/pixdepth
-?/struct pi
-?/pixbb
-?/pixotsuada
-?/pixacreate
-?/pixconncomp
-?/boxa[^ ]
-?   *
-?/\<pixwrite
-? \<pixWrite\>
-?/added
-?/classyp
-? \<processOutputFiles\>
-?/\<processOutputFiles\>
-? \<runScrape\>
-?/\<processOutputFilesr
-?/dumpfi
-?/running gr
-?/running go
-? \<processResults\>
-? \<colHeadingCount\>
-?/\<pixWRite
-?/pixwr
-? \<w\>
-? BoxW
-?/struct
-? \<include\>
-?/boxa
-?/struct box
-?/conn
-?/PIX
-?/allt
-?/float
-?/pixxconncom
-?/pixclone
-?/pixconn
-?/connected
-? \<dmUser\>
-?/ *$
-?/ *$ 
-?/pixread
-?/hocr
-?/\<TessBaseAPIinit
-?/read.*mem.jp
-? \<TessBaseAPISetImage\>
-?/cuchar
-?/apt-get
-?/read.*png
-?/pdf
-? \<datagroupId\>
-?/map
-? \<mkUsbReq\>
-?/late
-?/str.ma
-? \<usbankCdoList\>
-?/randoms
-?/randpgt
-?/apikey
-? \<loginPage\>
-?  \([a-z]\)\.
-?  \(a-z\)\.
-?/   0fa
-?/load err
-? \<scrape\>
-? Scraper.super_
-? __super__
-? \<require\>
-? \<Scraper\>
-? \<__hasProp\>
-?/usbank
-?/start
-?/cancel
-?/setTim
-? \<ClassyPrelude\>
-?/insert
-? \<cleanAndConcatenateEmaxxData\>
-? \<dumpFile\>
-?/runscrap
-? \<csvConf\>
-? \<group\>
-? \<encode\>
-?/encode
-?/runcas
-?/mkdir
-?/files
-?/dumpfil
-?/catt
-?/showMo
-? "
-?/showmodal
-?/popup
-?/error in pop
-?/-all
-?/\<wait\>
-?/po
-?/opup
-? \<exitOnErorr\>
-?/onloader
-? \<ctl00_BodyContent_HoldersSubMenuTabList_Submenutablist1_Repeater1_ctl02_lbButton\>
-?/subm
-?/\<654\>
-?/\<669\>
-?/669
-?/5
-?/checkcusip
-?/checksup
-?/661
-?/: check
-? \<readLine\>
-? \<checkCusip\>
-?/catt'ed
-? [ "]
-? 1
-?/pixread.*jpeg
-?/pixread.*png
-?/SetImage
-?/baseapitsetim
-?/pixread.*jp.*g
-?/pixread.*jp*g
-?/pixreadmem.*$
-?/pixreadmem
-?/pixreadstr
-?/extern PIX .*$
-?/extern PIX 
-?/extern PIX
-?/\<pixRead\>
-?/pixRead\>
-?/pixRead
-?/getho
-?/gethocr
-?/encod
-?/utf8
-?/uplo
-? 	""	
-?/	""	
-? coffee
-?/jade
-? \<DBS\>
-?/encoding
-?/replace
-?/att
-?/sear
-? \<widgetFileSettings\>
-?/readF
-?/listd
-?/mongoer
-? \<ThreadId\>
-?/runforkmon
-?/app
-?/rou
-?  *,* *
-?/passw
-? \<e\>
-? \<AppError\>
-?/apperror
-?/decodeop
-? Text
-?/conf
-? \<acc\>
-? \<t\>
-? |
-?/vector
-?/as bsl
-? \<pathToDownloads\>
-?/pro
-?/rpocess
-?/reader
-?/readter
-? \<Temp\>
-?/monadba
-?/controlio
-?/contorlio
-?/runmongo
-?/worker_en
-? \<runErrorT\>
-?/runerro
-? \<MongoM\>
-? \<AppErrorT\>
-?/apper
-?/rinap
-? '.*'
-?/data.aes
-?/success
-?/succes
-? \<ScraperConfJson\>
-? Azure
-?/azurec
-?/filep
-? \<parseMonad\>
-? \<MongoEnv\>
-?/mongoenv
-? \<deriveFromJSON\>
-?/apperr
-? \<getEnvT\>
-? Just
-? \<translateEnv\>
-?/tra
-? \<lookupEnv\>
-? \<Environment\>
-?/environ
-?/getenv
-? \<loadMongoEnv\>
-? \<getAzureConf\>
-?/text
-?/azure.ya
-?/citi
-?/draftf
-?/datagro.*repl
-? \<Map\>
-?/justenv
-? \<MonadIO\>
-?/monadI
-?/loadya
-? \<justEnv\>
-? EitherT
-?/eithert
-? \<runMongoM\>
-?/j
-?/IO a
-?/runreadert
-?/worker
-? \<loadWorkerConf\>
-?/loadwo
-?/alloca
-?/workerM
-? \<runWorkerM\>
-?/\<runWorkerM\>q:
-?/action
-?/toimgda
-? \<WorkerM\>
-? \<WorkerConf\>
-? \<WorkerConf\>MongoEnv
-? () *$
-? \<toFilePath\>
-?/t\.pa
-? \<showT\>
-?/m.lookup
-?/\<m\.
-? \<readT\>
-?/\<T\.
-?/T\.
-? \<getHostName\>
-?/bsd
-? \<docRootName\>
-?/\<docRoute\>
-?/bufen
 
 # Expression History (newest to oldest):
 =yy
@@ -2044,82 +2044,34 @@ $
 
 # Registers:
 "0	LINE	0
-	        <input type="submit" >
-	      <button class="btn btn-info skip">Just me for now..
+		url = git@github.com:docmunch/DefinitelyTyped.git
+	        branch = lodash
 ""1	LINE	0
-	let g:netrw_dirhistmax  =10
-	let g:netrw_dirhist_cnt =3
-	let g:netrw_dirhist_1='/Users/max/development/docmunch/dm-spare/docmunch/test/e2e'
-	let g:netrw_dirhist_2='/Users/max/development/docmunch/MAIN_REPO/workers'
-	let g:netrw_dirhist_3='/Users/max/development/vouch/vouch_app/lib'
+		url = https://github.com/borisyankov/DefinitelyTyped.git
 "2	LINE	0
-	<template name="onboardRelationship">
-	  {{> onboardHeader }}
-	  <div class="row-fluid">
-	    <div class="span3">
-	      <p>
-	        have a partner?  invite them to join you.
-	        if not, its ok to skip this step.  also, to the poly folks, we're adding
-	        group support soon.  you are not forgotten
-	    <div class="span9">
-	      <form class="validate form relationship">
-	        {{#control-group-fields "pick a cute username for your and your partner to share"}}
-	271
-<          <input  data-validation-regex-regex="[A-Za-z0-9]{3,}" data-validation-regex-message="just letters and numbers please" data-validation-minlength-message="at least 3 characters" minlength="3" required type="text" name="relname" placeholder="killer_user_name"/>
-	        {{/control-group-fields }}
-	        {{#control-group-fields "partner's email"}}
-	          <input required type="email" name="email" placeholder="awesome@sau.ce"/>
-	        {{/control-group-fields }}
-	        {{> inputGender}}
-	        <input type="submit" >
-	      <button class="btn btn-info skip">Just me for now..
+	>>>>>>> origin/gw-services
 "3	LINE	0
-	          <button.btn.btn-primary type="submit" data-meteor-method="onboardBasic">Save
+	  cat docmunch-workers.lock.yaml | grep '    -' | cut -d '-' -f 6 | sort | uniq | xargs cabal install -j --force-reinstalls --reinstall > cabal.config
+	  # since we're going to build upload-doc anyway, save some cycles
+	  cabal install --only-dependencies
+	=======
+	  rm cabal.config
+	  echo "constraints: Cabal >= 1.18.0" > cabal.config
 "4	LINE	0
-	        {{/autoForm}}
+	<<<<<<< HEAD
 "5	LINE	0
-	        {{#autoForm schema="OnboardBasicForm" id="onboardBasicForm" validation="keyup"}}
-	          {{afQuickField 'name' autofocus='true' placeholder="name"}}
-	          {{afQuickField 'gender' options=genders}}
-	          {{afQuickField 'zipcode'}}
-	          <.row>
-	            <.col-md-6>
-	              {{afQuickField 'bYear'}}
-	              <p.text-muted>required
-	            <.col-md-6>
-	              <.row>
-	                <.col-md-6>{{afQuickField 'bMonth'}}
-	                <.col-md-6>{{afQuickField 'bDay'}}
-	              <.row>
-	                <p.col-md-12.text-muted>optional
+	  echo "constraints:" > cabal.config
 "6	LINE	0
-	  {{> obTest2 }}
+	      # console.log "mapped to : " , util.inspect [convErr, dgs], colors: true, depth: 3
 "7	LINE	0
-	<template name="obTest">
-	  {{this}}
-	<template name="obTest2">
-	  <h1> foo
-	  {{> obTest this}}
+	    if reqdd.query?.testJsonData?
 "8	LINE	0
-	        # <form class="validate form profile">
-	        #   {{#control-group-fields "choose your username (remember, this is for you, not your relationship unit)"}}
-	272
-<        #     <input  data-validation-regex-regex="[A-Za-z0-9]{3,}" data-validation-regex-message="just letters and numbers please" data-validation-minlength-message="at least 3 characters" minlength="3" required type="text" name="name" placeholder="killer_user_name"/>
-	        #   {{/control-group-fields }}
-	        #   {{> inputGender}}
-	        #   {{#control-group-fields "birthday (ok to just give the year)"}}
-	        #     <input data-validation-max-message="sorry, you have to be 18.. :( " data-validation-min-message="are you really over 113 years old?" min="1900" max="1995" required type="number" name="birthyear" placeholder="YYYY"/>
-	        #       <select name="birthmonth">
-	        #         <option value="0">month
-	        #         {{#each months}}<option value="{{idx}}">{{short}}{{/each}}
-	        #       <select name="birthday">
-	        #         <option value="0">day
-	        #         {{#each days}}<option value="{{idx}}">{{idx}}{{/each}}
-	        #   {{/control-group-fields }}
-	        #   {{> inputZipcode}}
-	        #   <input type="submit" >
+	
 "9	LINE	0
 	
+	interface IMainRouteParams extends ng.IRouteParamsService {
+	  docId?: string;
+	}
 "a@	CHAR	0
 	ilsdkfjkl  kjl`.€kr€kr€kr€kr€kr€kr€kr€krj
 "b	CHAR	0
@@ -2140,2951 +2092,1489 @@ $
 "w	CHAR	0
 	:w\P
 "-	CHAR	0
-	Basic
+	*
 
 # File marks:
-'0  98  4  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/ingest/ingest-ctrl.ts
-'1  1  0  ~/development/docmunch/REPO_mc61/.git/MERGE_MSG
-'2  94  0  ~/development/vouch/vouch_app/client/lib/views/accounts.hamlet
-'3  8  0  ~/development/docmunch/MAIN_REPO/.git/COMMIT_EDITMSG
-'4  1  86  ~/development/docmunch/MAIN_REPO/.git/rebase-merge/git-rebase-todo
-'5  1  0  ~/.vimrc
-'6  4771  0  /private/tmp/all-cmds.log
-'7  6  0  ~/development/docmunch/MAIN_REPO/.git/COMMIT_EDITMSG
-'8  19  0  ~/development/docmunch/MAIN_REPO/.git/rebase-merge/git-rebase-todo
-'9  56  63  ~/.zshrc
+'0  169  4  ~/development/docmunch/MAIN_REPO/workers/cabal.config
+'1  6  0  ~/development/docmunch/MAIN_REPO/.git/config
+'2  9  1  ~/development/docmunch/MAIN_REPO/.git/config
+'3  51  0  ~/development/docmunch/MAIN_REPO/docmunch/package.json
+'4  35  0  ~/development/docmunch/MAIN_REPO/workers/bin/webapp
+'5  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/10-before-logout.png
+'6  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/08-before-delete.png
+'7  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/05-right-after-selector.png
+'8  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/03-before-upload-new.png
+'9  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/02-quickFormFill.png
 
 # Jumplist (newest first):
--'  98  4  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/ingest/ingest-ctrl.ts
--'  12  5  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/ingest/ingest-ctrl.ts
--'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/angular-app.ts
--'  24  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/css/ingest.less
--'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/css/account.less
--'  1  0  ~/development/docmunch/REPO_mc61/.git/MERGE_MSG
--'  94  0  ~/development/vouch/vouch_app/client/lib/views/accounts.hamlet
--'  43  29  ~/development/vouch/vouch_app/collections/profiles.coffee
--'  6  7  ~/development/vouch/vouch_app/lib/forms.coffee
--'  6  0  ~/development/vouch/vouch_app/lib
--'  15  0  ~/development/vouch/vouch_app/lib
--'  54  16  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  75  0  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  81  2  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  77  0  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  36  5  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  109  16  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  64  16  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  67  3  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  23  15  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  27  17  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  87  32  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  88  10  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  6  10  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  186  10  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  184  23  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  139  38  ~/development/vouch/vouch_app/client/lib/views/accounts.hamlet
--'  131  0  ~/development/vouch/vouch_app/client/lib/views/accounts.hamlet
--'  77  0  ~/development/vouch/vouch_app/client/lib/views/accounts.hamlet
--'  7  0  ~/development/vouch/vouch_app/client/main.html
--'  9  43  ~/development/vouch/vouch_app/client/css/master.less
--'  5  2  ~/development/vouch/vouch_app/client/main.html
--'  6  4  ~/development/vouch/vouch_app/client/main.html
--'  1  0  ~/development/vouch/vouch_app/client/lib/views/accounts.hamlet
--'  34  25  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  35  5  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  63  4  ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
--'  1  0  ~/development/vouch/vouch_app/client/view_helpers/admin.coffee
--'  8  4  ~/development/vouch/vouch_app/smart.json
--'  12  0  ~/development/vouch/vouch_app/smart.json
--'  8  23  ~/development/vouch/vouch_app/client/lib/views/user.hamlet
--'  5  32  ~/development/vouch/vouch_app/client/lib/views/user.hamlet
--'  1  0  ~/development/vouch/vouch_app/smart.json
--'  8  0  ~/development/docmunch/MAIN_REPO/.git/COMMIT_EDITMSG
--'  1  0  ~/development/docmunch/MAIN_REPO/.git/COMMIT_EDITMSG
--'  1  86  ~/development/docmunch/MAIN_REPO/.git/rebase-merge/git-rebase-todo
--'  1  0  ~/.vimrc
--'  127  4  ~/.vimrc
--'  82  0  ~/.vimrc
--'  4771  0  /private/tmp/all-cmds.log
--'  811  0  /private/tmp/all-cmds.log
--'  1  0  /private/tmp/all-cmds.log
--'  6  0  ~/development/docmunch/MAIN_REPO/.git/COMMIT_EDITMSG
--'  19  0  ~/development/docmunch/MAIN_REPO/.git/rebase-merge/git-rebase-todo
--'  56  63  ~/.zshrc
--'  1  0  ~/.zshrc
--'  351  8920  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  340  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  336  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  332  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  325  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  321  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  317  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  313  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  309  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  305  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  301  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  297  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  293  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  289  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  285  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  281  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  277  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  273  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  269  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  265  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  258  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  251  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  244  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  237  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  230  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  223  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  219  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  215  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  211  159  ~/Google Drive/Docmunch/Demo PDFs/Private/400 Capital/te.svg
--'  291  47  ~/development/github/meteor-autoform/autoform-client.js
--'  294  29  ~/development/github/meteor-autoform/autoform-client.js
--'  4  0  ~/development/github/meteor-autoform/autoform-common.js
--'  12  4  ~/development/github/meteor-autoform/autoform-server.js
--'  2  0  ~/development/github/meteor-autoform/autoform-server.js
--'  736  4  ~/development/github/meteor-autoform/autoform-client.js
--'  731  49  ~/development/github/meteor-autoform/autoform-client.js
--'  278  12  ~/development/github/meteor-autoform/autoform-client.js
--'  270  35  ~/development/github/meteor-autoform/autoform-client.js
--'  266  36  ~/development/github/meteor-autoform/autoform-client.js
--'  265  49  ~/development/github/meteor-autoform/autoform-client.js
--'  264  31  ~/development/github/meteor-autoform/autoform-client.js
--'  34  13  ~/development/github/meteor-hamlet-handlebars/plugin/compile-hamlet-templates.js
+-'  169  4  ~/development/docmunch/MAIN_REPO/workers/cabal.config
+-'  23  0  ~/development/docmunch/MAIN_REPO/workers/cabal.config
+-'  22  7  ~/development/docmunch/MAIN_REPO/workers/cabal.config
+-'  51  12  ~/development/docmunch/MAIN_REPO/workers/cabal.config
+-'  1  0  ~/development/docmunch/MAIN_REPO/workers/cabal.config
+-'  6  0  ~/development/docmunch/MAIN_REPO/.git/config
+-'  1  0  ~/development/docmunch/MAIN_REPO/.git/config
+-'  9  1  ~/development/docmunch/MAIN_REPO/.git/config
+-'  7  7  ~/development/docmunch/MAIN_REPO/.gitmodules
+-'  1  0  ~/development/docmunch/MAIN_REPO/.gitmodules
+-'  51  0  ~/development/docmunch/MAIN_REPO/docmunch/package.json
+-'  4  5  ~/development/docmunch/MAIN_REPO/docmunch/package.json
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/package.json
+-'  35  0  ~/development/docmunch/MAIN_REPO/workers/bin/webapp
+-'  1  0  ~/development/docmunch/MAIN_REPO/workers/bin/webapp
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/10-before-logout.png
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/08-before-delete.png
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/05-right-after-selector.png
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/03-before-upload-new.png
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/02-quickFormFill.png
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png
+-'  101  0  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
+-'  61  0  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
+-'  84  0  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
+-'  29  7  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+-'  2404  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+-'  326  24  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+-'  45  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+-'  34  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+-'  26  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+-'  24  4  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+-'  9  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+-'  7  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+-'  5  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+-'  6  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+-'  29  54  ~/development/docmunch/MAIN_REPO/workers/bin/webapp
+-'  27  136  ~/development/docmunch/dm-gw-services/workers/bin/webapp
+-'  28  8  ~/development/docmunch/dm-gw-services/workers/bin/webapp
+-'  24  9  ~/development/docmunch/dm-gw-services/workers/bin/webapp
+-'  11  55  ~/development/docmunch/dm-gw-services/workers/bin/webapp
+-'  1  0  ~/development/docmunch/dm-gw-services/workers/bin/webapp
+-'  37  54  ~/development/docmunch/dm-gw-services/workers/bin/webapp
+-'  12  0  ~/development/docmunch/dm-gw-services/workers/bin/webapp
+-'  340  17  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+-'  70  3  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+-'  369  0  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+-'  71  51  ~/development/docmunch/MAIN_REPO/koality.yml
+-'  68  46  ~/development/docmunch/MAIN_REPO/workers/Test/test-inkscape.hs
+-'  817  23  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  639  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  474  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  309  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  162  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  222  8  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  69  8  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  14  31  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  180  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  329  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  493  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  659  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  823  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  981  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  984  26  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  834  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  39  35  ~/development/docmunch/MAIN_REPO/koality.yml
+-'  26  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  204  11  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  175  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  49  11  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  21  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  1  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+-'  402  0  ~/development/docmunch/MAIN_REPO/workers/workers.cabal
+-'  22  59  ~/development/docmunch/MAIN_REPO/workers/Test/README.md
+-'  1  0  ~/development/docmunch/MAIN_REPO/README.md
+-'  79  27  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
+-'  212  39  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
+-'  209  0  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
+-'  205  46  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
+-'  189  46  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
+-'  359  27  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+-'  353  10  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+-'  352  37  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+-'  373  30  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+-'  34  2  ~/development/docmunch/MAIN_REPO/workers/Webapp/models
+-'  35  27  ~/development/docmunch/MAIN_REPO/workers/Webapp/models
+-'  44  14  ~/development/docmunch/MAIN_REPO/workers/Webapp/models
+-'  370  27  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+-'  268  13  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Table/Extract.hs
+-'  228  0  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+-'  1  0  ~/development/docmunch/MAIN_REPO/workers/Webapp/models
+-'  390  14  ~/development/docmunch/MAIN_REPO/workers/workers.cabal
 
 # History of marks within files (newest to oldest):
 
-> ~/development/docmunch/MAIN_REPO/docmunch/assets/css/account.less
-	"	1	0
+> ~/development/docmunch/MAIN_REPO/workers/cabal.config
+	"	169	4
+	.	1	0
+	+	1	0
 
-> ~/development/docmunch/MAIN_REPO/docmunch/assets/css/ingest.less
-	"	24	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/angular-app.ts
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/ingest/ingest-ctrl.ts
-	"	98	4
-
-> ~/development/docmunch/REPO_mc61/.git/MERGE_MSG
-	"	1	0
-
-> ~/development/vouch/vouch_app/smart.json
-	"	15	0
-	^	12	73
-	.	12	72
-	+	1	0
-	+	3	0
-	+	6	0
-	+	13	0
-	+	12	16
-	+	13	59
-	+	13	4
-	+	12	18
-	+	13	0
-	+	12	72
-
-> ~/development/vouch/vouch_app/ControlP
-	"	2	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-
-> ~/development/vouch/vouch_app/client/lib/views/user.hamlet
-	"	8	23
-	^	5	33
-	.	5	0
-	+	1	0
-	+	4	44
-	+	1	26
-	+	4	47
-	+	4	36
-	+	4	47
-	+	8	12
-	+	4	53
-	+	8	0
-	+	4	32
-	+	8	0
-	+	4	39
-	+	7	0
-	+	4	39
+> ~/development/docmunch/MAIN_REPO/.git/config
+	"	6	0
+	.	9	0
 	+	9	0
-	+	8	0
-	+	9	0
-	+	8	15
-	+	7	0
-	+	6	10
-	+	7	0
-	+	6	11
-	+	7	32
-	+	5	0
 
-> ~/development/vouch/vouch_app/client/view_helpers/admin.coffee
-	"	1	0
-	^	4	25
-	.	4	0
-	+	14	19
-	+	17	49
-	+	1	34
-	+	12	0
-	+	6	0
-	+	10	5
-	+	15	31
-	+	17	0
-	+	16	10
-	+	8	49
-	+	9	52
-	+	10	48
-	+	11	27
-	+	8	0
-	+	7	17
-	+	9	41
-	+	5	0
-	+	2	0
-	+	4	43
-	+	4	27
-	+	4	16
-	+	2	9
-	+	2	0
-	+	2	9
-	+	2	9
-	+	2	23
-	+	2	9
-	+	4	0
-	+	4	0
-	+	4	0
-	+	4	47
-	+	4	28
-	+	4	35
-	+	4	37
-	+	4	49
-	+	2	0
-	+	4	0
+> ~/development/docmunch/MAIN_REPO/.gitmodules
+	"	6	0
+	^	7	8
+	.	7	7
+	+	7	7
 
-> ~/development/vouch/vouch_app/client/view_helpers/accounts.coffee
-	"	102	33
-	.	87	0
-	+	67	44
-	+	67	0
-	+	65	0
-	+	64	20
-	+	77	12
-	+	77	5
-	+	77	11
-	+	77	9
-	+	77	9
-	+	77	15
-	+	77	37
-	+	77	15
-	+	77	17
-	+	77	13
-	+	77	0
-	+	77	21
-	+	77	14
-	+	77	0
-	+	77	0
-	+	77	16
-	+	77	0
-	+	77	45
-	+	77	47
-	+	77	10
-	+	77	63
-	+	77	61
-	+	77	0
-	+	77	0
-	+	77	19
-	+	77	27
-	+	77	46
-	+	77	19
-	+	77	0
-	+	77	4
-	+	77	15
-	+	77	0
-	+	77	16
-	+	77	13
-	+	77	20
-	+	77	16
-	+	77	11
-	+	77	31
-	+	77	8
-	+	77	9
-	+	77	0
-	+	77	0
-	+	77	21
-	+	77	17
-	+	77	15
-	+	77	32
-	+	77	0
-	+	77	7
-	+	77	0
-	+	77	14
-	+	81	15
-	+	82	13
-	+	83	69
-	+	87	0
-	+	77	20
-	+	77	0
-	+	77	11
-	+	77	21
-	+	77	3
-	+	77	3
-	+	77	3
-	+	77	3
-	+	77	7
-	+	77	0
-	+	77	0
-	+	77	6
-	+	77	8
-	+	77	2
-	+	77	6
-	+	77	8
-	+	77	2
-	+	77	9
-	+	77	10
-	+	77	22
-	+	77	0
-	+	77	22
-	+	77	0
-	+	74	20
-	+	77	0
-	+	77	0
-	+	70	0
-	+	77	0
-	+	77	0
-	+	76	0
-	+	87	0
-	+	77	0
-	+	36	0
-	+	77	0
-	+	81	8
-	+	78	40
-	+	80	11
-	+	85	12
-	+	87	0
-	+	86	41
-	+	87	0
-	+	87	0
+> ~/development/docmunch/MAIN_REPO/docmunch/package.json
+	"	51	0
+	^	14	28
+	.	14	27
+	+	14	27
 
-> ~/development/vouch/vouch_app/client/view_helpers/events.coffee
-	"	1	0
-
-> ~/development/vouch/vouch_app/client/lib/views/accounts.hamlet
-	"	54	0
-	^	78	35
-	.	94	0
-	+	26	0
-	+	58	25
-	+	58	0
-	+	58	0
-	+	75	0
-	+	27	0
-	+	24	0
-	+	25	7
-	+	26	0
-	+	24	9
-	+	23	8
-	+	24	0
-	+	75	0
-	+	75	0
-	+	52	0
-	+	59	56
-	+	60	78
-	+	61	59
-	+	73	0
-	+	61	42
-	+	70	51
-	+	73	42
-	+	70	50
-	+	59	0
-	+	63	17
-	+	70	10
-	+	70	24
-	+	70	10
-	+	69	0
-	+	64	0
-	+	69	23
-	+	70	23
-	+	69	53
-	+	70	51
-	+	65	18
-	+	69	0
-	+	68	0
-	+	67	0
-	+	68	0
-	+	69	23
-	+	70	23
-	+	69	0
-	+	68	20
-	+	68	18
-	+	68	0
-	+	68	29
-	+	68	0
-	+	71	0
-	+	72	40
-	+	65	0
-	+	66	0
-	+	73	0
-	+	62	0
-	+	73	82
-	+	62	45
-	+	59	54
-	+	62	0
-	+	70	0
-	+	69	29
-	+	71	0
-	+	70	29
-	+	59	0
-	+	60	28
-	+	61	28
-	+	62	28
-	+	59	61
-	+	62	37
-	+	65	32
-	+	69	45
-	+	70	45
-	+	68	0
-	+	62	0
-	+	59	0
-	+	60	0
-	+	72	0
-	+	73	0
-	+	139	33
-	+	59	49
-	+	139	27
-	+	59	27
-	+	139	42
-	+	59	44
-	+	75	0
-	+	94	9
-	+	94	0
-	+	94	22
-	+	94	16
-	+	94	9
-	+	94	12
-	+	94	0
-	+	94	0
-	+	94	0
-	+	78	34
-	+	83	0
-	+	83	0
-	+	92	0
-	+	83	0
-	+	90	0
-	+	91	0
-	+	94	0
-	r	142	44
-
-> ~/development/vouch/vouch_app/client/lib/views/events.hamlet
-	"	40	7
-
-> ~/development/vouch/vouch_app/client/startup.coffee
-	"	24	3
-	^	16	4
-	.	17	0
-	+	15	0
-	+	20	22
-	+	22	0
-	+	20	20
-	+	14	0
-	+	14	0
-	+	14	0
-	+	3	71
-	+	4	3
-	+	3	43
-	+	3	4
-	+	3	0
-	+	17	28
-	+	21	26
-	+	18	3
-	+	22	2
-	+	3	0
-	+	4	0
-	+	3	0
-	+	14	0
-	+	14	0
-	+	14	0
-	+	12	6
-	+	6	43
-	+	7	17
-	+	8	5
-	+	9	6
-	+	12	8
-	+	9	29
-	+	8	45
-	+	9	23
-	+	3	0
-	+	12	0
-	+	12	32
-	+	6	41
-	+	6	0
-	+	5	2
-	+	13	2
-	+	6	0
-	+	9	26
-	+	10	35
-	+	8	0
-	+	7	30
-	+	6	5
-	+	3	0
-	+	7	0
-	+	2	3
-	+	17	0
-
-> ~/development/vouch/vouch_app/client/css/master.less
-	"	9	43
-	^	9	44
-	.	9	43
-	+	10	0
-	+	3	25
-	+	8	0
-	+	8	0
-	+	10	0
-	+	10	0
-	+	10	2
-	+	7	0
-	+	6	32
-	+	3	0
-	+	10	0
-	+	8	0
-	+	3	0
-	+	1	49
-	+	3	0
-	+	9	43
-
-> ~/development/vouch/vouch_app/client/main.html
-	"	7	0
-	.	7	0
-	+	5	14
-	+	5	0
-	+	5	0
-	+	6	52
-	+	7	0
-	+	6	31
-	+	7	0
-
-> ~/development/vouch/vendor/bootstrap/less/bootstrap.less
-	"	31	28
-
-> ~/development/vouch/vouch_app/client/lib/views/header.hamlet
-	"	40	14
-	^	32	16
-	.	32	15
-	+	2	13
-	+	4	0
-	+	2	29
-	+	31	37
-	+	3	15
-	+	4	0
-	+	28	25
-	+	41	20
-	+	28	14
-	+	31	48
-	+	41	14
-	+	31	15
-	+	41	29
-	+	28	0
-	+	28	22
-	+	31	13
-	+	41	0
-	+	31	23
-	+	28	25
-	+	28	13
-	+	28	42
-	+	41	13
-	+	31	33
-	+	41	0
-	+	33	0
-	+	41	7
-	+	36	17
-	+	33	26
-	+	36	15
-	+	41	0
-	+	39	0
-	+	34	76
-	+	37	74
-	+	33	0
-	+	31	0
-	+	41	0
-	+	30	0
-	+	31	0
-	+	30	23
-	+	39	80
-	+	40	0
-	+	39	65
-	+	40	18
-	+	39	0
-	+	35	32
-	+	38	47
-	+	35	46
-	+	30	0
-	+	28	0
-	+	26	0
-	+	30	13
-	+	40	12
-	+	35	18
-	+	31	48
-	+	28	0
-	+	29	20
-	+	35	44
-	+	38	47
-	+	32	15
-
-> ~/development/vouch/vouch_app/collections/profiles.coffee
-	"	43	29
-	^	52	17
-	.	43	29
-	+	3	18
-	+	54	15
-	+	54	33
-	+	54	45
-	+	54	0
-	+	53	0
-	+	53	18
-	+	54	0
-	+	53	43
-	+	40	0
-	+	52	9
-	+	42	25
-	+	43	24
-	+	45	0
-	+	42	25
-	+	43	30
-	+	45	0
-	+	44	0
-	+	42	6
-	+	43	6
-	+	44	38
-	+	46	0
-	+	52	0
-	+	49	30
-	+	46	27
-	+	47	35
-	+	45	0
-	+	52	0
-	+	51	58
-	+	52	16
-	+	43	29
-
-> ~/development/vouch/vouch_app/collections/verifications.coffee
-	"	19	39
-	.	26	0
-	+	1	0
-	+	47	13
-	+	40	14
-	+	47	40
-	+	1	0
-	+	2	20
-	+	3	0
-	+	6	40
-	+	40	0
-	+	28	0
-	+	30	16
-	+	39	18
-	+	40	17
-	+	39	34
-	+	40	0
-	+	12	28
-	+	35	28
-	+	14	46
-	+	39	0
-	+	15	31
-	+	26	0
-	+	17	51
-	+	24	55
-	+	22	9
-	+	24	55
-	+	25	14
-	+	27	32
-	+	28	17
-	+	33	19
-	+	34	20
-	+	27	38
-	+	38	37
-	+	8	21
-	+	9	18
-	+	37	35
-	+	10	0
-	+	32	0
-	+	32	0
-	+	33	0
-	+	26	0
-	+	26	0
-	+	26	0
-
-> ~/development/vouch/vouch_app/server/filepicker-policies.coffee
-	"	29	0
-	^	31	56
-	.	7	0
-	+	47	28
-	+	46	20
-	+	47	38
-	+	47	0
-	+	62	0
-	+	62	0
-	+	62	56
-	+	49	0
-	+	50	21
-	+	51	19
-	+	52	0
-	+	51	17
-	+	61	0
-	+	37	27
-	+	53	35
-	+	61	0
-	+	53	35
-	+	55	17
-	+	62	1
-	+	54	10
-	+	55	43
-	+	48	7
-	+	49	0
-	+	52	0
-	+	62	0
-	+	55	6
-	+	55	8
-	+	61	0
-	+	55	24
-	+	57	17
-	+	60	3
-	+	61	4
-	+	60	0
-	+	59	73
-	+	62	5
-	+	58	8
-	+	59	8
-	+	60	11
-	+	62	2
-	+	63	38
-	+	66	8
-	+	67	15
-	+	69	0
-	+	65	11
-	+	70	24
-	+	73	24
-	+	74	41
-	+	79	0
-	+	78	42
-	+	65	14
-	+	77	30
-	+	78	43
-	+	67	25
-	+	81	25
-	+	84	0
-	+	77	0
-	+	81	22
-	+	82	37
-	+	74	30
-	+	67	38
-	+	76	0
-	+	67	5
-	+	1	28
-	+	36	0
-	+	5	34
-	+	14	0
-	+	5	34
-	+	6	23
-	+	9	51
-	+	12	62
-	+	13	49
-	+	11	17
-	+	29	0
-	+	33	39
-	+	33	0
-	+	19	44
-	+	33	0
-	+	15	0
+> ~/development/docmunch/MAIN_REPO/workers/bin/webapp
+	"	35	0
+	.	29	0
 	+	16	0
-	+	20	24
-	+	21	13
-	+	20	5
-	+	22	18
-	+	28	2
-	+	25	39
-	+	26	0
-	+	25	4
-	+	26	34
-	+	18	48
-	+	18	0
-	+	25	41
-	+	26	49
-	+	6	13
-	+	13	49
-	+	30	15
-	+	31	22
-	+	32	0
-	+	31	55
-	+	1	0
-	+	7	0
-
-> ~/development/vouch/vouch_app/client/view_helpers/handlebars_helpers.coffee
-	"	33	37
-	^	6	53
-	.	41	0
-	+	50	0
-	+	49	0
-	+	50	30
-	+	51	4
-	+	51	14
-	+	83	0
-	+	83	0
-	+	52	0
-	+	51	0
-	+	83	0
-	+	82	2
-	+	113	0
-	+	113	0
-	+	113	0
-	+	113	0
-	+	113	48
-	+	113	98
-	+	113	53
-	+	113	0
-	+	113	0
-	+	100	0
-	+	99	14
-	+	108	40
-	+	112	15
-	+	113	0
-	+	103	112
-	+	102	27
-	+	103	7
-	+	113	0
-	+	102	21
-	+	103	82
-	+	107	0
-	+	103	108
-	+	7	0
-	+	5	72
-	+	5	45
-	+	5	70
-	+	5	69
-	+	7	0
-	+	5	68
-	+	7	80
-	+	7	0
-	+	28	0
-	+	10	40
-	+	13	0
-	+	10	45
-	+	13	0
-	+	11	25
-	+	12	17
-	+	13	0
-	+	12	27
-	+	112	13
-	+	99	20
-	+	112	26
-	+	101	27
-	+	102	16
-	+	102	21
-	+	103	59
-	+	100	45
-	+	103	6
-	+	104	33
-	+	105	32
-	+	106	4
-	+	100	49
-	+	104	46
-	+	105	46
-	+	104	47
-	+	105	42
-	+	104	42
-	+	102	0
-	+	16	0
-	+	14	37
-	+	15	54
-	+	10	0
-	+	7	41
-	+	8	16
-	+	7	40
-	+	9	0
-	+	8	36
-	+	8	36
-	+	8	34
-	+	8	34
-	+	7	32
-	+	8	0
-	+	6	52
-	+	41	0
-
-> ~/development/vouch/vouch_app/client/view_helpers/header.coffee
-	"	13	60
-	^	10	39
-	.	10	38
-	+	6	33
-	+	11	20
-	+	8	0
-	+	13	53
-	+	5	31
-	+	13	27
-	+	14	0
-	+	13	60
-	+	10	38
-
-> ~/development/vouch/vouch_app/smart.lock
-	"	39	20
-
-> ~/.vimrc
-	"	128	4
-	^	71	2
-	.	128	4
-	+	11	28
 	+	25	0
-	+	20	1
-	+	19	1
-	+	10	8
-	+	65	12
-	+	210	0
-	+	210	19
-	+	10	1
-	+	19	0
-	+	210	0
-	+	210	14
-	+	210	14
-	+	210	14
-	+	210	1
-	+	210	1
-	+	10	0
-	+	210	0
-	+	210	0
-	+	89	0
-	+	95	0
-	+	91	0
-	+	68	0
-	+	87	11
-	+	72	17
-	+	36	0
-	+	9	0
-	+	65	1
-	+	71	1
-	+	72	0
-	+	93	0
-	+	109	0
-	+	110	0
-	+	108	46
-	+	71	0
-	+	72	0
-	+	73	0
-	+	71	0
-	+	128	4
-
-> /usr/local/Cellar/vim/7.4/share/vim/vim74/doc/options.txt
-	"	5164	20
-
-> ~/development/vouch/vouch_app/lib/forms.coffee
-	"	6	7
-
-> ~/development/github/meteor-hamlet-handlebars/package.js
-	"	29	0
-	^	47	5
-	.	53	0
-	+	16	26
-	+	2	52
-	+	48	0
-	+	53	0
-
-> ~/development/github/meteor-hamlet-handlebars/plugin/compile-hamlet-templates.js
-	"	34	13
-	.	24	0
-	+	3	0
-	+	5	35
-	+	2	0
-	+	17	16
-	+	19	23
-	+	20	5
-	+	21	7
-	+	20	10
-	+	17	14
-	+	20	14
-	+	19	20
-	+	21	41
-	+	22	0
-	+	24	39
-	+	24	0
-
-> ~/development/github/meteor-hamlet-handlebars/plugin/html_scanner.js
-	"	57	31
-
-> ~/development/github/meteor-hamlet-handlebars/package.js.old
-	"	45	0
-
-> ~/development/github/meteor-hamlet-handlebars/ControlP
-	"	3	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	6	0
-	+	2	0
-
-> ~/development/github/meteor-hamlet-handlebars/README.md
-	"	5	23
-	^	3	58
-	.	3	57
-	+	3	57
-
-> ~/development/github/meteor-hamlet-handlebars/smart.json
-	"	5	19
-	^	5	20
-	.	5	19
-	+	5	19
-
-> ~/development/github/meteor-autoform/autoform-server.js
-	"	10	8
-	.	10	0
-	+	7	91
-	+	4	28
-	+	1	33
-	+	9	0
-	+	10	0
-
-> ~/development/github/meteor-autoform/ControlP
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-
-> ~/development/github/meteor-autoform/autoform-common.js
-	"	4	0
-
-> ~/development/github/meteor-autoform/autoform-client.js
-	"	291	47
-	.	746	0
-	+	263	50
-	+	273	0
-	+	269	0
-	+	270	0
-	+	270	0
-	+	271	37
-	+	264	49
-	+	267	0
-	+	265	0
-	+	266	51
-	+	265	84
-	+	268	89
-	+	270	0
-	+	269	0
-	+	272	19
-	+	266	0
-	+	265	0
-	+	266	0
-	+	269	55
-	+	270	0
-	+	264	22
-	+	264	31
-	+	265	49
-	+	266	36
-	+	268	27
-	+	263	0
-	+	746	0
-
-> ~/development/vouch/vouch_app/client/view_helpers/dashboard.coffee
-	"	28	15
-	^	38	51
-	.	10	34
-	+	5	39
-	+	2	50
-	+	3	53
-	+	2	53
-	+	3	53
-	+	7	3
-	+	6	0
-	+	4	0
-	+	27	16
-	+	27	17
-	+	42	0
-	+	7	0
-	+	43	34
-	+	45	0
-	+	45	37
-	+	45	42
-	+	45	3
-	+	45	0
-	+	9	25
-	+	25	0
-	+	13	0
-	+	15	42
-	+	16	14
-	+	17	19
-	+	25	0
-	+	17	5
-	+	24	14
-	+	24	71
-	+	23	4
-	+	23	77
-	+	24	40
-	+	25	0
-	+	45	60
-	+	14	26
-	+	9	51
-	+	12	28
-	+	23	0
-	+	21	12
-	+	23	25
-	+	21	13
-	+	23	0
-	+	22	17
-	+	10	48
-	+	45	0
-	+	28	19
-	+	43	60
-	+	45	0
-	+	29	0
-	+	41	0
-	+	44	59
-	+	38	50
-	+	9	33
-	+	10	34
-
-> ~/development/vouch/vouch_app/server/fixtures.coffee
-	"	1	0
-
-> ~/development/vouch/vouch_app/client/router.coffee
-	"	61	11
-	.	2	0
-	+	110	19
-	+	101	0
-	+	70	56
-	+	65	79
-	+	92	58
-	+	70	0
-	+	65	0
-	+	97	1
-	+	49	0
-	+	49	0
-	+	51	0
-	+	105	35
-	+	106	41
-	+	110	26
-	+	105	0
-	+	105	0
-	+	105	0
-	+	110	0
-	+	107	64
-	+	107	15
-	+	110	0
-	+	107	59
-	+	108	53
-	+	110	4
-	+	108	40
-	+	109	48
-	+	110	0
-	+	101	21
-	+	48	0
-	+	61	34
-	+	73	11
-	+	77	0
-	+	79	66
-	+	80	0
-	+	96	62
-	+	82	32
-	+	61	15
-	+	62	0
-	+	61	75
-	+	76	6
-	+	75	68
-	+	82	30
-	+	100	29
-	+	101	0
-	+	48	0
-	+	48	26
-	+	64	2
-	+	65	0
-	+	98	0
-	+	103	20
-	+	98	0
-	+	110	0
-	+	48	13
-	+	49	13
-	+	49	13
-	+	48	29
-	+	49	0
-	+	50	0
-	+	49	12
-	+	50	12
-	+	47	33
-	+	48	30
-	+	42	0
-	+	1	0
-	+	38	0
-	+	37	0
-	+	1	0
-	+	39	0
-	+	110	0
-	+	2	0
-	+	2	19
-	+	3	40
-	+	4	40
-	+	5	22
-	+	6	26
-	+	6	0
-	+	6	26
-	+	7	50
-	+	6	21
-	+	7	49
-	+	8	17
-	+	9	47
-	+	10	61
-	+	11	63
-	+	12	10
-	+	14	9
-	+	15	0
-	+	14	18
-	+	15	48
-	+	17	18
-	+	18	37
-	+	19	5
-	+	20	29
-	+	21	31
-	+	20	29
-	+	5	23
-	+	13	22
-	+	16	21
-	+	2	40
-	+	2	0
-
-> ~/development/vouch/vouch_app/client/lib/views/dashboard.hamlet
-	"	4	17
-	^	33	38
-	.	34	0
-	+	63	0
-	+	18	0
-	+	19	0
-	+	35	33
-	+	35	17
-	+	29	17
-	+	19	15
-	+	28	7
-	+	18	7
-	+	4	13
-	+	18	0
-	+	46	0
-	+	29	18
-	+	36	0
-	+	3	6
-	+	4	0
-	+	4	0
-	+	17	0
-	+	4	0
-	+	14	31
-	+	17	9
-	+	19	16
-	+	14	42
-	+	14	16
-	+	14	11
-	+	14	23
-	+	14	60
-	+	14	15
-	+	14	68
-	+	14	0
-	+	14	18
-	+	14	0
-	+	17	0
-	+	17	0
-	+	17	22
-	+	14	24
-	+	14	21
-	+	17	41
-	+	14	17
-	+	17	0
-	+	18	0
-	+	17	0
-	+	18	0
-	+	14	0
-	+	5	0
-	+	18	0
-	+	15	11
-	+	6	16
-	+	13	16
-	+	14	14
-	+	13	15
-	+	6	15
-	+	7	44
-	+	8	102
-	+	8	13
-	+	3	26
-	+	3	23
-	+	3	0
-	+	15	0
-	+	17	0
-	+	3	0
-	+	2	23
-	+	3	0
-	+	16	10
-	+	7	18
-	+	8	66
-	+	14	29
-	+	3	75
-	+	14	20
-	+	35	10
-	+	32	0
-	+	33	23
-	+	35	0
-	+	35	0
-	+	33	31
-	+	30	14
-	+	29	0
-	+	21	27
-	+	23	11
-	+	21	28
-	+	19	0
-	+	27	7
-	+	33	37
-	+	34	0
-
-> ~/development/vouch/vouch_app/collections/images.coffee
-	"	1	33
-	^	1	39
-	.	1	33
-	+	1	33
-
-> ~/development/vouch/vouch_app/client/lib/views/admin.hamlet
-	"	21	27
-	^	9	14
-	.	9	13
-	+	1	36
-	+	6	10
-	+	5	11
-	+	29	23
-	+	9	14
-	+	18	13
-	+	11	27
-	+	20	13
-	+	20	0
-	+	18	14
-	+	20	23
-	+	21	38
-	+	27	18
-	+	24	54
-	+	20	0
-	+	7	13
-	+	29	13
-	+	11	45
-	+	6	9
-	+	24	63
-	+	26	16
-	+	28	27
-	+	11	54
-	+	12	0
-	+	17	5
-	+	12	17
-	+	14	0
-	+	15	0
-	+	14	35
-	+	13	0
-	+	12	0
-	+	18	0
-	+	9	13
-	+	12	0
-	+	11	24
-	+	11	0
-	+	12	0
-	+	11	0
-	+	15	0
-	+	17	0
-	+	10	13
-	+	10	13
-	+	17	0
-	+	19	37
-	+	20	0
-	+	10	104
-	+	10	0
-	+	10	41
-	+	12	31
-	+	11	28
-	+	16	45
-	+	11	19
-	+	11	0
-	+	10	0
-	+	9	13
-
-> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/ControlP
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
-	"	149	3
-
-> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/test/test-ctrl.ts
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/node_modules/grunt-typescript/node_modules/typescript/bin/lib.d.ts
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/node_modules/typescript/bin/lib.d.ts
-	"	1	0
-
-> ~/development/github/shackage/shackage/Application.hs
-	"	73	0
-	^	70	38
-	.	70	37
-	+	27	26
-	+	71	0
-	+	67	67
-	+	69	26
-	+	72	66
-	+	21	42
-	+	67	39
-	+	66	32
-	+	70	25
-	+	68	31
-	+	70	35
-	+	66	10
-	+	67	10
-	+	72	56
-	+	70	68
-	+	26	21
-	+	25	0
-	+	26	43
-	+	70	75
-	+	67	0
-	+	70	37
-
-> ~/development/github/shackage/shackage/Foundation.hs
-	"	23	0
-	^	35	26
-	.	35	25
-	+	35	34
-	+	21	0
-	+	35	25
-
-> ~/development/github/shackage/shackage/Import.hs
-	"	19	0
-	^	18	6
-	.	18	5
-	+	17	0
-	+	20	0
-	+	5	73
-	+	6	0
-	+	5	62
-	+	17	83
-	+	20	0
-	+	5	59
-	+	20	36
-	+	20	0
-	+	18	5
-
-> ~/development/github/shackage/shackage/Model.hs
-	"	1	0
-
-> ~/development/github/shackage/shackage/Settings.hs
-	"	71	24
-	^	71	25
-	.	71	24
-	+	71	28
-	+	78	25
-	+	71	24
-
-> ~/development/github/shackage/shackage/shackage.cabal
-	"	52	28
-	^	55	29
-	.	55	28
-	+	16	20
-	+	104	0
-	+	49	19
-	+	53	56
-	+	52	58
-	+	38	25
-	+	39	34
-	+	53	0
-	+	37	28
-	+	55	28
-
-> ~/development/github/shackage/shackage/app/main.hs
-	"	5	7
-
-> ~/development/github/shackage/shackage/tests/main.hs
-	"	1	0
-
-> ~/development/github/shackage/shackage/tests/TestImport.hs
-	"	1	0
-
-> ~/development/github/shackage/shackage/CabalUtil.hs
-	"	96	0
-	^	96	0
-	.	97	0
-	+	71	37
-	+	71	41
-	+	71	49
-	+	71	52
-	+	75	37
-	+	68	51
-	+	67	54
-	+	68	60
-	+	71	41
-	+	67	64
-	+	8	7
-	+	67	39
-	+	87	30
-	+	23	23
-	+	27	0
-	+	94	31
-	+	23	37
-	+	97	0
-	+	93	0
-	+	94	33
-	+	97	0
-	+	94	8
-	+	87	42
-	+	76	49
-	+	87	25
-	+	79	12
-	+	80	0
-	+	71	73
-	+	68	19
-	+	69	40
-	+	70	0
-	+	61	53
-	+	69	21
-	+	5	27
-	+	80	9
-	+	97	4
-	+	10	41
-	+	61	0
-	+	69	23
-	+	61	45
-	+	65	48
-	+	9	30
-	+	84	40
-	+	84	36
-	+	84	53
-	+	86	0
-	+	84	41
-	+	86	0
-	+	85	7
-	+	86	8
-	+	85	9
-	+	93	18
-	+	94	10
-	+	94	24
-	+	94	16
-	+	94	24
-	+	94	26
-	+	94	32
-	+	93	47
-	+	94	35
-	+	94	10
-	+	94	38
-	+	94	23
-	+	94	24
-	+	97	0
-	+	94	8
-	+	85	33
-	+	87	54
-	+	88	0
-	+	87	0
-	+	88	9
-	+	82	66
-	+	90	21
-	+	71	50
-	+	75	35
-	+	77	0
-	+	76	17
-	+	94	58
-	+	90	36
-	+	91	71
-	+	97	0
-	+	97	0
-	+	97	62
-	+	97	23
-	+	97	29
-	+	97	39
-	+	97	51
-	+	97	0
-	+	97	0
-	+	71	11
-	+	72	15
-	+	73	39
-	+	74	35
-	+	79	48
-	+	69	45
-	+	31	30
-	+	97	0
-	+	95	0
-	+	97	0
-	+	97	0
-
-> ~/development/github/shackage/.gitignore
-	"	10	8
-	^	10	9
-	.	10	8
-	+	9	19
-	+	11	0
-	+	10	8
-
-> ~/development/github/shackage/README.md
-	"	27	16
-	.	27	0
-	+	18	2
-	+	17	154
-	+	8	8
-	+	5	0
-	+	6	9
-	+	7	0
-	+	8	71
-	+	14	31
-	+	3245	0
-	+	3245	0
-	+	3245	2
-	+	3245	2
-	+	3245	27
-	+	27	0
-
-> ~/development/github/shackage/shackage/ControlP
-	"	3	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-
-> ~/development/github/shackage/shackage/config/settings.yml
-	"	7	2
-	^	6	4
-	.	7	0
-	+	6	15
-	+	7	0
-	+	6	3
-	+	7	0
-
-> ~/development/github/shackage/shackage/templates/homepage.hamlet
-	"	1	0
-
-> ~/development/github/shackage/shackage/templates/default-layout-wrapper.hamlet
-	"	21	0
-
-> ~/development/github/shackage/shackage/config/routes
-	"	8	21
-	^	8	26
-	.	8	25
-	+	8	25
-
-> ~/development/github/shackage/shackage/Handler/Home.hs
-	"	42	0
-	^	42	39
-	.	42	51
-	+	42	25
-	+	41	27
-	+	42	51
-
-> ~/development/docmunch/REPO_mc61/workers/Import.hs
-	"	37	11
-	^	28	19
-	.	28	18
-	+	89	0
-	+	62	5
-	+	62	0
-	+	87	18
-	+	61	24
-	+	71	45
-	+	21	27
-	+	39	0
-	+	38	38
-	+	39	0
-	+	39	0
-	+	38	68
-	+	81	60
-	+	34	0
-	+	26	0
-	+	27	18
-	+	81	39
-	+	27	39
-	+	81	50
-	+	86	36
-	+	60	29
-	+	86	27
-	+	27	51
-	+	81	39
-	+	27	32
-	+	70	27
-	+	28	18
-
-> ~/development/docmunch/REPO_mc61/workers/MongoEnv.hs
-	"	10	7
-	^	132	49
-	.	138	0
-	+	79	74
-	+	79	0
-	+	79	114
-	+	79	74
-	+	79	74
-	+	79	74
-	+	79	78
-	+	78	0
-	+	79	94
-	+	79	0
-	+	128	33
-	+	129	53
-	+	139	0
-	+	129	55
-	+	139	0
-	+	139	15
-	+	129	43
-	+	139	34
-	+	139	24
-	+	139	0
-	+	139	16
-	+	128	25
-	+	129	66
-	+	128	0
-	+	129	45
-	+	129	54
-	+	129	0
-	+	129	0
-	+	139	0
-	+	129	0
-	+	128	3
-	+	129	34
-	+	128	34
-	+	128	3
-	+	139	16
-	+	128	33
-	+	129	38
-	+	139	7
-	+	139	30
-	+	139	6
-	+	129	0
-	+	133	0
-	+	131	6
-	+	128	25
-	+	137	37
-	+	132	41
-	+	130	43
-	+	132	48
-	+	138	0
-
-> ~/development/docmunch/REPO_mc61/workers/ControlP
-	"	2	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
-
-> ~/development/docmunch/REPO_mc61/workers/Webapp/Doc/Table/Extract.hs
-	"	75	52
-	.	61	0
-	+	63	15
-	+	63	38
-	+	63	54
-	+	64	0
-	+	103	0
-	+	107	0
-	+	108	0
-	+	144	0
-	+	143	0
-	+	221	0
-	+	222	0
-	+	226	0
-	+	227	0
-	+	231	0
-	+	232	0
-	+	61	0
-	e	71	0
-
-> ~/development/docmunch/REPO_mc61/workers/Webapp/Doc/Table/Types.hs
-	"	83	0
-	^	1	8
-	.	1	0
-	+	25	0
-	+	32	0
-	+	60	0
-	+	62	0
-	+	79	0
-	+	80	0
-	+	85	0
-	+	87	0
-	+	141	0
-	+	144	0
-	+	155	0
-	+	181	0
-	+	182	0
-	+	203	0
-	+	202	0
-	+	220	0
-	+	216	0
-	+	90	49
-	+	30	2
-	+	30	0
-	+	25	0
-	+	42	39
-	+	1	0
-	+	1	0
-
-> ~/development/docmunch/REPO_mc61/workers/Webapp/Doc/Upload.hs
-	"	102	44
-	^	143	0
-	.	121	0
-	+	363	51
-	+	388	75
-	+	391	65
-	+	388	66
-	+	390	44
-	+	363	0
-	+	362	31
-	+	361	26
-	+	363	0
-	+	361	27
-	+	361	69
-	+	362	36
-	+	361	86
-	+	105	53
-	+	106	33
-	+	107	48
-	+	399	11
-	+	398	43
-	+	399	0
-	+	365	37
-	+	369	39
-	+	376	25
-	+	365	52
-	+	367	46
-	+	366	103
-	+	388	21
-	+	383	69
-	+	388	0
-	+	383	23
-	+	387	46
-	+	366	61
-	+	366	62
-	+	367	0
-	+	366	62
-	+	384	29
-	+	366	67
-	+	382	25
-	+	386	26
-	+	383	45
-	+	384	23
-	+	386	23
-	+	40	0
-	+	39	0
-	+	384	16
-	+	386	16
-	+	39	51
-	+	124	24
-	+	125	0
-	+	126	16
-	+	127	3
-	+	128	3
-	+	125	5
-	+	126	6
-	+	107	79
-	+	88	0
-	+	87	0
-	+	88	84
-	+	89	35
-	+	93	0
-	+	91	35
-	+	93	0
-	+	91	18
-	+	93	0
-	+	90	0
-	+	94	24
-	+	95	32
-	+	88	24
-	+	95	33
-	+	88	73
-	+	96	0
-	+	128	11
-	+	92	55
-	+	340	0
-	+	121	0
-	+	121	0
-	+	120	1
-	+	121	0
-	+	120	1
-	+	116	45
-	+	120	11
-	+	120	1
-	+	116	20
-	+	121	0
-	+	118	0
-	+	119	0
-	+	118	0
-	+	120	21
-	+	117	14
-	+	121	0
-	+	120	15
-	+	120	12
-	+	120	46
-	+	120	49
-	+	120	46
-	+	120	1
-	+	120	1
-	+	120	99
-	+	120	1
-	+	120	12
-	+	121	0
-	a	362	43
-	t	306	22
-
-> ~/development/docmunch/REPO_mc61/workers/Webapp/models
-	"	73	2
-	^	64	24
-	.	64	23
-	+	32	23
-	+	30	27
-	+	31	29
-	+	9	0
-	+	10	31
-	+	15	27
-	+	7	18
-	+	8	18
-	+	10	31
-	+	8	24
-	+	7	21
-	+	15	21
-	+	43	0
-	+	45	0
-	+	46	0
-	+	75	0
-	+	31	0
-	+	17	26
-	+	5	0
-	+	16	45
-	+	10	21
-	+	16	30
-	+	17	30
-	+	16	28
-	+	17	8
-	+	17	0
-	+	5	0
-	+	11	0
-	+	15	0
-	+	1	0
-	+	11	29
-	+	33	13
-	+	31	10
-	+	32	8
-	+	30	7
-	+	17	10
-	+	16	9
-	+	2	23
-	+	4	0
-	+	9	29
-	+	16	10
-	+	98	0
-	+	1	29
-	+	1	26
-	+	12	30
-	+	18	0
-	+	34	0
-	+	33	13
-	+	1	4
-	+	1	29
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	17
-	+	1	18
-	+	1	31
-	+	1	28
-	+	1	0
-	+	36	0
-	+	1	0
-	+	21	0
-	+	20	0
-	+	27	0
-	+	26	27
-	+	19	27
-	+	13	0
-	+	35	0
-	+	21	25
-	+	15	19
-	+	5	23
-	+	64	23
-
-> ~/development/docmunch/REPO_mc61/docmunch/models.coffee
-	"	212	5
-	^	214	22
-	.	214	21
-	+	29	0
-	+	225	56
-	+	219	74
-	+	225	88
-	+	221	16
-	+	222	19
-	+	209	61
-	+	210	0
-	+	271	72
-	+	287	60
-	+	271	0
-	+	225	0
-	+	227	0
-	+	287	51
-	+	288	47
-	+	288	52
-	+	277	55
-	+	279	0
-	+	276	3
-	+	281	63
-	+	282	0
-	+	221	13
-	+	222	16
-	+	288	0
-	+	288	41
-	+	276	0
-	+	288	0
-	+	275	33
-	+	288	0
-	+	280	17
-	+	280	0
-	+	281	0
-	+	278	45
-	+	277	54
-	+	281	42
-	+	277	19
-	+	278	0
-	+	280	0
-	+	287	0
-	+	275	0
-	+	267	0
-	+	265	0
-	+	321	26
-	+	322	33
-	+	324	25
-	+	213	0
-	+	204	0
-	+	196	0
-	+	275	2
-	+	14	0
-	+	326	69
-	+	312	28
-	+	218	14
-	+	292	25
-	+	297	24
-	+	298	12
-	+	314	0
-	+	303	57
-	+	306	51
-	+	306	47
-	+	309	12
-	+	319	41
-	+	304	0
-	+	305	0
-	+	310	59
-	+	307	0
-	+	310	0
-	+	308	58
-	+	309	27
-	+	285	0
-	+	287	6
-	+	313	25
-	+	310	0
-	+	326	0
-	+	223	0
-	+	249	0
-	+	262	0
-	+	275	0
-	+	287	0
-	+	308	0
-	+	198	0
-	+	198	19
-	+	176	32
-	+	181	0
-	+	198	0
-	+	177	19
-	+	178	0
-	+	177	13
-	+	179	0
-	+	177	0
-	+	197	33
-	+	177	39
-	+	187	0
-	+	205	0
-	+	214	0
-	+	176	5
-	+	187	21
-	+	197	21
-	+	205	21
-	+	214	21
-	a	245	2
-
-> ~/development/docmunch/REPO_mc61/workers/workers.cabal
-	"	351	23
-	^	487	16
-	.	487	15
-	+	43	34
-	+	106	27
-	+	181	27
-	+	250	27
-	+	43	0
-	+	293	0
-	+	498	0
-	+	341	3
-	+	341	20
-	+	341	0
-	+	349	0
-	+	348	0
-	+	496	0
-	+	497	10
-	+	355	10
-	+	351	17
-	+	352	17
-	+	355	14
-	+	274	0
-	+	353	18
-	+	30	0
-	+	94	0
-	+	179	0
-	+	235	0
-	+	354	0
-	+	185	0
-	+	187	0
-	+	186	0
-	+	257	0
-	+	122	15
-	+	67	21
-	+	122	16
-	+	238	0
-	+	30	0
-	+	95	0
-	+	181	0
-	+	67	33
-	+	122	31
-	+	67	42
-	+	122	34
-	+	122	43
-	+	122	62
-	+	123	0
-	+	122	83
-	+	123	0
-	+	67	0
-	+	333	10
-	+	334	17
-	+	335	17
-	+	336	14
-	+	337	18
-	+	133	0
-	+	201	0
-	+	273	0
-	+	1	0
-	+	421	18
-	+	423	24
-	+	424	23
-	+	420	0
-	+	485	15
-	+	486	10
-	+	487	15
-
-> ~/development/docmunch/REPO_mc61/workers/table-ext/table-ext.cabal
-	"	1	0
-
-> ~/development/docmunch/REPO_mc61/workers/Webapp/Models.hs
-	"	38	0
-	.	13	0
-	+	40	40
-	+	41	30
-	+	39	29
-	+	5	2
-	+	5	0
-	+	7	14
-	+	42	0
-	+	43	48
-	+	45	0
-	+	44	0
-	+	45	56
-	+	43	62
-	+	46	46
-	+	43	8
-	+	43	55
-	+	45	41
-	+	46	19
-	+	46	57
-	+	46	63
-	+	46	1
-	+	46	0
-	+	47	5
-	+	47	3
-	+	47	23
-	+	46	49
-	+	47	0
-	+	5	41
-	+	6	24
-	+	47	40
-	+	45	70
-	+	6	29
-	+	45	76
-	+	40	45
-	+	6	37
-	+	46	60
-	+	6	19
-	+	5	2
-	+	6	16
-	+	41	3
-	+	40	3
-	+	49	0
-	+	44	0
-	+	8	30
-	+	12	0
-	+	7	0
-	+	9	0
-	+	44	0
-	+	25	47
-	+	26	0
-	+	25	0
-	+	24	0
-	+	24	0
-	+	25	0
-	+	27	0
-	+	27	0
-	+	27	0
-	+	27	43
-	+	27	26
-	+	27	43
-	+	27	19
-	+	27	44
-	+	27	38
-	+	27	17
-	+	27	12
-	+	27	32
-	+	27	25
-	+	27	23
-	+	27	26
-	+	13	28
-	+	27	54
-	+	27	25
-	+	27	51
-	+	27	13
-	+	27	13
-	+	27	40
-	+	27	0
-	+	27	0
-	+	27	46
-	+	27	19
-	+	27	18
-	+	27	18
-	+	27	12
-	+	27	0
-	+	27	12
-	+	27	68
-	+	27	0
-	+	27	0
-	+	27	0
-	+	27	0
-	+	27	53
-	+	27	25
-	+	27	0
 	+	27	34
 	+	27	0
-	+	27	32
-	+	27	0
-	+	11	69
-	+	27	0
-	+	11	0
-	+	13	0
-
-> ~/development/docmunch/REPO_mc61/.gitignore
-	"	27	19
-	^	27	20
-	.	27	19
-	+	26	13
+	+	27	65
 	+	27	19
-
-> ~/development/docmunch/REPO_mc61/workers/Webapp/Model/Document.hs
-	"	30	17
-	^	50	60
-	.	50	59
-	+	35	0
-	+	61	0
-	+	5	0
-	+	9	0
-	+	6	0
-	+	7	7
-	+	46	23
-	+	47	23
-	+	48	23
-	+	49	23
-	+	10	2
-	+	9	0
-	+	7	26
-	+	8	0
-	+	7	36
-	+	8	0
-	+	10	0
-	+	7	41
-	+	50	59
-
-> ~/development/docmunch/REPO_mc61/docmunch/package.json
-	"	2	0
-
-> ~/development/docmunch/REPO_mc61/workers/table-ext/test/Visualization.hs
-	"	31	18
-	.	36	0
-	+	36	0
-
-> ~/development/docmunch/REPO_mc61/workers/azure.yaml
-	"	4	0
-
-> ~/development/docmunch/REPO_mc61/workers/Webapp/Doc/Upload/test/test.hs
-	"	23	0
-	^	49	38
-	.	48	51
-	+	42	8
-	+	39	0
-	+	39	0
-	+	37	30
-	+	39	0
-	+	53	0
-	+	37	46
-	+	38	7
-	+	37	44
-	+	38	0
-	+	53	0
-	+	50	39
-	+	49	37
-	+	48	51
-
-> ~/development/docmunch/REPO_mc61/workers/table-ext/test/test.hs
-	"	231	5
-	^	84	7
-	.	138	0
-	+	91	40
-	+	91	52
-	+	15	0
-	+	91	0
-	+	85	18
-	+	85	19
-	+	86	13
-	+	87	13
-	+	88	13
-	+	86	0
-	+	85	19
-	+	88	20
-	+	90	0
-	+	90	12
-	+	90	8
-	+	91	0
-	+	48	0
-	+	51	0
-	+	125	0
-	+	138	0
-
-> ~/development/docmunch/REPO_mc61/workers/Test/Webapp.hs
-	"	7	3
-
-> ~/development/docmunch/REPO_mc61/workers/Webapp/Doc/Inkscape.hs
-	"	78	7
-	^	78	8
-	.	78	8
-	+	142	30
-	+	199	9
-	+	196	21
-	+	195	38
-	+	205	0
-	+	199	46
-	+	196	63
-	+	194	46
-	+	4	35
-	+	197	6
-	+	205	0
-	+	205	0
-	+	198	0
-	+	196	31
-	+	3	0
-	+	196	50
-	+	199	18
-	+	205	22
-	+	205	28
-	+	205	19
-	+	6	0
-	+	15	43
-	+	205	0
-	+	205	16
-	+	205	26
-	+	205	24
-	+	198	47
-	+	205	30
-	+	205	22
-	+	198	0
-	+	198	52
-	+	194	25
-	+	199	47
-	+	205	0
-	+	198	0
-	+	199	67
-	+	198	0
-	+	205	0
-	+	36	0
-	+	202	42
-	+	201	3
-	+	202	53
-	+	201	23
-	+	202	14
-	+	202	14
-	+	66	68
-	+	79	12
-	+	79	9
-	+	79	20
-	+	80	20
-	+	81	0
-	+	87	14
-	+	142	79
-	+	143	61
-	+	142	27
-	+	90	12
-	+	204	36
-	+	203	0
-	+	202	25
-	+	194	27
-	+	203	43
-	+	91	0
-	+	91	50
-	+	90	30
-	+	192	0
-	+	191	55
-	+	68	0
-	+	69	0
-	+	191	45
-	+	71	21
-	+	69	15
-	+	71	34
-	+	70	0
-	+	89	36
-	+	10	40
-	+	191	49
-	+	190	57
-	+	71	0
-	+	69	10
-	+	78	61
-	+	81	54
-	+	82	42
-	+	91	34
-	+	89	0
-	+	91	30
-	+	191	92
-	+	202	13
-	+	91	44
-	+	91	42
-	+	91	0
-	+	193	50
-	+	91	0
-	+	90	0
-	+	73	11
-	+	72	0
-	+	73	39
-	+	91	0
-	+	74	7
-	+	75	0
-	+	78	8
-
-> ~/development/docmunch/REPO_mc61/workers/Test/test-inkscape.hs
-	"	57	24
-	^	43	37
-	.	43	37
-	+	18	30
-	+	67	65
-	+	67	31
-	+	67	43
-	+	74	59
-	+	67	24
-	+	67	16
-	+	67	16
-	+	73	0
-	+	62	0
-	+	63	41
-	+	63	41
-	+	67	0
-	+	66	43
-	+	18	42
-	+	18	41
-	+	19	0
-	+	18	42
-	+	65	30
-	+	74	25
-	+	67	16
-	+	67	24
-	+	67	24
-	+	67	0
-	+	67	25
-	+	67	26
-	+	73	0
-	+	74	0
-	+	67	0
-	+	53	0
-	+	66	31
-	+	67	23
-	+	66	43
-	+	74	0
-	+	67	0
-	+	74	0
-	+	22	23
-	+	67	0
-	+	74	0
-	+	76	0
-	+	76	0
-	+	76	0
-	+	51	28
-	+	63	70
-	+	51	0
-	+	63	22
-	+	52	27
-	+	63	71
-	+	52	29
-	+	51	28
-	+	68	25
-	+	51	32
-	+	68	70
-	+	76	74
-	+	11	24
-	+	76	0
-	+	76	40
-	+	76	0
-	+	76	0
-	+	76	35
-	+	76	46
-	+	76	0
-	+	76	0
-	+	76	22
-	+	64	0
-	+	63	39
-	+	62	0
-	+	76	0
-	+	56	0
-	+	39	25
-	+	40	51
-	+	39	25
-	+	40	25
-	+	42	22
-	+	41	24
-	+	42	47
-	+	45	56
-	+	46	0
-	+	30	13
-	+	31	16
-	+	44	0
-	+	47	53
-	+	47	40
-	+	47	56
-	+	49	0
-	+	47	55
-	+	47	0
-	+	57	67
-	+	38	40
-	+	33	104
-	+	33	27
-	+	37	51
-	+	35	0
-	+	37	55
-	+	35	102
-	+	34	39
-	+	36	23
-	+	37	49
-	+	35	33
-	+	43	37
-
-> ~/development/docmunch/REPO_mc61/workers/README.md
-	"	33	43
-	^	33	44
-	.	21	11
-	+	40	0
+	+	32	0
+	+	29	0
+	+	31	0
+	+	30	0
+	+	29	27
+	+	25	0
 	+	27	0
-	+	14	24
-	+	15	29
-	+	21	11
+	+	25	0
+	+	27	104
+	+	27	21
+	+	29	16
+	+	27	34
+	+	29	17
+	+	26	0
+	+	25	0
+	+	27	0
+	+	29	0
 
-> ~/development/docmunch/REPO_mc61/workers/Webmunch/Citi/Emaxx.hs
+> ~/development/docmunch/MAIN_REPO/workers/bin/webapp.LOCAL.177
+	"	36	0
+
+> ~/development/docmunch/MAIN_REPO/workers/bin/webapp.BASE.177
+	"	34	0
+
+> ~/development/docmunch/MAIN_REPO/workers/bin/webapp.REMOTE.177
+	"	34	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/10-before-logout.png
 	"	1	0
 
-> ~/development/docmunch/REPO_mc61/workers/Webmunch/Citi/Lcd.hs
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/10-before-logout.png.LOCAL.177.png
 	"	1	0
 
-> ~/development/docmunch/REPO_mc61/workers/Test/fixtures/inkscape-simple.pdf.svg
-	"	158	22
-	^	158	23
-	.	160	0
-	+	160	0
-	+	160	0
-	+	160	0
-	+	160	0
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/10-before-logout.png.BASE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/10-before-logout.png.REMOTE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/08-before-delete.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/08-before-delete.png.LOCAL.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/08-before-delete.png.BASE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/08-before-delete.png.REMOTE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/05-right-after-selector.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/05-right-after-selector.png.LOCAL.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/05-right-after-selector.png.BASE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/05-right-after-selector.png.REMOTE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/03-before-upload-new.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/03-before-upload-new.png.LOCAL.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/03-before-upload-new.png.BASE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/03-before-upload-new.png.REMOTE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/02-quickFormFill.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/02-quickFormFill.png.LOCAL.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/02-quickFormFill.png.BASE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/02-quickFormFill.png.REMOTE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png.LOCAL.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png.BASE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png.REMOTE.177.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
+	"	101	0
+	^	86	44
+	.	107	0
+	+	79	56
+	+	79	0
+	+	79	41
+	+	79	53
+	+	79	0
+	+	69	0
+	+	79	0
+	+	79	0
+	+	76	45
+	+	79	32
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	29
+	+	79	30
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	17
+	+	79	0
+	+	79	7
+	+	79	23
+	+	79	39
+	+	79	0
+	+	79	0
+	+	79	61
+	+	79	0
+	+	79	44
+	+	79	63
+	+	79	24
+	+	79	0
+	+	76	11
+	+	79	53
+	+	79	9
+	+	79	14
+	+	79	48
+	+	79	53
+	+	79	25
+	+	79	12
+	+	79	24
+	+	79	13
+	+	79	29
+	+	79	57
+	+	79	45
+	+	79	0
+	+	79	32
+	+	79	15
+	+	79	78
+	+	79	29
+	+	79	0
+	+	79	0
+	+	79	54
+	+	79	56
+	+	79	31
+	+	79	19
+	+	79	0
+	+	79	59
+	+	79	16
+	+	79	56
+	+	79	0
+	+	79	14
+	+	79	0
+	+	79	70
+	+	79	0
+	+	79	46
+	+	79	0
+	+	79	32
+	+	79	17
+	+	79	55
+	+	79	0
+	+	79	18
+	+	79	54
+	+	79	27
+	+	69	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	31
+	+	79	0
+	+	79	72
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	0
+	+	79	42
+	+	79	41
+	+	79	0
+	+	79	27
+	+	79	0
+	+	29	24
+	+	61	0
+	+	68	0
+	+	43	0
+	+	86	43
+	+	85	31
+	+	107	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee.LOCAL.177.coffee
+	"	61	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee.BASE.177.coffee
+	"	58	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee.REMOTE.177.coffee
+	"	61	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+	"	1	0
+	.	1	0
+	+	2405	0
+	+	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.LOCAL.177.js
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.BASE.177.js
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.REMOTE.177.js
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+	"	34	0
+	.	34	0
+	+	163	0
+	+	167	0
+	+	97	0
+	+	96	0
+	+	95	37
+	+	96	0
+	+	150	29
+	+	180	28
+	+	150	43
+	+	168	14
+	+	170	15
+	+	176	6
+	+	169	0
+	+	164	34
+	+	163	10
+	+	158	30
+	+	162	0
+	+	161	9
+	+	159	27
+	+	161	34
+	+	158	45
+	+	163	40
+	+	164	0
+	+	161	82
+	+	158	18
+	+	161	40
+	+	164	46
+	+	236	0
+	+	212	26
+	+	212	44
+	+	212	73
+	+	212	26
+	+	212	44
+	+	212	73
+	+	213	0
+	+	212	26
+	+	213	0
+	+	145	30
+	+	145	50
+	+	145	51
+	+	146	0
+	+	170	84
+	+	175	62
+	+	173	29
+	+	174	46
+	+	168	0
+	+	166	83
+	+	166	51
+	+	212	49
+	+	226	4
+	+	226	3
+	+	224	83
+	+	226	12
+	+	226	0
+	+	212	39
+	+	212	0
+	+	224	0
+	+	212	39
+	+	95	50
+	+	7	28
+	+	7	29
+	+	7	0
+	+	7	51
+	+	7	0
+	+	7	12
+	+	29	26
+	+	34	0
+	+	34	25
+	+	34	26
+	+	34	0
+	+	34	52
+	+	34	5
+	+	34	0
+	+	34	16
+	+	34	52
+	+	7	26
+	+	7	16
+	+	7	0
+	+	7	27
+	+	34	0
+	+	34	0
+	+	34	6
+	+	34	54
+	+	34	68
+	+	34	71
+	+	34	0
+	+	34	43
+	+	7	0
+	+	7	6
+	+	7	37
+	+	34	68
+	+	34	0
+	+	34	0
+	+	34	0
+	+	34	37
+	+	22	0
+	+	2	0
+	+	7	0
+	+	24	0
+	+	34	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts.LOCAL.177.ts
+	"	111	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts.BASE.177.ts
+	"	107	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts.REMOTE.177.ts
+	"	71	0
+
+> ~/development/docmunch/dm-gw-services/docmunch/package.json
+	"	14	28
+	^	14	23
+	.	14	28
+	+	14	28
+
+> ~/development/docmunch/dm-gw-services/docmunch/Gruntfile.coffee
+	"	5	28
+
+> ~/development/docmunch/dm-gw-services/.git/modules/DefinitelyTyped/config
+	"	10	8
+	.	10	0
+	+	10	0
+	+	11	0
+	+	10	0
+
+> ~/development/docmunch/dm-gw-services/.gitmodules
+	"	6	14
+	^	7	8
+	.	7	7
+	+	6	51
+	+	7	10
+	+	6	7
+	+	7	7
+
+> ~/development/docmunch/dm-gw-services/workers/bin/webapp
+	"	27	136
+	^	27	105
+	.	28	0
+	+	11	33
+	+	27	103
+	+	11	34
+	+	27	136
+	+	28	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
+	"	340	17
+	^	352	102
+	.	200	0
+	+	142	46
+	+	165	60
+	+	158	59
+	+	147	55
+	+	145	49
+	+	146	55
+	+	157	42
+	+	148	39
+	+	155	0
+	+	148	42
+	+	149	20
+	+	150	63
+	+	151	29
+	+	149	20
+	+	155	0
+	+	152	21
+	+	153	50
+	+	155	0
+	+	153	80
+	+	155	53
+	+	155	0
+	+	155	0
+	+	144	43
+	+	29	26
+	+	144	38
+	+	166	59
+	+	144	38
+	+	144	0
+	+	162	36
+	+	144	34
+	+	166	59
+	+	303	0
+	+	29	51
+	+	303	12
+	+	39	25
+	+	303	16
+	+	29	0
+	+	303	0
+	+	263	66
+	+	35	0
+	+	263	51
+	+	70	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	70	0
+	+	292	67
+	+	302	0
+	+	292	0
+	+	260	0
+	+	263	56
+	+	263	40
+	+	263	0
+	+	268	9
+	+	268	0
+	+	268	0
+	+	268	50
+	+	268	63
+	+	268	0
+	+	268	17
+	+	268	23
+	+	268	0
+	+	268	0
+	+	296	0
+	+	299	0
+	+	300	0
+	+	299	13
+	+	297	78
+	+	299	63
+	+	297	33
+	+	299	38
+	+	298	15
+	+	297	0
+	+	298	0
+	+	299	0
+	+	38	0
+	+	39	0
+	+	43	0
+	+	70	0
+	+	123	0
+	+	70	0
+	+	70	0
+	+	78	34
+	+	123	0
+	+	200	0
+	+	228	0
+	+	352	38
+	+	371	33
+	+	352	101
+	+	352	32
+	+	371	29
+	+	123	0
+	+	70	0
+	+	228	0
+	+	200	0
+	a	264	35
+
+> ~/development/docmunch/MAIN_REPO/workers/ControlP
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/development/docmunch/MAIN_REPO/workers/workers.cabal
+	"	402	0
+	^	416	13
+	.	416	12
+	+	450	23
+	+	450	21
+	+	450	41
+	+	450	57
+	+	450	63
+	+	450	21
+	+	450	44
+	+	450	65
+	+	450	16
+	+	450	45
+	+	450	0
+	+	379	0
+	+	380	27
+	+	383	30
+	+	388	0
+	+	389	0
+	+	390	0
+	+	391	0
+	+	450	0
+	+	446	0
+	+	432	0
+	+	455	13
+	+	106	13
+	+	260	13
+	+	334	15
+	+	455	10
+	+	106	11
+	+	260	11
+	+	334	10
+	+	53	21
+	+	122	21
+	+	203	21
+	+	275	21
+	+	474	21
+	+	376	21
+	+	386	21
+	+	390	21
+	+	458	10
+	+	107	10
+	+	337	10
+	+	262	10
+	+	235	0
+	+	235	0
+	+	234	0
+	+	235	0
+	+	388	0
+	+	387	0
+	+	386	9
+	+	407	25
+	+	387	0
+	+	388	4
+	+	387	2
+	+	400	5
+	+	406	11
+	+	262	0
+	+	107	0
+	+	262	0
+	+	337	0
+	+	458	0
+	+	53	0
+	+	122	0
+	+	203	0
+	+	275	0
+	+	376	0
+	+	474	0
+	+	432	30
+	+	433	21
+	+	489	31
+	+	490	0
+	+	489	50
+	+	72	0
+	+	71	49
+	+	141	0
+	+	140	49
+	+	222	31
+	+	223	0
+	+	222	50
+	+	297	0
+	+	296	50
+	+	386	0
+	+	386	2
+	+	387	0
+	+	386	2
+	+	387	0
+	+	388	2
+	+	415	8
+	+	416	12
+
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/models
+	"	33	21
+	^	26	30
+	.	34	26
+	+	16	14
+	+	6	28
+	+	16	0
+	+	6	24
+	+	1	0
+	+	5	16
+	+	16	10
+	+	23	10
+	+	31	10
+	+	44	10
+	+	59	0
+	+	58	22
+	+	82	22
+	+	58	15
+	+	58	10
+	+	82	15
+	+	6	0
+	+	95	14
+	+	22	14
+	+	15	0
+	+	30	0
+	+	4	0
+	+	43	0
+	+	1	0
+	+	6	0
+	+	17	0
+	+	24	0
+	+	32	0
+	+	45	0
+	+	60	0
+	+	67	0
+	+	84	0
+	+	95	0
+	+	95	14
+	+	35	32
+	+	35	10
+	+	35	36
+	+	34	0
+	+	34	26
+
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Table/Extract.hs
+	"	268	13
+
+> ~/development/docmunch/MAIN_REPO/docmunch/ControlP
+	"	10	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	28	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	11	0
+	+	2	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
+	"	212	39
+	^	212	52
+	.	212	39
+	+	2	0
+	+	388	25
+	+	388	43
+	+	395	0
+	+	389	0
+	+	386	10
+	+	396	10
+	+	398	10
+	+	399	10
+	+	423	62
+	+	394	68
+	+	389	0
+	+	390	26
+	+	401	0
+	+	422	0
+	+	396	4
+	+	398	4
+	+	399	4
+	+	423	50
+	+	386	4
+	+	423	31
+	+	401	0
+	+	416	0
+	+	394	7
+	+	391	19
+	+	391	20
+	+	392	0
+	+	391	69
+	+	212	39
+
+> ~/development/docmunch/MAIN_REPO/README.md
+	"	6	0
+	.	6	0
+	+	6	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Test/README.md
+	"	22	59
+	^	22	60
+	.	22	59
+	+	5	15
+	+	25	10
+	+	9	10
+	+	25	78
+	+	27	62
+	+	25	31
+	+	28	46
+	+	31	39
+	+	25	40
+	+	23	11
+	+	25	0
+	+	23	34
+	+	35	19
+	+	35	29
+	+	25	1
+	+	26	0
+	+	14	0
+	+	10	6
+	+	11	22
+	+	14	0
+	+	12	5
+	+	21	50
+	+	24	66
+	+	41	0
+	+	43	38
+	+	33	18
+	+	39	16
+	+	35	30
+	+	35	20
+	+	38	0
+	+	36	67
+	+	37	47
+	+	20	24
+	+	22	59
+
+> ~/development/docmunch/MAIN_REPO/workers/Test/performance/corpus/000000000000000000000001.json
+	"	98	16
+	^	108	37
+	.	108	36
+	+	95	30
+	+	108	36
+
+> ~/development/docmunch/MAIN_REPO/workers/Test/performance/corpus/000000000000000000000002.json
+	"	252	20
+	^	260	36
+	.	260	35
+	+	172	35
+	+	260	35
+
+> ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
+	"	817	23
+	.	26	0
+	+	135	0
+	+	442	0
+	+	26	0
+	+	180	0
+	+	329	0
+	+	493	0
+	+	659	0
+	+	823	0
+	+	26	0
+
+> ~/development/docmunch/MAIN_REPO/koality.yml
+	"	71	51
+	.	43	132
+	+	43	184
+	+	43	11
+	+	43	164
+	+	43	0
+	+	43	133
+	+	44	0
+	+	43	132
+
+> ~/development/docmunch/MAIN_REPO/workers/Test/performance.hs
+	"	186	44
+	^	204	58
+	.	204	57
+	+	154	45
+	+	154	46
+	+	155	0
+	+	149	0
+	+	149	0
+	+	144	25
+	+	145	57
+	+	144	47
+	+	147	13
+	+	149	0
+	+	147	7
+	+	147	25
+	+	147	57
+	+	148	60
+	+	141	50
+	+	177	4
+	+	177	49
+	+	177	19
+	+	177	0
+	+	155	0
+	+	147	68
+	+	148	0
+	+	191	68
+	+	192	61
+	+	192	20
+	+	194	19
+	+	192	94
+	+	191	29
+	+	193	89
+	+	194	0
+	+	193	88
+	+	194	30
+	+	186	62
+	+	194	31
+	+	193	80
+	+	194	61
+	+	198	0
+	+	194	32
+	+	198	33
+	+	185	58
+	+	194	23
+	+	198	0
+	+	185	72
+	+	194	19
+	+	196	45
+	+	197	45
+	+	198	0
+	+	199	0
+	+	198	0
+	+	1	38
+	+	197	31
+	+	193	38
+	+	143	48
+	+	145	0
+	+	144	64
+	+	146	21
+	+	151	11
+	+	150	71
+	+	152	35
+	+	145	22
+	+	146	39
+	+	146	43
+	+	145	0
+	+	146	0
+	+	145	52
+	+	182	18
+	+	204	44
+	+	203	58
+	+	204	66
+	+	205	62
+	+	204	65
+	+	206	22
+	+	205	20
+	+	204	21
+	+	182	38
+	+	197	36
+	+	41	0
+	+	182	32
+	+	185	63
+	+	182	31
+	+	185	69
+	+	197	65
+	+	199	21
+	+	197	38
+	+	182	0
+	+	197	0
+	+	182	0
+	+	183	0
+	+	182	11
+	+	183	0
+	+	202	0
+	+	202	0
+	+	203	0
+	+	202	34
+	+	203	0
+	+	204	24
+	+	205	24
+	+	206	24
+	+	205	43
+	+	204	57
+	a	144	30
+	o	67	47
+
+> ~/development/docmunch/MAIN_REPO/workers/Test/test-inkscape.hs
+	"	68	46
+	^	29	34
+	.	74	0
+	+	74	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/e2e/newUpload.js
+	"	124	0
+	^	51	50
+	.	51	49
+	+	54	0
+	+	43	0
+	+	50	54
+	+	53	0
+	+	51	13
+	+	53	0
+	+	51	49
+	+	52	6
+	+	44	0
+	+	45	38
+	+	46	53
+	+	51	49
+	a	50	54
+
+> ~/development/docmunch/MAIN_REPO/workers/Test/performance/corpus/525a29cc2f368be1b6000009.json
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Test/performance/corpus/525524ed319f2fe02f00000c.json
+	"	1689	7
+	^	1688	22
+	.	3359	0
+	+	1	0
+	+	17	21
+	+	1688	21
+	+	3359	0
+
+> ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml.LOCAL.41485.yaml
+	"	442	0
+
+> ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml.BASE.41485.yaml
+	"	438	0
+
+> ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml.REMOTE.41485.yaml
+	"	439	0
+
+> ~/development/docmunch/MAIN_REPO/workers/cabal.config.LOCAL.41485.config
+	"	1	1
+
+> ~/development/docmunch/MAIN_REPO/workers/cabal.config.BASE.41485.config
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/workers/cabal.config.REMOTE.41485.config
+	"	1	1
+
+> ~/development/docmunch/MAIN_REPO/workers/bin/webapp.LOCAL.41485
+	"	36	27
+
+> ~/development/docmunch/MAIN_REPO/workers/bin/webapp.BASE.41485
+	"	35	27
+
+> ~/development/docmunch/MAIN_REPO/workers/bin/webapp.REMOTE.41485
+	"	38	27
+
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs.LOCAL.41485.hs
+	"	40	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs.BASE.41485.hs
+	"	39	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs.REMOTE.41485.hs
+	"	42	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Import.hs
+	"	165	0
+	^	6	21
+	.	168	0
+	+	112	0
+	+	116	44
+	+	113	52
+	+	115	14
+	+	113	25
+	+	114	14
+	+	98	50
+	+	99	0
+	+	109	0
+	+	108	0
+	+	109	26
+	+	110	18
+	+	111	67
+	+	118	0
+	+	164	14
+	+	6	20
+	+	165	0
+	+	166	0
+	+	168	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Import.hs.LOCAL.41485.hs
+	"	164	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Import.hs.BASE.41485.hs
+	"	158	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Import.hs.REMOTE.41485.hs
+	"	160	0
+
+> ~/development/docmunch/MAIN_REPO/workers/MongoEnv.hs
+	"	193	0
+	^	20	18
+	.	22	0
+	+	89	36
+	+	21	19
+	+	194	0
+	+	194	0
+	+	194	42
+	+	194	26
+	+	194	59
+	+	194	37
+	+	194	86
+	+	194	71
+	+	194	18
+	+	194	41
+	+	194	55
+	+	194	49
+	+	194	12
+	+	194	12
+	+	194	12
+	+	194	0
+	+	194	0
+	+	194	0
+	+	194	62
+	+	194	30
+	+	194	31
+	+	194	103
+	+	22	30
+	+	194	22
+	+	194	0
+	+	194	21
+	+	194	82
+	+	194	30
+	+	194	29
+	+	194	0
+	+	194	65
+	+	194	68
+	+	194	24
+	+	194	20
+	+	194	31
+	+	194	27
+	+	194	20
+	+	194	20
+	+	194	21
+	+	194	0
+	+	194	0
+	+	22	0
+	n	60	17
 
 > ~/development/docmunch/MAIN_REPO/workers/Setup.hs
 	"	1	0
 
-> ~/development/docmunch/MAIN_REPO/ops/deploy/build-server.coffee
-	"	23	11
+> ~/development/docmunch/MAIN_REPO/workers/Util.hs
+	"	1	0
 
-> ~/development/docmunch/MAIN_REPO/docmunch/app.coffee
-	"	49	28
-	.	2	0
-	+	72	75
-	+	75	0
-	+	76	0
-	+	373	72
-	+	386	0
-	+	123	0
-	+	2	0
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Inkscape.hs
+	"	339	23
+	.	426	0
+	+	97	62
+	+	409	0
+	+	426	0
+	+	426	0
+	+	419	16
+	+	420	20
+	+	421	21
+	+	422	17
+	+	423	10
+	+	424	15
+	+	425	24
+	+	426	0
+	+	481	0
+	+	482	0
+	+	474	23
+	+	475	23
+	+	476	0
+	+	414	33
+	+	416	33
+	+	415	0
+	+	409	0
+	+	426	0
 
-> ~/development/docmunch/MAIN_REPO/docmunch/routes/admin.coffee
-	"	129	0
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload/test/test.hs
+	"	44	18
 
-> ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
-	"	131	0
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Models.hs
+	"	73	22
+	.	73	0
+	+	13	0
+	+	73	0
+	+	63	8
+	+	72	0
+	+	63	0
+	+	67	53
+	+	69	48
+	+	67	0
+	+	71	0
+	+	64	0
+	+	71	0
+	+	65	0
+	+	67	0
+	+	65	0
+	+	65	0
+	+	63	0
+	+	71	0
+	+	61	0
+	+	63	0
+	+	66	0
+	+	66	0
+	+	66	0
+	+	71	0
+	+	68	0
+	+	67	27
+	+	67	12
+	+	14	16
+	+	67	0
+	+	67	53
+	+	67	58
+	+	71	0
+	+	66	0
+	+	67	0
+	+	54	0
+	+	55	52
+	+	56	32
+	+	57	37
+	+	61	0
+	+	71	0
+	+	53	5
+	+	51	83
+	+	52	24
+	+	3	34
+	+	73	40
+	+	73	47
+	+	73	20
+	+	73	0
+	+	73	0
+	+	73	0
+	+	73	0
 
-> ~/development/docmunch/MAIN_REPO/ops/deploy/webapp.coffee
-	"	77	0
-	^	82	75
-	.	82	74
-	+	77	0
-	+	82	75
-	+	16	0
-	+	15	0
-	+	20	0
-	+	21	46
-	+	20	0
-	+	15	0
-	+	22	9
-	+	15	0
+> ~/development/docmunch/MAIN_REPO/workers/table-ext/test/Visualization.hs
+	"	33	14
+	.	35	18
+	+	35	18
+
+> ~/development/docmunch/MAIN_REPO/workers/Test/Env.hs
+	"	11	41
+
+> ~/development/docmunch/MAIN_REPO/workers/Test/Webapp.hs
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/workers/table-ext/test/test.hs
+	"	12	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Model/Document.hs
+	"	1	0
+	^	17	38
+	.	18	0
+	+	45	39
+	+	46	9
+	+	17	35
+	+	18	9
+	+	13	0
+	+	18	13
 	+	17	0
-	+	21	45
-	+	23	0
-	+	1	0
-	+	19	0
-	+	82	74
+	+	18	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Table/Pretty.hs
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Table/Types.hs
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/node_modules/connect-assets/test/BenchmarkDynamic.coffee
+	"	38	2
+	.	27	0
+	+	27	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/node_modules/connect-assets/test/BenchmarkStatic.coffee
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/js/welcome.coffee
+	"	59	52
+
+> ~/development/docmunch/MAIN_REPO/docmunch/node_modules/coffee-trace/lib/cs_js_source_mapping.coffee
+	"	1	0
