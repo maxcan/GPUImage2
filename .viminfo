@@ -8,23 +8,42 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/binar
+~MSle0~/^>
 
 # Last Substitute Search Pattern:
 ~MSle0&bson-0.2.3
 
 # Last Substitute String:
-$bson-0.2.2
+$
 
 # Command Line History (newest to oldest):
-:qa
 :wqa
-:split .git/config
-:w
-:qa!
+:qa
+:q
 :diffget 4
-:SyntasticToggleMode
+:w
+:vs
+:v
 :clo
+:SyntasticToggleMode
+:e assets/ts/_all.ts
+:e _a
+:spl
+:e assets/ts/feature/user.ts
+:w assets/ts/feature/user.ts
+:vimgrep /dm-document/ **/*.%:e
+:cli
+:vimgrep /user/ **/*.%:e
+:e %:h
+:vimgrep /admin/ **/*.%:e
+:vimgrep /checkAdmin/ **/*.%:e
+:split
+:vimgrep /scope.check/ **/*.%:e
+:b1
+:vimgrep /log.*=/ **/*.%:e
+:vimgrep /\<IRootScope\>/ **/*.%:e
+:split .git/config
+:qa!
 :85
 :cn
 :%s/ 
@@ -35,21 +54,17 @@ $bson-0.2.2
 :74
 :%s/bson-0.2.3/bson-0.2.2/gc
 :e ../koality.yml
-:e %:h
 :e Test/performance/corpus/
 :cd ../workers/
 :vimgrep /testjson/ **/*.%:e
 :cd ../docmunch/
-:cli
 :417
 :e!
-:spl
 :vimgrep /titlerows/ **/*.%:e
 :bw
 :e bin/webapp
 :110
 :247
-:vs
 :Vs
 :w! 525a29cc2f368be1b6000009.json
 :w! 000000000000000000000001.json
@@ -104,7 +119,6 @@ $bson-0.2.2
 :48
 :vimgrep /_.eac/ **/*.%:e
 :vimgrep /models.*\<in/ **/*.%:e
-:q
 :vimgrep /models.*in/ **/*.%:e
 :vimgrep /elem/ **/*.%:e
 :vimgrep /models.*elem/ **/*.%:e
@@ -360,7 +374,6 @@ $bson-0.2.2
 :vimgrep /securely/ **/*.%:e
 :%s/ \+$//gc
 :s/bootstrap/toastr/g
-:e assets/ts/_all.ts
 :vimgrep /declare/ **/*.%:e
 :vimgrep /jquery/ **/*.%:e
 :vimgrep /scrip.*jqu/ **/*.%:e
@@ -429,7 +442,6 @@ $bson-0.2.2
 :e Webmunch/
 :e run-citi-webmunch.sh
 :b2
-:b1
 :sav %:h/emaxx-corp.yaml
 :e Webmunch/Citi/Emaxx/
 :!open %:h
@@ -613,7 +625,6 @@ $bson-0.2.2
 :set rnu
 :help 'relativenumber'
 :split client/view_helpers/header.coffee
-:split
 :vimgrep /validatenew/ **/*.%:e
 :'<,'>s/row-fluid/row/g
 :%s
@@ -1017,24 +1028,20 @@ $bson-0.2.2
 :vimgrep /\<lookupTextBox\>/ **/*.jade
 :vimgrep /\<lookupTextBox\>/ **/*.ts
 :cd ../
-:vimgrep /\<lookupTextBox\>/ **/*.%:e
-:vimgrep /lookupTextBox/ **/*.jade
-:vimgrep /lookupTextBox/ **/*.%:e
-:%s/1.2.0.1/1.2.3/gc
-:vimgrep /\<textBoxId\>/ **/*.%:e
-:e ../docmunch/README.md
-:e docmu
-:e docm
-:Unite file_rec/async -default-action=tabopen
-:help vimproc.txt
-:VimProcBang
 
 # Search String History (newest to oldest):
+?/^>
+?/^<
+?/===
+?/user
+?/docu
+?/checkad
+? \<\$rootScope\>
+? \<IRootScope\>
+?/iroot
 ?/binar
 ?/type
-?/^<
 ?/^==
-?/===
 ? \<\$routeParams\>
 ?/>>
 ?/typesc
@@ -1259,7 +1266,6 @@ $bson-0.2.2
 ?/saving to
 ?/saving to az
 ?/req.que
-?/user
 ?/checkadm
 ?/rootsc
 ?/repo
@@ -2024,12 +2030,6 @@ $bson-0.2.2
 ? <.>
 ? \<liftM4\>
 ?/\.\.
-?/persistfie
-?/\<semigroups\>
-?/cpp
-? \<semigroups\>
-?/semigo
-? Left
 
 # Expression History (newest to oldest):
 =yy
@@ -2044,34 +2044,50 @@ $bson-0.2.2
 
 # Registers:
 "0	LINE	0
-		url = git@github.com:docmunch/DefinitelyTyped.git
-	        branch = lodash
-""1	LINE	0
-		url = https://github.com/borisyankov/DefinitelyTyped.git
+	  , sharedArray: shared.Array
+""1	BLOCK	0
+	-
+	-
+	-
+	-
+	-
+	-
+	-
+	-
 "2	LINE	0
-	>>>>>>> origin/gw-services
+	  , $routeParams: IMainRouteParams
 "3	LINE	0
-	  cat docmunch-workers.lock.yaml | grep '    -' | cut -d '-' -f 6 | sort | uniq | xargs cabal install -j --force-reinstalls --reinstall > cabal.config
-	  # since we're going to build upload-doc anyway, save some cycles
-	  cabal install --only-dependencies
-	=======
-	  rm cabal.config
-	  echo "constraints: Cabal >= 1.18.0" > cabal.config
+	  export interface Upload {
+	    pending: { docs: Object[]; };
+	    push(fileData:any): void;
+	  }
+	  export interface Demo {
+	    _id: string;
+	  }
+	  export interface DocSets {
+	    all: shared.IArray<Models.IDoc>;
+	  }
+	  export interface DataSets {
+	    tables: shared.IArray<Models.IDataSet>;
+	  }
+	  export interface Documents {
+	    docSets: DocSets;
+	    dataSets: DataSets;
+	    destroy(doc: Models.IDoc): ng.IPromise<boolean>;
+	    active: Models.IDoc
+	  }
 "4	LINE	0
-	<<<<<<< HEAD
+	  , sharedArray: shared.Array
 "5	LINE	0
-	  echo "constraints:" > cabal.config
+	  , firstTimeModal: modal.firstTime
 "6	LINE	0
-	      # console.log "mapped to : " , util.inspect [convErr, dgs], colors: true, depth: 3
+	  , $timeout: ng.ITimeoutService
 "7	LINE	0
-	    if reqdd.query?.testJsonData?
+	  , $location: ng.ILocationService
 "8	LINE	0
-	
+		url = https://github.com/borisyankov/DefinitelyTyped.git
 "9	LINE	0
-	
-	interface IMainRouteParams extends ng.IRouteParamsService {
-	  docId?: string;
-	}
+	>>>>>>> origin/gw-services
 "a@	CHAR	0
 	ilsdkfjkl  kjl`.€kr€kr€kr€kr€kr€kr€kr€krj
 "b	CHAR	0
@@ -2092,21 +2108,51 @@ $bson-0.2.2
 "w	CHAR	0
 	:w\P
 "-	CHAR	0
-	*
+	doc.Documents
 
 # File marks:
-'0  169  4  ~/development/docmunch/MAIN_REPO/workers/cabal.config
-'1  6  0  ~/development/docmunch/MAIN_REPO/.git/config
-'2  9  1  ~/development/docmunch/MAIN_REPO/.git/config
-'3  51  0  ~/development/docmunch/MAIN_REPO/docmunch/package.json
-'4  35  0  ~/development/docmunch/MAIN_REPO/workers/bin/webapp
-'5  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/10-before-logout.png
-'6  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/08-before-delete.png
-'7  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/05-right-after-selector.png
-'8  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/03-before-upload-new.png
-'9  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/02-quickFormFill.png
+'0  13  73  ~/.vimperatorrc
+'1  7  0  ~/.vimperatorrc
+'2  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png
+'3  1  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+'4  796  26  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.LOCAL.36884.js
+'5  42  8  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+'6  169  4  ~/development/docmunch/MAIN_REPO/workers/cabal.config
+'7  6  0  ~/development/docmunch/MAIN_REPO/.git/config
+'8  9  1  ~/development/docmunch/MAIN_REPO/.git/config
+'9  51  0  ~/development/docmunch/MAIN_REPO/docmunch/package.json
 
 # Jumplist (newest first):
+-'  13  73  ~/.vimperatorrc
+-'  7  13  ~/.vimperatorrc
+-'  1  0  ~/.vimperatorrc
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+-'  796  26  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.LOCAL.36884.js
+-'  42  8  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  5  7  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  3  1  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  4  3  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  22  1  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  19  1  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  2  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  44  25  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/document.ts
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/views/partials/ribbon.jade
+-'  94  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+-'  177  9  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/document.ts
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/document.ts
+-'  45  2  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/util/shared.ts
+-'  83  3  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
+-'  5  12  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
+-'  2  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/doc/doc-ctrl.ts
+-'  31  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/app.coffee
+-'  48  17  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
+-'  37  34  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
+-'  185  6  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+-'  46  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
+-'  38  7  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
 -'  169  4  ~/development/docmunch/MAIN_REPO/workers/cabal.config
 -'  23  0  ~/development/docmunch/MAIN_REPO/workers/cabal.config
 -'  22  7  ~/development/docmunch/MAIN_REPO/workers/cabal.config
@@ -2127,24 +2173,20 @@ $bson-0.2.2
 -'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/05-right-after-selector.png
 -'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/03-before-upload-new.png
 -'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/02-quickFormFill.png
--'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png
 -'  101  0  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
 -'  61  0  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
 -'  84  0  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
 -'  29  7  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
 -'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
--'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
--'  2404  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
--'  326  24  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
--'  45  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
--'  34  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
--'  26  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
--'  24  4  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
--'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
--'  9  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
--'  7  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
--'  5  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
--'  6  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/main/main-ctrl.ts
+-'  2394  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+-'  34  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+-'  26  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+-'  24  4  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+-'  9  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+-'  7  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+-'  5  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+-'  6  0  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
 -'  29  54  ~/development/docmunch/MAIN_REPO/workers/bin/webapp
 -'  27  136  ~/development/docmunch/dm-gw-services/workers/bin/webapp
 -'  28  8  ~/development/docmunch/dm-gw-services/workers/bin/webapp
@@ -2170,40 +2212,247 @@ $bson-0.2.2
 -'  329  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
 -'  493  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
 -'  659  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  823  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  981  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  984  26  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  834  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  39  35  ~/development/docmunch/MAIN_REPO/koality.yml
--'  26  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  204  11  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  175  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  49  11  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  21  6  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  1  0  ~/development/docmunch/MAIN_REPO/workers/docmunch-workers.lock.yaml
--'  402  0  ~/development/docmunch/MAIN_REPO/workers/workers.cabal
--'  22  59  ~/development/docmunch/MAIN_REPO/workers/Test/README.md
--'  1  0  ~/development/docmunch/MAIN_REPO/README.md
--'  79  27  ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee
--'  212  39  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
--'  209  0  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
--'  205  46  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
--'  189  46  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
--'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
--'  359  27  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
--'  353  10  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
--'  352  37  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
--'  373  30  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
--'  34  2  ~/development/docmunch/MAIN_REPO/workers/Webapp/models
--'  35  27  ~/development/docmunch/MAIN_REPO/workers/Webapp/models
--'  44  14  ~/development/docmunch/MAIN_REPO/workers/Webapp/models
--'  370  27  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
--'  268  13  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Table/Extract.hs
--'  228  0  ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs
--'  1  0  ~/development/docmunch/MAIN_REPO/workers/Webapp/models
--'  390  14  ~/development/docmunch/MAIN_REPO/workers/workers.cabal
+-'  42  8  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  5  7  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  3  1  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  4  3  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  22  1  ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+-'  1  0  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+-'  796  26  ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.LOCAL.36884.js
 
 # History of marks within files (newest to oldest):
+
+> ~/.vimperatorrc
+	"	13	73
+	^	16	83
+	.	9	0
+	+	17	0
+	+	16	75
+	+	9	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png.LOCAL.37012.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png.BASE.37012.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png.REMOTE.37012.png
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
+	"	1	0
+	.	1	0
+	+	2395	0
+	+	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.LOCAL.37012.js
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.BASE.37012.js
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.REMOTE.37012.js
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.LOCAL.36884.js
+	"	796	26
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.BASE.36884.js
+	"	796	20
+
+> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.REMOTE.36884.js
+	"	796	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/admin/admin-ctrl.ts
+	"	83	3
+	^	5	13
+	.	5	0
+	+	38	0
+	+	48	0
+	+	46	0
+	+	47	43
+	+	48	23
+	+	49	0
+	+	5	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/ControlP
+	"	10	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/account/account-ctrl.ts
+	"	94	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/angular-app.ts
+	"	4	34
+	^	4	35
+	.	4	35
+	+	4	23
+	+	3	25
+	+	4	65
+	+	5	0
+	+	4	35
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/doc/doc-ctrl.ts
+	"	2	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/document.ts
+	"	44	25
+	.	1	0
+	+	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/ingest/ingest-ctrl.ts
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/util/general.ts
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/views/partials/ribbon.jade
+	"	29	23
+
+> ~/development/docmunch/MAIN_REPO/docmunch/app.coffee
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/paths-gen.ts
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/_all.ts
+	"	19	32
+	^	19	33
+	.	19	32
+	+	19	32
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/util/shared.ts
+	"	45	2
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/test/test-ctrl.ts
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/util/models.ts
+	"	44	20
+
+> ~/development/docmunch/MAIN_REPO/docmunch/node_modules/typescript/bin/lib.d.ts
+	"	1	0
+
+> ~/development/docmunch/MAIN_REPO/docmunch/assets/ts/feature/user.ts
+	"	42	8
+	^	27	8
+	.	27	7
+	+	234	0
+	+	19	22
+	+	28	0
+	+	22	13
+	+	25	0
+	+	25	0
+	+	4	0
+	+	7	0
+	+	3	17
+	+	7	0
+	+	5	38
+	+	25	19
+	+	27	7
 
 > ~/development/docmunch/MAIN_REPO/workers/cabal.config
 	"	169	4
@@ -2321,9 +2570,6 @@ $bson-0.2.2
 	"	1	0
 
 > ~/development/docmunch/MAIN_REPO/docmunch/test/captures/02-quickFormFill.png.REMOTE.177.png
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png
 	"	1	0
 
 > ~/development/docmunch/MAIN_REPO/docmunch/test/captures/01-welcome-page.png.LOCAL.177.png
@@ -2448,12 +2694,6 @@ $bson-0.2.2
 
 > ~/development/docmunch/MAIN_REPO/docmunch/routes/doc.coffee.REMOTE.177.coffee
 	"	61	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js
-	"	1	0
-	.	1	0
-	+	2405	0
-	+	1	0
 
 > ~/development/docmunch/MAIN_REPO/docmunch/public/gen/app.js.LOCAL.177.js
 	"	1	0
@@ -2961,110 +3201,6 @@ $bson-0.2.2
 > ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Table/Extract.hs
 	"	268	13
 
-> ~/development/docmunch/MAIN_REPO/docmunch/ControlP
-	"	10	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	28	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	11	0
-	+	2	0
-
 > ~/development/docmunch/MAIN_REPO/docmunch/models.coffee
 	"	212	39
 	^	212	52
@@ -3344,237 +3480,3 @@ $bson-0.2.2
 
 > ~/development/docmunch/MAIN_REPO/workers/bin/webapp.LOCAL.41485
 	"	36	27
-
-> ~/development/docmunch/MAIN_REPO/workers/bin/webapp.BASE.41485
-	"	35	27
-
-> ~/development/docmunch/MAIN_REPO/workers/bin/webapp.REMOTE.41485
-	"	38	27
-
-> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs.LOCAL.41485.hs
-	"	40	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs.BASE.41485.hs
-	"	39	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload.hs.REMOTE.41485.hs
-	"	42	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Import.hs
-	"	165	0
-	^	6	21
-	.	168	0
-	+	112	0
-	+	116	44
-	+	113	52
-	+	115	14
-	+	113	25
-	+	114	14
-	+	98	50
-	+	99	0
-	+	109	0
-	+	108	0
-	+	109	26
-	+	110	18
-	+	111	67
-	+	118	0
-	+	164	14
-	+	6	20
-	+	165	0
-	+	166	0
-	+	168	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Import.hs.LOCAL.41485.hs
-	"	164	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Import.hs.BASE.41485.hs
-	"	158	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Import.hs.REMOTE.41485.hs
-	"	160	0
-
-> ~/development/docmunch/MAIN_REPO/workers/MongoEnv.hs
-	"	193	0
-	^	20	18
-	.	22	0
-	+	89	36
-	+	21	19
-	+	194	0
-	+	194	0
-	+	194	42
-	+	194	26
-	+	194	59
-	+	194	37
-	+	194	86
-	+	194	71
-	+	194	18
-	+	194	41
-	+	194	55
-	+	194	49
-	+	194	12
-	+	194	12
-	+	194	12
-	+	194	0
-	+	194	0
-	+	194	0
-	+	194	62
-	+	194	30
-	+	194	31
-	+	194	103
-	+	22	30
-	+	194	22
-	+	194	0
-	+	194	21
-	+	194	82
-	+	194	30
-	+	194	29
-	+	194	0
-	+	194	65
-	+	194	68
-	+	194	24
-	+	194	20
-	+	194	31
-	+	194	27
-	+	194	20
-	+	194	20
-	+	194	21
-	+	194	0
-	+	194	0
-	+	22	0
-	n	60	17
-
-> ~/development/docmunch/MAIN_REPO/workers/Setup.hs
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Util.hs
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Inkscape.hs
-	"	339	23
-	.	426	0
-	+	97	62
-	+	409	0
-	+	426	0
-	+	426	0
-	+	419	16
-	+	420	20
-	+	421	21
-	+	422	17
-	+	423	10
-	+	424	15
-	+	425	24
-	+	426	0
-	+	481	0
-	+	482	0
-	+	474	23
-	+	475	23
-	+	476	0
-	+	414	33
-	+	416	33
-	+	415	0
-	+	409	0
-	+	426	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Upload/test/test.hs
-	"	44	18
-
-> ~/development/docmunch/MAIN_REPO/workers/Webapp/Models.hs
-	"	73	22
-	.	73	0
-	+	13	0
-	+	73	0
-	+	63	8
-	+	72	0
-	+	63	0
-	+	67	53
-	+	69	48
-	+	67	0
-	+	71	0
-	+	64	0
-	+	71	0
-	+	65	0
-	+	67	0
-	+	65	0
-	+	65	0
-	+	63	0
-	+	71	0
-	+	61	0
-	+	63	0
-	+	66	0
-	+	66	0
-	+	66	0
-	+	71	0
-	+	68	0
-	+	67	27
-	+	67	12
-	+	14	16
-	+	67	0
-	+	67	53
-	+	67	58
-	+	71	0
-	+	66	0
-	+	67	0
-	+	54	0
-	+	55	52
-	+	56	32
-	+	57	37
-	+	61	0
-	+	71	0
-	+	53	5
-	+	51	83
-	+	52	24
-	+	3	34
-	+	73	40
-	+	73	47
-	+	73	20
-	+	73	0
-	+	73	0
-	+	73	0
-	+	73	0
-
-> ~/development/docmunch/MAIN_REPO/workers/table-ext/test/Visualization.hs
-	"	33	14
-	.	35	18
-	+	35	18
-
-> ~/development/docmunch/MAIN_REPO/workers/Test/Env.hs
-	"	11	41
-
-> ~/development/docmunch/MAIN_REPO/workers/Test/Webapp.hs
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/workers/table-ext/test/test.hs
-	"	12	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Webapp/Model/Document.hs
-	"	1	0
-	^	17	38
-	.	18	0
-	+	45	39
-	+	46	9
-	+	17	35
-	+	18	9
-	+	13	0
-	+	18	13
-	+	17	0
-	+	18	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Table/Pretty.hs
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/workers/Webapp/Doc/Table/Types.hs
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/node_modules/connect-assets/test/BenchmarkDynamic.coffee
-	"	38	2
-	.	27	0
-	+	27	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/node_modules/connect-assets/test/BenchmarkStatic.coffee
-	"	1	0
-
-> ~/development/docmunch/MAIN_REPO/docmunch/assets/js/welcome.coffee
-	"	59	52
-
-> ~/development/docmunch/MAIN_REPO/docmunch/node_modules/coffee-trace/lib/cs_js_source_mapping.coffee
-	"	1	0
