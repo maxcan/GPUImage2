@@ -5,3 +5,12 @@ nmap "\\bm" <Esc>:tabopen<Space>https://docs.google.com/a/daggerboardinc.com/spr
 source! /Users/max/.vimperatorrc.local
 
 " vim: set ft=vimperator:
+autocmd LocationChange .*                             js modes.passAllKeys = false
+autocmd LocationChange mail\\.google\\.com            js modes.passAllKeys = true
+autocmd LocationChange www\\.google\\.com/calendar    js modes.passAllKeys = true
+autocmd LocationChange docs\\.google\\.com            js modes.passAllKeys = true
+autocmd LocationChange app\\.asana\\.com              js modes.passAllKeys = true
+" autocmd LocationChange www\\.github\\.com              js modes.passAllKeys = true
+" autocmd LocationChange github\\.com              js modes.passAllKeys = true
+autocmd LocationChange www\\.google\\.com/reader      js modes.passAllKeys = true
+autocmd LocationChange mail\\.google\\.com/tasks      js modes.passAllKeys = false
