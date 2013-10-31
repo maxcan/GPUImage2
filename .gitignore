@@ -16,6 +16,7 @@
 .dshell
 .viminfo
 .dropbox/
-.zcompdump*
 .DS_Store
 .zhistory
+.bash_history
+.zcompdump*
