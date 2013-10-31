@@ -176,6 +176,9 @@ set softtabstop=2
 " strip WS command
 map <Leader>ws :%s/ \+$//<CR>
 
+au Bufenter *.md setlocal softtabstop=4
+au Bufenter *.md setlocal shiftwidth=4
+
 au Bufenter *.hs setlocal softtabstop=4
 au Bufenter *.hs setlocal shiftwidth=4
 

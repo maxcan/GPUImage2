@@ -1,8 +1,5 @@
 .less-history-file:
 .search
-"link
-"---
-"+++
 "diff --git
 "mike
 "Mike
@@ -100,4 +97,7 @@
 "coffe
 "processRawP
 "test
+"check
+"mongod
+"-b
 .shell
