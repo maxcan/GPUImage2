@@ -1,7 +1,5 @@
 .less-history-file:
 .search
-"diff --git
-"mike
 "Mike
 "askpa
 "root
@@ -100,4 +98,6 @@
 "check
 "mongod
 "-b
+"zoon
+"z
 .shell
