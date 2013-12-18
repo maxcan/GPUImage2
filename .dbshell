@@ -1,8 +1,3 @@
-db.queue.remove({})
-db.queue.update({_id: ObjectId("51d7b6b22d9d445d5c000007")}, {handled:true})
-db.docs.find({userFileName : 'ocr-test.pdf'})
-db.dropDatabase()
-db.dropDatabase()
 show collections
 db.queue_ocr.find({})
 db.queue.find({})
@@ -96,4 +91,9 @@ db.users.remove({})
 db.users.find({})
 db.docs.find({})
 db.docs.remove({})
+db.docs.find({})
+db.users.find({})
+db.users.find({})
+ogaraje
+db.dropDatabase()
 db.docs.find({})

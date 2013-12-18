@@ -5,8 +5,9 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="kphoen"
+ZSH_THEME="miloshadzic"
 # ZSH_THEME="flazz"
 
 # Example aliases
@@ -20,7 +21,7 @@ ZSH_THEME="kphoen"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=30
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -37,19 +38,22 @@ ZSH_THEME="kphoen"
 # Uncomment following line if you want to disable marking untracked files under
 # VCS as dirty. This makes repository status check for large repositories much,
 # much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+# function git_prompt_info() {
+#   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+#   echo "foo"
+# }
+
 # Customize to your needs...
-export PATH=$PATH:./.cabal-sandbox/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/max/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/max/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin
-
-
+export PATH=$PATH:./.cabal-sandbox/bin:../.cabal-sandbox/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/max/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/max/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin
 
 # JAVA shit for aws
 export JAVA_HOME='/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home'
@@ -59,8 +63,8 @@ export NODE_ENV=dev
 export AWS_ACCESS_KEY='AKIAJ2ER3FHDTHX5M5ZA'
 export AWS_SECRET_KEY='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'
 export AWS_CREDENTIAL_FILE="$HOME/.ec2/iam.creds.txt"
-echo "AWSAccessKeyId=${AWS_ACCESS_KEY}" > $AWS_CREDENTIAL_FILE
-echo "AWSSecretKey=${AWS_SECRET_KEY}" >> $AWS_CREDENTIAL_FILE
+# echo "AWSAccessKeyId=${AWS_ACCESS_KEY}" > $AWS_CREDENTIAL_FILE
+# echo "AWSSecretKey=${AWS_SECRET_KEY}" >> $AWS_CREDENTIAL_FILE
 autoload -U compinit
 compinit
 
@@ -131,3 +135,5 @@ alias hsact='source .hsenv*/bin/activate'
 
 alias runmongo='mongod run --config /usr/local/etc/mongod.conf'
 cd() { pushd "$*" >> /dev/null; }
+export LD_LIBRARY_PATH=/usr/local/lib
+export PATH=~/.cabal/bin:$PATH
