@@ -1,8 +1,4 @@
 show collections
-db.queue_ocr.find({})
-db.queue.find({})
-db.queue_ocr.find({})
-show collections
 db.queue.find({})
 show collections
 db.queue_ocr.find({})
@@ -92,8 +88,12 @@ db.users.find({})
 db.docs.find({})
 db.docs.remove({})
 db.docs.find({})
+db.dropDatabase()
+db.dropDatabase()
+db.dropDatabase()
 db.users.find({})
-db.users.find({})
-ogaraje
+show collections
+db.foo.insert({a:1})
+db.foo.find({})
 db.dropDatabase()
 db.docs.find({})
