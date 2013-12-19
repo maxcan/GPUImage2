@@ -34,3 +34,8 @@ Pictures
 Development
 Library
 .rnd
+.lesshst
+.xsession*
+.profile
+.bash_logout
+.ICEauthority
