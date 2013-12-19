@@ -10,7 +10,6 @@
 .gem
 .cabal
 *cache*
-.vim/
 .zhistory
 .zcompdump
 .dshell
