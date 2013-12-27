@@ -38,3 +38,4 @@ Library
 .profile
 .bash_logout
 .ICEauthority
+*.pid
