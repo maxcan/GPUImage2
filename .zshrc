@@ -53,7 +53,7 @@ source $ZSH/oh-my-zsh.sh
 # }
 
 # Customize to your needs...
-export PATH=$PATH:./.cabal-sandbox/bin:../.cabal-sandbox/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/max/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/max/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin
+export PATH=$PATH:./.cabal-sandbox/bin:../.cabal-sandbox/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/max/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/max/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin
 
 # JAVA shit for aws
 export JAVA_HOME='/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home'
@@ -136,4 +136,4 @@ alias hsact='source .hsenv*/bin/activate'
 alias runmongo='mongod run --config /usr/local/etc/mongod.conf'
 cd() { pushd "$*" >> /dev/null; }
 export LD_LIBRARY_PATH=/usr/local/lib
-export PATH=~/.cabal/bin:$PATH
+export PATH=/usr/local/bin:~/.cabal/bin:$PATH
