@@ -109,6 +109,7 @@ au Bufenter *.ts setlocal cinkeys=0{,0},0),0#,!^F,o,O,e
 set wildignore+=**/DefinitelyTyped/**
 set wildignore+=**/test/fixtures/*tree/**
 set wildignore+=**/cabal-dev/**
+set wildignore+=**/node_modules/**,**/.cabal-sandbox/**,**/.git,**/phantomjs/src/**
 
 com W w
 com Wa wa
