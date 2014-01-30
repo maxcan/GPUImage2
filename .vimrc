@@ -1,5 +1,5 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+$#set nocompatible               " be iMproved
+$#filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
 " Vundle stuff
@@ -44,6 +44,8 @@ Bundle 'dhruvasagar/vim-table-mode'
 
 " let g:slime_target = "tmux"
 
+" for commenting:
+autocmd FileType hamlet set commentstring=$#%s
 " For control-p
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
@@ -54,6 +56,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|o|hi)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+
 
 set mouse=a
 
@@ -91,6 +94,7 @@ imap <Leader>bb <Esc>:CtrlPBuffer<cr>
 imap <Leader>pp <Esc>:CtrlP<cr>
 map <Leader>b :CtrlPBuffer<cr>
 map <Leader>p :CtrlP<cr>
+map <leader>PP :CtrlPClearAllCaches<CR>
 cnoremap jj <C-c>
 
 " Syntastic stuff
@@ -118,10 +122,10 @@ vnoremap <Leader>ss :SlimuxREPLSendSelection<CR>
 noremap <Leader>sl :SlimuxREPLSendLine<CR>
 noremap <Leader>sc :SlimuxREPLConfigure<CR>
 
-imap <Leader>v :set paste<cr>o
-imap <Leader>V :set nopaste<cr>
-map <Leader>v :set paste<cr>o
-map <Leader>V :set nopaste<cr>
+imap <Leader>x :set paste<cr>o
+imap <Leader>X :set nopaste<cr>
+map <Leader>x :set paste<cr>o
+map <Leader>X :set nopaste<cr>
 set statusline=%<%f\ B%n\ %y%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %P
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
