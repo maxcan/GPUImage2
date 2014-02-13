@@ -111,6 +111,8 @@ REPORTTIME=10
 # export PATH=${PATH}:${AWS_IAM_HOME}/bin
 
 export MANPATH=/usr/local/share/man:$MANPATH
+alias cdlast="cd `ls -rt | tail -n 1`"
+
 alias dt="date '+%Y-%m-%d'"
 alias cdv='cabal-dev'
 alias cdvii='cabal-dev install'

@@ -1,5 +1,5 @@
-$#set nocompatible               " be iMproved
-$#filetype off                   " required!
+set nocompatible               " be iMproved
+filetype off                   " required!
 
 set rtp+=~/.vim/bundle/vundle/
 " Vundle stuff
@@ -57,7 +57,6 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
-
 set mouse=a
 
 nnoremap ' `
@@ -65,7 +64,9 @@ nnoremap ` '
 " let mapleader = " "
 let mapleader = '\'
 inoremap jj <Esc>
-" nno <leader>p :<C-u>Unite file_mru file_rec/async:! -start-insert -buffer-name=files<CR>
+
+" for copy and pasting from vim
+nnoremap <Leader>c :set number!<CR>:set relativenumber!<CR>:GitGutterToggle<CR>
 
 " Unite
 
@@ -122,10 +123,10 @@ vnoremap <Leader>ss :SlimuxREPLSendSelection<CR>
 noremap <Leader>sl :SlimuxREPLSendLine<CR>
 noremap <Leader>sc :SlimuxREPLConfigure<CR>
 
-imap <Leader>x :set paste<cr>o
-imap <Leader>X :set nopaste<cr>
-map <Leader>x :set paste<cr>o
-map <Leader>X :set nopaste<cr>
+imap <Leader>x :set paste!<cr>
+" imap <Leader>X :set nopaste<cr>
+map <Leader>x :set paste!<cr>
+" map <Leader>X :set nopaste<cr>
 set statusline=%<%f\ B%n\ %y%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %P
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
