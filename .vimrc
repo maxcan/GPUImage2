@@ -13,7 +13,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'nono/vim-handlebars'
 Bundle 'tpope/vim-fugitive'
 " Bundle 'wincent/Command-T'
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
 Bundle 'kshenoy/vim-signature'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'kien/ctrlp.vim'
@@ -35,12 +35,13 @@ Bundle 'wgibbs/vim-irblack'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
-Bundle 'epeli/slimux'
+" Bundle 'epeli/slimux'
 " Bundle 'jpalardy/vim-slime'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'leafgarland/typescript-vim'
 " Bundle 'skammer/vim-css-color'
 Bundle 'dhruvasagar/vim-table-mode'
+Bundle 'nbouscal/vim-stylish-haskell'
 
 " let g:slime_target = "tmux"
 
@@ -187,6 +188,9 @@ au Bufenter *.md setlocal shiftwidth=4
 
 au Bufenter *.hs setlocal softtabstop=4
 au Bufenter *.hs setlocal shiftwidth=4
+
+au Bufenter *.hs setlocal cc=80
+au Bufenter *.hs highlight ColorColumn ctermbg=0
 
 set expandtab
 
