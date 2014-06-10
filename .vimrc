@@ -21,9 +21,10 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'jnurmine/Zenburn'
 Bundle 'mattn/zencoding-vim'
 " Bundle 'Twinside/vim-haskellConceal'
-Bundle 'pbrisbin/html-template-syntax'
+" Bundle 'pbrisbin/html-template-syntax'
 " Bundle 'eagletmt/ghcmod-vim'
 " Bundle 'pbrisbin/html-template-syntax'
+Bundle 'pbrisbin/vim-syntax-shakespeare'
 " Bundle 'Shougo/neocomplcache'
 " Bundle 'Shougo/neocomplcache-snippets-complete'
 " Bundle 'honza/snipmate-snippets'
@@ -41,7 +42,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'leafgarland/typescript-vim'
 " Bundle 'skammer/vim-css-color'
 Bundle 'dhruvasagar/vim-table-mode'
-Bundle 'nbouscal/vim-stylish-haskell'
+" Bundle 'nbouscal/vim-stylish-haskell'
 
 " let g:slime_target = "tmux"
 
@@ -182,7 +183,7 @@ set softtabstop=2
 
 " strip WS command
 map <Leader>ws :%s/ \+$//<CR>
-
+map <Leader>/ /\(^>>>\)\|\(^<<<\)\|\(^====\)<CR>
 au Bufenter *.md setlocal softtabstop=4
 au Bufenter *.md setlocal shiftwidth=4
 

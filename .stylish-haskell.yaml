@@ -72,6 +72,28 @@ columns: 80
 # needs to be aware of these, so it can parse the file correctly.
 #
 # No language extensions are enabled by default.
-# language_extensions:
+language_extensions:
   # - TemplateHaskell
   # - QuasiQuotes
+  - TemplateHaskell
+  - QuasiQuotes
+  - OverloadedStrings
+  - NoImplicitPrelude
+  - CPP
+  - RecordWildCards
+  - ScopedTypeVariables
+  - MultiParamTypeClasses
+  - TypeFamilies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - StandaloneDeriving
+  - FlexibleContexts
+  - EmptyDataDecls
+  - NoMonomorphismRestriction
+  - DeriveDataTypeable
+  - FlexibleInstances
+  - TupleSections
+  - LambdaCase
+  - RecordWildCards
+  - ConstraintKinds
+  - DoAndIfThenElse
