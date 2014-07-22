@@ -125,9 +125,11 @@ alias gs='git status'
 alias gc='git commit'
 alias gch='git checkout'
 alias gd='git diff'
+alias gfo='git fetch origin'
 alias gdc='git diff --color'
 alias gcam='git commit -a -m'
 alias glp='git log --color -w -p'
+alias gmnc='git merge --no-ff --no-commit'
 alias pull='git pull origin'
 alias push='git push origin'
 alias exo='expresso'
@@ -148,3 +150,4 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
+ulimit -n 8192

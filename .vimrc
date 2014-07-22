@@ -20,6 +20,7 @@ Bundle 'kien/ctrlp.vim'
 " Bundle 'Valloric/YouCompleteMe'
 Bundle 'jnurmine/Zenburn'
 Bundle 'mattn/zencoding-vim'
+" Bundle 'raichoo/haskell-vim'
 " Bundle 'Twinside/vim-haskellConceal'
 " Bundle 'pbrisbin/html-template-syntax'
 " Bundle 'eagletmt/ghcmod-vim'
@@ -50,7 +51,6 @@ Bundle 'dhruvasagar/vim-table-mode'
 autocmd FileType hamlet set commentstring=$#%s
 " For control-p
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_switch_buffer = 'v'
 let g:ctrlp_custom_ignore = {
@@ -113,6 +113,7 @@ au Bufenter *.ts setlocal cinkeys=0{,0},0),0#,!^F,o,O,e
 " let g:SlimuxUseNodeReplForCoffee = 1
 
 " Because definitely typed was crushing vimgrep
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=**/DefinitelyTyped/**
 set wildignore+=**/test/fixtures/*tree/**
 set wildignore+=**/cabal-dev/**
@@ -183,7 +184,7 @@ set softtabstop=2
 
 " strip WS command
 map <Leader>ws :%s/ \+$//<CR>
-map <Leader>/ /\(^>>>\)\|\(^<<<\)\|\(^====\)<CR>
+map <Leader>/ /\(^>>>\)\\|\(^<<<\)\\|\(^====\)<CR>
 au Bufenter *.md setlocal softtabstop=4
 au Bufenter *.md setlocal shiftwidth=4
 

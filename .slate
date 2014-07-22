@@ -2,7 +2,7 @@ config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
-alias margin 15
+alias margin 10
 alias margin2 (2*${margin})
 alias margin15 (1.5*${margin})
 alias margin05 (0.5*${margin})
