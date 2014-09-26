@@ -51,6 +51,14 @@ Bundle 'dhruvasagar/vim-table-mode'
 autocmd FileType hamlet set commentstring=$#%s
 " For control-p
 
+set commentstring=$#%s
+
+autocmd FileType markdown noremap  <buffer> <silent> k gk
+autocmd FileType markdown noremap  <buffer> <silent> j gj
+autocmd FileType markdown noremap  <buffer> <silent> 0 g0
+autocmd FileType markdown noremap  <buffer> <silent> $ g$
+
+
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_switch_buffer = 'v'
 let g:ctrlp_custom_ignore = {

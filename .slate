@@ -4,6 +4,7 @@ config resizePercentOf screenSize
 
 alias margin 10
 alias margin2 (2*${margin})
+alias margin3 (3*${margin})
 alias margin15 (1.5*${margin})
 alias margin05 (0.5*${margin})
 
@@ -11,10 +12,12 @@ alias marOriginX (screenOriginX+${margin})
 alias marOriginY (screenOriginY+${margin})
 
 alias narrowX (screenSizeX/3)
+alias narrowerX (screenSizeX/4)
 alias wideX (2*(screenSizeX/3))
+alias widerX (3*(screenSizeX/4))
 
 alias narrowY (screenSizeY/3)
-alias wideY (2*(screenSizeY/3))
+alias widerY (3*(screenSizeY/4))
 
 alias full          move screenOriginX;screenOriginY                                          screenSizeX;screenSizeY
 alias lefthalf      move ${marOriginX};${marOriginY}                      (screenSizeX/2)-${margin15};screenSizeY-${margin2}
@@ -33,8 +36,8 @@ alias bottomright   corner bottom-right resize:screenSizeX/2;screenSizeY/2
 alias lefttopqtr    move ${marOriginX};${marOriginY}                      (screenSizeX/2)-${margin15};(screenSizeY/2)-${margin2}
 alias righttopqtr    move ${marOriginX}+screenSizeX/2-${margin05};${marOriginY}        (screenSizeX/2)-${margin15};(screenSizeY/2)-${margin2}
 
-alias leftthirds    move ${marOriginX};${marOriginY}                        ${wideX}-${margin15};screenSizeY-${margin2}
-alias rightthirds   move ${marOriginX}+${narrowX}-${margin05};${marOriginY} ${wideX}-${margin15};screenSizeY-${margin2}
+alias leftmost    move ${marOriginX};${marOriginY}                        ${widerX}-${margin15};screenSizeY-${margin2}
+alias rightmost   move ${marOriginX}+${narrowerX}-${margin05};${marOriginY} ${widerX}-${margin15};screenSizeY-${margin2}
 
 bind up:alt;ctrl ${full}
 bind down:alt;ctrl ${bottomhalf}
@@ -47,8 +50,8 @@ bind right:alt;ctrl ${righthalf}
 bind up:cmd;alt;ctrl ${tophalf}
 bind left:cmd;ctrl ${leftthird}
 bind right:cmd;ctrl ${rightthird}
-bind left:cmd;alt;ctrl ${leftthirds}
-bind right:cmd;alt;ctrl ${rightthirds}
+bind left:cmd;alt;ctrl ${leftmost}
+bind right:cmd;alt;ctrl ${rightmost}
 bind down:cmd;alt;ctrl ${middlethird}
 
 # bind tab:cmd switch
