@@ -8,7 +8,10 @@ source! /Users/max/.vimperatorrc.local
 " vim: set ft=vimperator:
 autocmd LocationChange .*                             js modes.passAllKeys = false
 autocmd LocationChange mail\\.google\\.com            js modes.passAllKeys = true
+autocmd LocationChange docs\\.google\\.com            js modes.passAllKeys = true
 autocmd LocationChange www\\.google\\.com/calendar    js modes.passAllKeys = true
 autocmd LocationChange feedly\\.com/*                 js modes.passAllKeys = true
 autocmd LocationChange workflowy\\.com/*              js modes.passAllKeys = true
 autocmd LocationChange www.workflowy\\.com/*          js modes.passAllKeys = true
+autocmd LocationChange trello\\.com/*          js modes.passAllKeys = true
+autocmd LocationChange *\\.trello\\.com/*          js modes.passAllKeys = true

@@ -58,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
 # }
 
 # Customize to your needs...
-export PATH=$PATH:./.cabal-sandbox/bin:../.cabal-sandbox/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/max/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/max/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin
+export PATH=$PATH:./.cabal-sandbox/bin:../.cabal-sandbox/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:./cabal-dev/bin:/Users/max/.cabal/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/max/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286/bin:/Users/max/.rvm/gems/ruby-1.9.3-p286@global/bin:/Users/max/.rvm/rubies/ruby-1.9.3-p286/bin:/Users/max/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin:/usr/local/share/npm/bin/:/Users/max/Library/Haskell/bin:/Users/max/bin:/Users/max/bin/play:/usr/local/Cellar/aws-iam-tools/1.5.0/jars/bin:/Users/max/.rvm/bin:/Users/max/.gem/ruby/2.0.0/bin
 
 # JAVA shit for aws
 export JAVA_HOME='/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home'
@@ -151,3 +151,5 @@ export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
 export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
 ulimit -n 8192
+
+. `brew --prefix`/etc/profile.d/z.sh
