@@ -152,4 +152,16 @@ export JAVA_HOME="$(/usr/libexec/java_home)"
 # export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
 ulimit -n 8192
 
+###### Nitro stuff
+docker-kafka-ip() {docker-machine env docker-kafka | grep _HOST | gsed -re 's/.*HOST="tcp:..([0-9.]*):.*$/\1/'}
+docker-kafka-set() {
+  export ZOOKEEPER_OVERRIDE=$(docker-kafka-ip):2181;
+  export BROKERS_OVERRIDE=$(docker-kafka-ip):9092
+  echo "ZOOKEEPER_OVERRIDE = $ZOOKEEPER_OVERRIDE"
+  echo "BROKERS_OVERRIDE = $BROKERS_OVERRIDE"
+}
+alias dks='docker-kafka-set'
+
 . `brew --prefix`/etc/profile.d/z.sh
+
+alias tmux-attach='tmux new-session -t 0'

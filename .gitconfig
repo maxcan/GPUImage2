@@ -1,6 +1,6 @@
 [user]
-	name = Max Cantor (MBPr)
-	email = i@cantor.mx
+	name = Max
+	email = max.cantor@gonitro.com
 [alias]
 	standup = log --since yesterday
 	purr = pull --rebase

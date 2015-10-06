@@ -19,7 +19,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'kien/ctrlp.vim'
 " Bundle 'Valloric/YouCompleteMe'
 Bundle 'jnurmine/Zenburn'
-Bundle 'mattn/zencoding-vim'
+Bundle 'derekwyatt/vim-scala'
+" Bundle 'mattn/zencoding-vim'
 " Bundle 'raichoo/haskell-vim'
 " Bundle 'Twinside/vim-haskellConceal'
 " Bundle 'pbrisbin/html-template-syntax'
@@ -44,6 +45,7 @@ Bundle 'leafgarland/typescript-vim'
 " Bundle 'skammer/vim-css-color'
 Bundle 'dhruvasagar/vim-table-mode'
 " Bundle 'nbouscal/vim-stylish-haskell'
+Bundle 'embear/vim-localvimrc'
 
 " let g:slime_target = "tmux"
 
@@ -62,8 +64,8 @@ autocmd FileType markdown noremap  <buffer> <silent> $ g$
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_switch_buffer = 'v'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.((git|hg|svn|node_modules|cabal-dev|hsenv)|node_modules)$',
-  \ 'file': '\v\.(exe|so|dll|o|hi)$',
+  \ 'dir':  '\v[\/]\.((bower_components|git|hg|svn|node_modules|cabal-dev|hsenv)|node_modules)$',
+  \ 'file': '\v\.(exe|class|so|dll|o|hi)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
@@ -77,6 +79,7 @@ inoremap jj <Esc>
 
 " for copy and pasting from vim
 nnoremap <Leader>c :set number!<CR>:set relativenumber!<CR>:GitGutterToggle<CR>
+nnoremap <Leader>wi :set wildignore+=public/assets/**<CR>:set wildignore+=**/temp/**<CR>
 
 " Unite
 
@@ -125,7 +128,14 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=**/DefinitelyTyped/**
 set wildignore+=**/test/fixtures/*tree/**
 set wildignore+=**/cabal-dev/**
-set wildignore+=**/node_modules/**,**/.cabal-sandbox/**,**/.git,**/phantomjs/src/**
+set wildignore+=**/bower_components/**
+set wildignore+=bower_components/**
+set wildignore+=target/**
+set wildignore+=**/node_modules/**
+" set wildignore+=target/**
+set wildignore+=**/.cabal-sandbox/**
+set wildignore+=**/.git
+set wildignore+=**/phantomjs/src/**
 
 com W w
 com Wa wa
@@ -195,7 +205,6 @@ map <Leader>ws :%s/ \+$//<CR>
 map <Leader>/ /\(^>>>\)\\|\(^<<<\)\\|\(^====\)<CR>
 au Bufenter *.md setlocal softtabstop=4
 au Bufenter *.md setlocal shiftwidth=4
-
 au Bufenter *.hs setlocal softtabstop=4
 au Bufenter *.hs setlocal shiftwidth=4
 
