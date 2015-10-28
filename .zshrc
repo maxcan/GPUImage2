@@ -162,6 +162,11 @@ docker-kafka-set() {
 }
 alias dks='docker-kafka-set'
 
+alias restartDockerKafkaMachine='docker-machine stop docker-kafka; VBoxManage hostonlyif remove vboxnet0 && docker-machine start docker-kafka'
+alias runFF='export LOCAL_STORAGE_LAYER_DIR_OVERRIDE="/tmp/ls" && mkdir -p $LOCAL_STORAGE_LAYER_DIR_OVERRIDE && dks && sbt "run-main com.nitro.kafka.pdfparse.FormFieldMain"'
+alias runPP='export LOCAL_STORAGE_LAYER_DIR_OVERRIDE="/tmp/ls" && mkdir -p $LOCAL_STORAGE_LAYER_DIR_OVERRIDE && dks && sbt "run-main com.nitro.kafka.pdfparse.ParsingMain"'
+alias runKafka='eval "$(docker-machine env docker-kafka)" && docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=`docker-machine ip docker-kafka` --env ADVERTISED_PORT=9092 spotify/kafka'
+alias runCloud='export SSO_BASE_URL=http://localhost:9090 && sbt run'
 . `brew --prefix`/etc/profile.d/z.sh
 
 alias tmux-attach='tmux new-session -t 0'
