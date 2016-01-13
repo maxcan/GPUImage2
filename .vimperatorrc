@@ -1,17 +1,1 @@
-"3.8.2 (created: 2014/02/13 23:52:43)
-
-map hkge :open<Space>http://hackage.haskell.org/package/
-map dxis :open<Space>https://github.com/docmunch/dox/issues
-nmap "\\bm" <Esc>:tabopen<Space>https://docs.google.com/a/daggerboardinc.com/spreadsheet/viewform?formkey=dExhTUY2VGtsUVhYSHE0Z3Vab3ZMaHc6MQ&ifq<Space><Return>
-source! /Users/max/.vimperatorrc.local
-
-" vim: set ft=vimperator:
-autocmd LocationChange .*                             js modes.passAllKeys = false
-autocmd LocationChange mail\\.google\\.com            js modes.passAllKeys = true
-autocmd LocationChange docs\\.google\\.com            js modes.passAllKeys = true
-autocmd LocationChange www\\.google\\.com/calendar    js modes.passAllKeys = true
-autocmd LocationChange feedly\\.com/*                 js modes.passAllKeys = true
-autocmd LocationChange workflowy\\.com/*              js modes.passAllKeys = true
-autocmd LocationChange www.workflowy\\.com/*          js modes.passAllKeys = true
-autocmd LocationChange trello\\.com/*          js modes.passAllKeys = true
-autocmd LocationChange *\\.trello\\.com/*          js modes.passAllKeys = true
+/Users/mcantor/development/github/dotfiles/.vimperatorrc

@@ -1,8 +1,1 @@
-"1.0rc1
-
-loadplugins '\.(js|penta)$'
-group user
-set passkeys=mail.google.com:,gi
-set strictfocus=*:laissez-faire
-
-" vim: set ft=pentadactyl:
+/Users/mcantor/development/github/dotfiles/.pentadactylrc
