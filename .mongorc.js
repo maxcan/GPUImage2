@@ -1,1 +1,1 @@
-/Users/mcantor/development/github/dotfiles/.mongorc.js
+/Users/max/development/github/mongo-hacker/mongo_hacker.js

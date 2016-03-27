@@ -1,1 +1,15 @@
-/Users/mcantor/development/github/dotfiles/.gitconfig
+[user]
+	name = Max
+	email = max.cantor@gonitro.com
+[alias]
+	standup = log --since yesterday
+	purr = pull --rebase
+	ready = rebase -i @{u}
+	lg = log --pretty=format:\"%Cgreen %h%Creset %C(white)%s%Creset %Cblue%ar%Creset %C(bold white)%an%Creset\" --graph
+        up = "!git remote update -p; git merge --ff-only @{u}"
+[log]
+	decorate = full
+[push]
+	default = upstream
+[core]
+	editor = vim
