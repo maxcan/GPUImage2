@@ -471,6 +471,47 @@ let filterOperations: Array<FilterOperationInterface> = [
         filterOperationType:.SingleInput
     ),
     FilterOperation(
+        filter:{MotionDetector()},
+        listName:"Motion Detector - CENTROIDS",
+        titleName:"Motion Detector - CENTROIDS",
+        sliderConfiguration:.Enabled(minimumValue:0.0, maximumValue:1.0, initialValue:0.50),
+        sliderUpdateCallback: {(filter, sliderValue) in
+            filter.lowPassStrength = sliderValue
+        },
+        filterOperationType:.Custom(filterSetupFunction:{(camera, filter, outputView) in
+            let castFilter = filter as! MotionDetector
+            // TODO: Get this more dynamically sized
+            #if os(iOS)
+                let crosshairGenerator = CrosshairGenerator(size:Size(width:480, height:640))
+            #else
+                let crosshairGenerator = CrosshairGenerator(size:Size(width:1280, height:720))
+            #endif
+            crosshairGenerator.crosshairWidth = 15.0
+            
+            castFilter.motionDetectedCallback = { (pos, str) in
+                crosshairGenerator.renderCrosshairs([pos])
+            }
+            
+            camera --> castFilter
+            
+            let blendFilter = AlphaBlend()
+            camera --> blendFilter --> outputView
+            crosshairGenerator --> blendFilter
+            
+            return blendFilter
+        })
+    ),
+    FilterOperation(
+        filter:{MotionDetector()},
+        listName:"Motion Detector",
+        titleName:"Motion Detector",
+        sliderConfiguration:.Enabled(minimumValue:0.0, maximumValue:1.0, initialValue:0.80),
+        sliderUpdateCallback: {(filter, sliderValue) in
+            filter.lowPassStrength = sliderValue
+        },
+        filterOperationType:.SingleInput
+    ),
+    FilterOperation(
         filter:{HarrisCornerDetector()},
         listName:"Harris corner detector",
         titleName:"Harris Corner Detector",
@@ -1132,6 +1173,8 @@ let filterOperations: Array<FilterOperationInterface> = [
         sliderUpdateCallback:nil,
         filterOperationType:.Blend
     ),
+    
+
     
     // TODO: Poisson blend
 ]
