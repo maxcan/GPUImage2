@@ -46,6 +46,7 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'dhruvasagar/vim-table-mode'
 " Bundle 'nbouscal/vim-stylish-haskell'
 Bundle 'embear/vim-localvimrc'
+Bundle 'wellle/targets.vim'
 
 " let g:slime_target = "tmux"
 

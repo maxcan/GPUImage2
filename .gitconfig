@@ -13,3 +13,5 @@
 	default = upstream
 [core]
 	editor = vim
+[status]
+	submoduleSummary = true
