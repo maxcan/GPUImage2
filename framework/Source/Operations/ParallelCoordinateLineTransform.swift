@@ -36,11 +36,19 @@
 import Foundation
 
 public class ParallelCoordinateLineTransform: OperationGroup {
-    public init(fragmentShader:String) {
+    public override init() {
         super.init()
-        let lineGenerator = LineGenerator(size:Size(width:0 , height: 0))
+        // TODO fix this.
+        #if os(iOS)
+            let lineGenerator = LineGenerator(size:Size(width:480, height:640))
+        #else
+            let lineGenerator = LineGenerator(size:Size(width:1280, height:720))
+        #endif
+
+//
+//        let lineGenerator = LineGenerator(size:Size(width:0 , height: 0))
         lineGenerator.clearColor = Color.Black
-//        let blendFilter = AlphaBlend()
+        //        let blendFilter = AlphaBlend()
         let parallelCoordinateGenerator = ParallelCoordinateLineGenerator()
 
         parallelCoordinateGenerator.parallelLinesCallback = { lines in
@@ -51,7 +59,7 @@ public class ParallelCoordinateLineTransform: OperationGroup {
             // black out the output of the parallelCoordinateGenerator
             lineGenerator --> output
             input --> parallelCoordinateGenerator // --> blendFilter
-//            blendFilter --> output
+            //            blendFilter --> output
         }
     }
 }
@@ -137,17 +145,17 @@ public class ParallelCoordinateLineGenerator: OperationGroup {
                                  p2: Position(1.0, normalizedYCoordinate))
                 lineStorageIndex += 1
 
-//                lineCoordinates!.append(-1.0)
-//                lineCoordinates!.append(-normalizedYCoordinate)
-//                lineCoordinates!.append(0.0)
-//                lineCoordinates!.append(normalizedXCoordinate)
-//                lineCoordinates!.append(0.0)
-//                lineCoordinates!.append(normalizedXCoordinate)
-//                lineCoordinates!.append(1.0)
-//                lineCoordinates!.append(normalizedYCoordinate)
-//
+                //                lineCoordinates!.append(-1.0)
+                //                lineCoordinates!.append(-normalizedYCoordinate)
+                //                lineCoordinates!.append(0.0)
+                //                lineCoordinates!.append(normalizedXCoordinate)
+                //                lineCoordinates!.append(0.0)
+                //                lineCoordinates!.append(normalizedXCoordinate)
+                //                lineCoordinates!.append(1.0)
+                //                lineCoordinates!.append(normalizedYCoordinate)
+                //
                 linePairsToRender+=1
-//
+                //
 
                 linePairsToRender = min(linePairsToRender, maxLinePairsToRender)
                 lineStorageIndex = min(lineStorageIndex, maxLineStorageIndex)
@@ -159,44 +167,44 @@ public class ParallelCoordinateLineGenerator: OperationGroup {
         let currentFrameTime = (CFAbsoluteTimeGetCurrent() - startTime);
         print("Line generation processing time : \(1000.0 * currentFrameTime) ms for \(linePairsToRender) lines");
         return lineCoordinates
-//        outputFramebuffer = [[GPUImageContext sharedFramebufferCache] fetchFramebufferForSize:[self sizeOfFBO] textureOptions:self.outputTextureOptions onlyTexture:NO];
-//        [outputFramebuffer activateFramebuffer];
-//
-//        if (usingNextFrameForImageCapture)
-//        {
-//            [outputFramebuffer lock];
-//        }
-//
-//        [GPUImageContext setActiveShaderProgram:filterProgram];
-//        [self setUniformsForProgramAtIndex:0];
-//
-//        glClearColor(0.0, 0.0, 0.0, 1.0);
-//        glClear(GL_COLOR_BUFFER_BIT);
-//
-//        if (![GPUImageContext deviceSupportsFramebufferReads])
-//        {
-//            glBlendEquation(GL_FUNC_ADD);
-//            glBlendFunc(GL_ONE, GL_ONE);
-//            glEnable(GL_BLEND);
-//        }
-//        else
-//        {
-//        }
-//
-//        glLineWidth(1);
-//
-//        glVertexAttribPointer(filterPositionAttribute, 2, GL_FLOAT, 0, 0, lineCoordinates);
-//        glDrawArrays(GL_LINES, 0, (linePairsToRender * 4));
-//
-//        if (![GPUImageContext deviceSupportsFramebufferReads])
-//        {
-//            glDisable(GL_BLEND);
-//        }
-//        [firstInputFramebuffer unlock];
-//        if (usingNextFrameForImageCapture)
-//        {
-//            dispatch_semaphore_signal(imageCaptureSemaphore);
-//        }
-//
+        //        outputFramebuffer = [[GPUImageContext sharedFramebufferCache] fetchFramebufferForSize:[self sizeOfFBO] textureOptions:self.outputTextureOptions onlyTexture:NO];
+        //        [outputFramebuffer activateFramebuffer];
+        //
+        //        if (usingNextFrameForImageCapture)
+        //        {
+        //            [outputFramebuffer lock];
+        //        }
+        //
+        //        [GPUImageContext setActiveShaderProgram:filterProgram];
+        //        [self setUniformsForProgramAtIndex:0];
+        //
+        //        glClearColor(0.0, 0.0, 0.0, 1.0);
+        //        glClear(GL_COLOR_BUFFER_BIT);
+        //
+        //        if (![GPUImageContext deviceSupportsFramebufferReads])
+        //        {
+        //            glBlendEquation(GL_FUNC_ADD);
+        //            glBlendFunc(GL_ONE, GL_ONE);
+        //            glEnable(GL_BLEND);
+        //        }
+        //        else
+        //        {
+        //        }
+        //
+        //        glLineWidth(1);
+        //
+        //        glVertexAttribPointer(filterPositionAttribute, 2, GL_FLOAT, 0, 0, lineCoordinates);
+        //        glDrawArrays(GL_LINES, 0, (linePairsToRender * 4));
+        //
+        //        if (![GPUImageContext deviceSupportsFramebufferReads])
+        //        {
+        //            glDisable(GL_BLEND);
+        //        }
+        //        [firstInputFramebuffer unlock];
+        //        if (usingNextFrameForImageCapture)
+        //        {
+        //            dispatch_semaphore_signal(imageCaptureSemaphore);
+        //        }
+        //
     }
 }

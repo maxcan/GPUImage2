@@ -498,6 +498,57 @@ let filterOperations: Array<FilterOperationInterface> = [
         filterOperationType:.SingleInput
     ),
     FilterOperation(
+        filter:{ParallelCoordinateLineTransform()},
+        listName:"Parallel Coordinate Tester",
+        titleName:"Parallel Coordinate Tester",
+        sliderConfiguration:.Enabled(minimumValue:0.01, maximumValue:0.70, initialValue:0.20),
+        sliderUpdateCallback: {(filter, sliderValue) in
+            //            filter.threshold = sliderValue
+        },
+        filterOperationType:.Custom(filterSetupFunction:{(camera, filter, outputView) in
+            let castFilter = filter as! ParallelCoordinateLineTransform
+            // TODO: Get this more dynamically sized
+            let thresholdEdgeDetectionFilter = CannyEdgeDetection()
+            let parallelCoordsTransformFilter = ParallelCoordinateLineTransform()
+            let nonMaximumSuppression = TextureSamplingOperation(fragmentShader:ThresholdedNonMaximumSuppressionFragmentShader)
+
+            camera --> thresholdEdgeDetectionFilter --> castFilter --> nonMaximumSuppression --> outputView
+            return nil
+        })
+
+    ),
+    FilterOperation(
+        filter:{HoughTransformLineDetector()},
+        listName:"Hough Line detector",
+        titleName:"Hough Line Detector",
+        sliderConfiguration:.Enabled(minimumValue:0.01, maximumValue:0.70, initialValue:0.20),
+        sliderUpdateCallback: {(filter, sliderValue) in
+//            filter.threshold = sliderValue
+        },
+        filterOperationType:.Custom(filterSetupFunction:{(camera, filter, outputView) in
+            let castFilter = filter as! HoughTransformLineDetector
+            // TODO: Get this more dynamically sized
+            #if os(iOS)
+                let lineGenerator = LineGenerator(size:Size(width:480, height:640))
+            #else
+                let lineGenerator = LineGenerator(size:Size(width:1280, height:720))
+            #endif
+
+            castFilter.linesDetectedCallback = { lines in
+                lineGenerator.renderLines(lines)
+            }
+
+            camera --> castFilter
+
+            let blendFilter = AlphaBlend()
+            camera --> blendFilter --> outputView
+            lineGenerator --> blendFilter
+
+            return blendFilter
+        })
+    ),
+
+    FilterOperation(
         filter:{HarrisCornerDetector()},
         listName:"Harris corner detector",
         titleName:"Harris Corner Detector",

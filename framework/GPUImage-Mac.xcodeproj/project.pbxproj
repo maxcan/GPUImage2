@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		503409CF1D52FECA00BC789C /* ParallelCoordinateLineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503409CE1D52FECA00BC789C /* ParallelCoordinateLineTransform.swift */; };
+		503409D31D56B10100BC789C /* HoughTransformLineDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503409D21D56B10100BC789C /* HoughTransformLineDetector.swift */; };
 		BC09239E1C92658200A2ADFA /* ShaderProgram_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */; };
 		BC0923A11C92661D00A2ADFA /* Pipeline_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */; };
 		BC0923A21C92664900A2ADFA /* Framebuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB279EB1C8D11630013E213 /* Framebuffer.swift */; };
@@ -195,6 +196,7 @@
 /* Begin PBXFileReference section */
 		503409CE1D52FECA00BC789C /* ParallelCoordinateLineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallelCoordinateLineTransform.swift; path = Source/Operations/ParallelCoordinateLineTransform.swift; sourceTree = "<group>"; };
 		503409D01D52FF1D00BC789C /* ParallelCoordinateLineTransform_GL.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = ParallelCoordinateLineTransform_GL.fsh; path = Source/Operations/Shaders/ParallelCoordinateLineTransform_GL.fsh; sourceTree = "<group>"; };
+		503409D21D56B10100BC789C /* HoughTransformLineDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoughTransformLineDetector.swift; path = Source/Operations/HoughTransformLineDetector.swift; sourceTree = "<group>"; };
 		BC09239D1C92658200A2ADFA /* ShaderProgram_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderProgram_Tests.swift; path = Tests/ShaderProgram_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC09239F1C9265A600A2ADFA /* Pipeline_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pipeline_Tests.swift; path = Tests/Pipeline_Tests.swift; sourceTree = SOURCE_ROOT; };
 		BC1E12F41C9F2FD7008F844F /* ThreeInput.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = ThreeInput.vsh; path = Source/Operations/Shaders/ThreeInput.vsh; sourceTree = "<group>"; };
@@ -724,6 +726,7 @@
 				BCA4E24A1CC3F3C5007B51BA /* ColourFASTDecriptor_GL.fsh */,
 				503409CE1D52FECA00BC789C /* ParallelCoordinateLineTransform.swift */,
 				503409D01D52FF1D00BC789C /* ParallelCoordinateLineTransform_GL.fsh */,
+				503409D21D56B10100BC789C /* HoughTransformLineDetector.swift */,
 			);
 			name = "Image processing";
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				BC7FD11A1CB0793900037949 /* MultiplyBlend.swift in Sources */,
 				BCA4E2591CC3F832007B51BA /* ColorLocalBinaryPattern.swift in Sources */,
 				BCBEC0FA1CCD993900B70ED7 /* MovieInput.swift in Sources */,
+				503409D31D56B10100BC789C /* HoughTransformLineDetector.swift in Sources */,
 				BC4EE1561CB3457800AD8A65 /* PrewittEdgeDetection.swift in Sources */,
 				BCB825B61CC9C1F100339790 /* MovieOutput.swift in Sources */,
 				BCFF46D31CB9C24500A0C521 /* HarrisCornerDetector.swift in Sources */,
