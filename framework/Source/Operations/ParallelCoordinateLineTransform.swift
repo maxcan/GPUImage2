@@ -45,21 +45,22 @@ public class ParallelCoordinateLineTransform: OperationGroup {
             let lineGenerator = LineGenerator(size:Size(width:1280, height:720))
         #endif
 
-//
-//        let lineGenerator = LineGenerator(size:Size(width:0 , height: 0))
+        //
+        //        let lineGenerator = LineGenerator(size:Size(width:0 , height: 0))
         lineGenerator.clearColor = Color.Black
-        //        let blendFilter = AlphaBlend()
+        let blendFilter = AlphaBlend()
         let parallelCoordinateGenerator = ParallelCoordinateLineGenerator()
 
         parallelCoordinateGenerator.parallelLinesCallback = { lines in
             lineGenerator.renderLines(lines)
+            print("Rendering lines: \(lines)")
         }
         self.configureGroup {input, output in
             // can we have "disconnected filters like this?  If not, we'll just
             // black out the output of the parallelCoordinateGenerator
-            lineGenerator --> output
-            input --> parallelCoordinateGenerator // --> blendFilter
-            //            blendFilter --> output
+            lineGenerator --> blendFilter
+            input --> parallelCoordinateGenerator --> blendFilter
+            blendFilter --> output
         }
     }
 }
@@ -78,11 +79,11 @@ public class ParallelCoordinateLineGenerator: OperationGroup {
             input --> self.parallelTransformOp --> output
 
         }
-        outputImageRelay.newImageCallback = {[weak self] framebuffer in
-            if let parallelLinesCallback = self?.parallelLinesCallback {
-                parallelLinesCallback(self?.generateLineCoordinates(framebuffer) ?? [])
-            }
-        }
+        //        outputImageRelay.newImageCallback = {[weak self] framebuffer in
+        //            if let parallelLinesCallback = self?.parallelLinesCallback {
+        //                parallelLinesCallback(self?.generateLineCoordinates(framebuffer) ?? [])
+        //            }
+        //        }
     }
 
     func generateLineCoordinates(framebuffer:Framebuffer) -> [Line]{
