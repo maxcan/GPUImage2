@@ -47,7 +47,7 @@ public class ParallelCoordinateLineTransform: OperationGroup {
 
         //
         //        let lineGenerator = LineGenerator(size:Size(width:0 , height: 0))
-        lineGenerator.clearColor = Color.Black
+        lineGenerator.clearColor = Color.init(red: 0.004, green: 0.004, blue: 0.004)
         let blendFilter = AlphaBlend()
         let parallelCoordinateGenerator = ParallelCoordinateLineGenerator()
 
@@ -67,16 +67,18 @@ public class ParallelCoordinateLineTransform: OperationGroup {
 
 // Use the Line Generator filter for drawing.  We'll just use this to output the lines
 public class ParallelCoordinateLineGenerator: OperationGroup {
-    let parallelTransformOp: BasicOperation
+//    let parallelTransformOp: BasicOperation
     var maxLinePairsToRender:UInt32
     public var parallelLinesCallback:([Line] -> ())?
 
     public init(fragmentShader:String = ParallelCoordinateLineTransformFragmentShader) {
-        parallelTransformOp = BasicOperation(fragmentShader: fragmentShader)
+        // massive facepalm.. that fragment transform is just to share the lines that
+        // were drawn by GL_DRAW_ARRAY
+//        parallelTransformOp = BasicOperation(fragmentShader: fragmentShader)
         maxLinePairsToRender = 999 // ???
         super.init()
         self.configureGroup{input, output in
-            input --> self.parallelTransformOp --> output
+            input --> output
 
         }
         //        outputImageRelay.newImageCallback = {[weak self] framebuffer in

@@ -511,7 +511,7 @@ let filterOperations: Array<FilterOperationInterface> = [
             let thresholdEdgeDetectionFilter = CannyEdgeDetection()
             let parallelCoordsTransformFilter = ParallelCoordinateLineTransform()
             let nonMaximumSuppression = TextureSamplingOperation(fragmentShader:ThresholdedNonMaximumSuppressionFragmentShader)
-                        camera --> thresholdEdgeDetectionFilter --> castFilter --> outputView
+            camera --> thresholdEdgeDetectionFilter --> castFilter --> outputView
 
 //            camera --> thresholdEdgeDetectionFilter --> castFilter --> nonMaximumSuppression --> outputView
             return nil
