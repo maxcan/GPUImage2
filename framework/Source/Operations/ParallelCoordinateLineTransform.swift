@@ -35,97 +35,82 @@
 
 import Foundation
 
-public class ParallelCoordinateLineTransform: OperationGroup {
-    public override init() {
-        super.init()
-        // TODO fix this.
-        #if os(iOS)
-            let lineGenerator = LineGenerator(size:Size(width:480, height:640))
-        #else
-            let lineGenerator = LineGenerator(size:Size(width:1280, height:720))
-        #endif
-
-        //
-        //        let lineGenerator = LineGenerator(size:Size(width:0 , height: 0))
-        lineGenerator.clearColor = Color.init(red: 0.004, green: 0.004, blue: 0.004)
-        let blendFilter = AlphaBlend()
-        let parallelCoordinateGenerator = ParallelCoordinateLineGenerator()
-
-        parallelCoordinateGenerator.parallelLinesCallback = { lines in
-            lineGenerator.renderLines(lines)
-            print("Rendering lines: \(lines)")
-        }
-        self.configureGroup {input, output in
-            // can we have "disconnected filters like this?  If not, we'll just
-            // black out the output of the parallelCoordinateGenerator
-            lineGenerator --> blendFilter
-            input --> parallelCoordinateGenerator --> blendFilter
-            blendFilter --> output
-        }
-    }
-}
-
-// Use the Line Generator filter for drawing.  We'll just use this to output the lines
-public class ParallelCoordinateLineGenerator: OperationGroup {
-//    let parallelTransformOp: BasicOperation
-    var maxLinePairsToRender:UInt32
-    public var parallelLinesCallback:([Line] -> ())?
-
-    public init(fragmentShader:String = ParallelCoordinateLineTransformFragmentShader) {
-        // massive facepalm.. that fragment transform is just to share the lines that
-        // were drawn by GL_DRAW_ARRAY
-//        parallelTransformOp = BasicOperation(fragmentShader: fragmentShader)
+public class ParallelCoordinateLineTransform: BasicOperation {
+    var maxLinePairsToRender:Int?
+    var lineCoordinates:UnsafeMutablePointer<GLfloat>?
+    let MAX_SCALING_FACTOR: UInt32 = 4
+    public init() {
         maxLinePairsToRender = 999 // ???
-        super.init()
-        self.configureGroup{input, output in
-            input --> output
+        let fragShader =
+            ( sharedImageProcessingContext.deviceSupportsFramebufferReads()
+                ? ParallelCoordinateLineTransformFBOReadFragmentShader
+                : ParallelCoordinateLineTransformFragmentShader
+                )
+        super.init(vertexShader: ParallelCoordinateLineTransformVertexShader , fragmentShader: fragShader)
+        // TODO fix this.
+//        #if os(iOS)
+//            let lineGenerator = LineGenerator(size:Size(width:480, height:640))
+//        #else
+//            let lineGenerator = LineGenerator(size:Size(width:1280, height:720))
+//        #endif
 
-        }
-        //        outputImageRelay.newImageCallback = {[weak self] framebuffer in
-        //            if let parallelLinesCallback = self?.parallelLinesCallback {
-        //                parallelLinesCallback(self?.generateLineCoordinates(framebuffer) ?? [])
-        //            }
-        //        }
+
     }
+    override func renderFrame() {
+        renderToTextureVertices()
+    }
+    func renderToTextureVertices() {
+        print("[PARALLEL COORD TRANSFORM] renderToTextureVertices entering")
+        guard let framebuffer = inputFramebuffers[0] else {fatalError("Could not get framebuffer orientation for parallel coords")}
+        let inputSize = sizeOfInitialStageBasedOnFramebuffer(framebuffer)
+        // Making lots of things Ints instead of UInt32 or Int32 so that we can "Freely" access array indices.
+        // I dont like it but c'est la vie
+        let inputByteSize = Int(inputSize.width * inputSize.height * 4)
+        let imageByteWidth = framebuffer.size.width * 4
+        let maxLinePairsToRender = self.maxLinePairsToRender ?? (Int(inputSize.width * inputSize.height) / Int(self.MAX_SCALING_FACTOR))
+        let lineCoordinates = self.lineCoordinates ??
+            UnsafeMutablePointer<GLfloat>.alloc(Int(maxLinePairsToRender * 8))
 
-    func generateLineCoordinates(framebuffer:Framebuffer) -> [Line]{
+        let rawImagePixels = UnsafeMutablePointer<UInt8>.alloc(Int(inputByteSize))
+        glFinish()
+        glReadPixels(0, 0, inputSize.width, inputSize.height, GLenum(GL_RGBA), GLenum(GL_UNSIGNED_BYTE), rawImagePixels)
 
-        let MAXLINESCALINGFACTOR : UInt32 = 4
-        let maxLinePairsToRender : UInt32 = UInt32(framebuffer.size.width * framebuffer.size.height) / MAXLINESCALINGFACTOR;
-        var lineCoordinates = Array<Line>(count: Int(maxLinePairsToRender) * 2, repeatedValue: Line.Segment(p1:Position(0,0),p2:Position(0,0)))
 
+//var lineCoordinates = Array<Line>(count: Int(maxLinePairsToRender) * 2, repeatedValue: Line.Segment(p1:Position(0,0),p2:Position(0,0)))
         // Copying from Harris Corner Detector
-        let imageByteSize = Int(framebuffer.size.width * framebuffer.size.height * 4)
-        let inputTextureSize = framebuffer.size
-        let rawImagePixels = UnsafeMutablePointer<UInt8>.alloc(imageByteSize)
-
-        glReadPixels(0, 0, framebuffer.size.width, framebuffer.size.height, GLenum(GL_RGBA), GLenum(GL_UNSIGNED_BYTE), rawImagePixels)
+//        let imageByteSize = Int(framebuffer.size.width * framebuffer.size.height * 4)
+//        let inputTextureSize = framebuffer.size
 
         let startTime = CFAbsoluteTimeGetCurrent()
         let xAspectMultiplier:Float = 1.0
         let yAspectMultiplier:Float = 1.0
 
-        let imageWidth = framebuffer.size.width * 4
 
-        var linePairsToRender:UInt32 = 0
-        var currentByte = 0
-        var lineStorageIndex:UInt32 = 0
+        var linePairsToRender:Int = 0
+        var currentByte:Int = 0
+        var lineStorageIndex:Int = 0
 
-        let maxLineStorageIndex:UInt32 = maxLinePairsToRender * 2
+        let maxLineStorageIndex = maxLinePairsToRender * 8 - 8
 
         var minY:Float = 100
         var maxY:Float = -100
         var minX:Float = 100
         var maxX:Float = -100
 
-        while (currentByte < imageByteSize) {
+        while (currentByte < inputByteSize) {
             let colorByte = rawImagePixels[currentByte]
-            if (colorByte > 0) {
-                let xCoordinate = Int32(currentByte) % imageWidth
-                let yCoordinate = Int32(currentByte) / imageWidth
 
-                let normalizedXCoordinate:Float = (-1.0 + 2.0 * (Float)(xCoordinate / 4) / Float(inputTextureSize.width)) * xAspectMultiplier;
-                let normalizedYCoordinate:Float = (-1.0 + 2.0 * (Float)(yCoordinate) / Float(inputTextureSize.height)) * yAspectMultiplier;
+            if (colorByte > 0) {
+//                if (currentByte % 800 == 0) {
+//                    print("[PARALLEL COORD TRANSFORM] renderToTextureVertices colorByte = \(colorByte) idx = \(currentByte) lpt = \(linePairsToRender)")
+//
+//                }
+
+                let xCoordinate = Int32(currentByte) % imageByteWidth
+                let yCoordinate = Int32(currentByte) / imageByteWidth
+
+                let normalizedXCoordinate:Float = (-1.0 + 2.0 * (Float)(xCoordinate / 4) / Float(inputSize.width)) * xAspectMultiplier;
+                let normalizedYCoordinate:Float = (-1.0 + 2.0 * (Float)(yCoordinate) / Float(inputSize.height)) * yAspectMultiplier;
 
                 // this might not be the most performant..
                 minY = min(minY, normalizedYCoordinate);
@@ -138,27 +123,19 @@ public class ParallelCoordinateLineGenerator: OperationGroup {
                 // signed ints seem silly.  If this is a no-op, then fine.  But if casting like this hurts performance can look into
                 // better solutions.
 
-                lineCoordinates[Int(lineStorageIndex)] =
-                    Line.Segment(p1: Position(-1.0, -normalizedYCoordinate),
-                                 p2: Position(0.0, normalizedXCoordinate))
-                lineStorageIndex += 1
-                // S space coordinates, (0, x) to (d, y)
-                lineCoordinates[Int(lineStorageIndex)] =
-                    Line.Segment(p1: Position(0.0, normalizedXCoordinate),
-                                 p2: Position(1.0, normalizedYCoordinate))
-                lineStorageIndex += 1
+                // T space coordinates, (-d, -y) to (0, x)
+                lineCoordinates[lineStorageIndex] = -1.0; lineStorageIndex += 1
+                lineCoordinates[lineStorageIndex] = -normalizedYCoordinate; lineStorageIndex += 1
+                lineCoordinates[lineStorageIndex] = 0.0; lineStorageIndex += 1
+                lineCoordinates[lineStorageIndex] = normalizedXCoordinate; lineStorageIndex += 1
 
-                //                lineCoordinates!.append(-1.0)
-                //                lineCoordinates!.append(-normalizedYCoordinate)
-                //                lineCoordinates!.append(0.0)
-                //                lineCoordinates!.append(normalizedXCoordinate)
-                //                lineCoordinates!.append(0.0)
-                //                lineCoordinates!.append(normalizedXCoordinate)
-                //                lineCoordinates!.append(1.0)
-                //                lineCoordinates!.append(normalizedYCoordinate)
-                //
-                linePairsToRender+=1
-                //
+                // S space coordinates, (0, x) to (d, y)
+                lineCoordinates[lineStorageIndex] = 0.0; lineStorageIndex += 1
+                lineCoordinates[lineStorageIndex] = normalizedXCoordinate; lineStorageIndex += 1
+                lineCoordinates[lineStorageIndex] = 1.0; lineStorageIndex += 1
+                lineCoordinates[lineStorageIndex] = normalizedYCoordinate; lineStorageIndex += 1
+
+                linePairsToRender += 1
 
                 linePairsToRender = min(linePairsToRender, maxLinePairsToRender)
                 lineStorageIndex = min(lineStorageIndex, maxLineStorageIndex)
@@ -169,45 +146,48 @@ public class ParallelCoordinateLineGenerator: OperationGroup {
 
         let currentFrameTime = (CFAbsoluteTimeGetCurrent() - startTime);
         print("Line generation processing time : \(1000.0 * currentFrameTime) ms for \(linePairsToRender) lines");
-        return lineCoordinates
-        //        outputFramebuffer = [[GPUImageContext sharedFramebufferCache] fetchFramebufferForSize:[self sizeOfFBO] textureOptions:self.outputTextureOptions onlyTexture:NO];
-        //        [outputFramebuffer activateFramebuffer];
+
+        renderFramebuffer = sharedImageProcessingContext.framebufferCache.requestFramebufferWithProperties(orientation:framebuffer.orientation, size:inputSize, stencil:mask != nil)
+        releaseIncomingFramebuffers()
+        renderFramebuffer.activateFramebufferForRendering()
+
+        clearFramebufferWithColor(Color.Black)
+
+        // do we need this:
+//        [self setUniformsForProgramAtIndex:0];
+//        renderFramebuffer.lock() // may be unnecessary - what is teh GPUImage2 version of usingNextFrameForImageCapture
+        shader.use()
+
         //
-        //        if (usingNextFrameForImageCapture)
-        //        {
-        //            [outputFramebuffer lock];
-        //        }
+        // can we get rid of this from clearFrameBufferWithColor
+//        glClearColor(0.0, 0.0, 0.0, 1.0);
+//        glClear(GL_COLOR_BUFFER_BIT);
         //
-        //        [GPUImageContext setActiveShaderProgram:filterProgram];
-        //        [self setUniformsForProgramAtIndex:0];
-        //
-        //        glClearColor(0.0, 0.0, 0.0, 1.0);
-        //        glClear(GL_COLOR_BUFFER_BIT);
-        //
-        //        if (![GPUImageContext deviceSupportsFramebufferReads])
-        //        {
-        //            glBlendEquation(GL_FUNC_ADD);
-        //            glBlendFunc(GL_ONE, GL_ONE);
-        //            glEnable(GL_BLEND);
-        //        }
-        //        else
-        //        {
-        //        }
-        //
-        //        glLineWidth(1);
-        //
-        //        glVertexAttribPointer(filterPositionAttribute, 2, GL_FLOAT, 0, 0, lineCoordinates);
-        //        glDrawArrays(GL_LINES, 0, (linePairsToRender * 4));
-        //
-        //        if (![GPUImageContext deviceSupportsFramebufferReads])
-        //        {
-        //            glDisable(GL_BLEND);
-        //        }
-        //        [firstInputFramebuffer unlock];
-        //        if (usingNextFrameForImageCapture)
-        //        {
-        //            dispatch_semaphore_signal(imageCaptureSemaphore);
-        //        }
-        //
+        let supportsFrameBufferReads = sharedImageProcessingContext.deviceSupportsFramebufferReads()
+        if (supportsFrameBufferReads) {
+            glBlendEquation(GLenum(GL_FUNC_ADD))
+            glBlendFunc(GLenum(GL_ONE), GLenum(GL_ONE))
+            glEnable(GLenum(GL_BLEND))
+        }
+        else
+        {
+        }
+
+        glLineWidth(1);
+        guard let filterPositionAttr = shader.attributeIndex("position") else { fatalError("A position attribute was missing from the shader program during rendering.") }
+
+        glVertexAttribPointer(filterPositionAttr, 2, GLenum(GL_FLOAT), 0, 0, lineCoordinates);
+        glDrawArrays(GLenum(GL_LINES), 0, (Int32(linePairsToRender) * 4));
+
+        if (!supportsFrameBufferReads)
+        {
+            glDisable(GLenum(GL_BLEND))
+        }
+//        [firstInputFramebuffer unlock];
+//        if (usingNextFrameForImageCapture)
+//        {
+//            dispatch_semaphore_signal(imageCaptureSemaphore);
+//        }
+
     }
 }
