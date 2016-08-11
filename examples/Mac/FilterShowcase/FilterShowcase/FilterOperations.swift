@@ -511,6 +511,11 @@ let filterOperations: Array<FilterOperationInterface> = [
             let thresholdEdgeDetectionFilter = CannyEdgeDetection()
             let parallelCoordsTransformFilter = ParallelCoordinateLineTransform()
             let nonMaximumSuppression = TextureSamplingOperation(fragmentShader:ThresholdedNonMaximumSuppressionFragmentShader)
+            var threshold:Float = 0.2 { didSet { nonMaximumSuppression.uniformSettings["threshold"] = threshold } }
+            nonMaximumSuppression.uniformSettings["threshold"] = 0.2
+//            let directionalNonMaximumSuppression = TextureSamplingOperation(vertexShader:OneInputVertexShader, fragmentShader:DirectionalNonMaximumSuppressionFragmentShader)
+            
+//            camera --> thresholdEdgeDetectionFilter --> castFilter --> outputView
             camera --> thresholdEdgeDetectionFilter --> castFilter --> outputView
 
 //            camera --> thresholdEdgeDetectionFilter --> castFilter --> nonMaximumSuppression --> outputView

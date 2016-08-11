@@ -32,7 +32,17 @@ public class HoughTransformLineDetector: OperationGroup {
         let thresholdEdgeDetectionFilter = CannyEdgeDetection()
         let parallelCoordsTransformFilter = ParallelCoordinateLineTransform()
         let nonMaximumSuppression = TextureSamplingOperation(fragmentShader:ThresholdedNonMaximumSuppressionFragmentShader)
-
+        var threshold:Float = 0.2 { didSet { nonMaximumSuppression.uniformSettings["threshold"] = threshold } }
+        nonMaximumSuppression.uniformSettings["threshold"] = 0.2
+        
+//        let directionalNonMaximumSuppression = TextureSamplingOperation(vertexShader:OneInputVertexShader, fragmentShader:DirectionalNonMaximumSuppressionFragmentShader)
+        
+//        let nonMaximumSuppressionFlt =
+//            ( sharedImageProcessingContext.deviceSupportsFramebufferReads()
+//                ? Thre
+//                : ParallelCoordinateLineTransformFragmentShader
+//        )
+        
         outputImageRelay.newImageCallback = {[weak self] framebuffer in
             if let linesDetectedCallback = self?.linesDetectedCallback {
                 linesDetectedCallback(extractLinesFromImage(framebuffer))
