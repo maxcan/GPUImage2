@@ -36,38 +36,27 @@
 import Foundation
 
 public class ParallelCoordinateLineTransform: BasicOperation {
-    var maxLinePairsToRender:Int?
     var lineCoordinates:UnsafeMutablePointer<GLfloat>?
     let MAX_SCALING_FACTOR: UInt32 = 4
     public init() {
-        maxLinePairsToRender = 999 // ???
         let fragShader =
             ( sharedImageProcessingContext.deviceSupportsFramebufferReads()
                 ? ParallelCoordinateLineTransformFBOReadFragmentShader
                 : ParallelCoordinateLineTransformFragmentShader
                 )
-        super.init(vertexShader: ParallelCoordinateLineTransformVertexShader , fragmentShader: fragShader)
-        // TODO fix this.
-//        #if os(iOS)
-//            let lineGenerator = LineGenerator(size:Size(width:480, height:640))
-//        #else
-//            let lineGenerator = LineGenerator(size:Size(width:1280, height:720))
-//        #endif
-
-
+        super.init(vertexShader: ParallelCoordinateLineTransformVertexShader, fragmentShader: fragShader)
     }
     override func renderFrame() {
         renderToTextureVertices()
     }
     func renderToTextureVertices() {
-        print("[PARALLEL COORD TRANSFORM] renderToTextureVertices entering")
         guard let framebuffer = inputFramebuffers[0] else {fatalError("Could not get framebuffer orientation for parallel coords")}
         let inputSize = sizeOfInitialStageBasedOnFramebuffer(framebuffer)
         // Making lots of things Ints instead of UInt32 or Int32 so that we can "Freely" access array indices.
         // I dont like it but c'est la vie
         let inputByteSize = Int(inputSize.width * inputSize.height * 4)
         let imageByteWidth = framebuffer.size.width * 4
-        let maxLinePairsToRender = self.maxLinePairsToRender ?? (Int(inputSize.width * inputSize.height) / Int(self.MAX_SCALING_FACTOR))
+        let maxLinePairsToRender = (Int(inputSize.width * inputSize.height) / Int(self.MAX_SCALING_FACTOR))
         let lineCoordinates = self.lineCoordinates ??
             UnsafeMutablePointer<GLfloat>.alloc(Int(maxLinePairsToRender * 8))
 
@@ -101,11 +90,6 @@ public class ParallelCoordinateLineTransform: BasicOperation {
             let colorByte = rawImagePixels[currentByte]
 
             if (colorByte > 0) {
-//                if (currentByte % 800 == 0) {
-//                    print("[PARALLEL COORD TRANSFORM] renderToTextureVertices colorByte = \(colorByte) idx = \(currentByte) lpt = \(linePairsToRender)")
-//
-//                }
-
                 let xCoordinate = Int32(currentByte) % imageByteWidth
                 let yCoordinate = Int32(currentByte) / imageByteWidth
 
@@ -146,12 +130,10 @@ public class ParallelCoordinateLineTransform: BasicOperation {
 
         let currentFrameTime = (CFAbsoluteTimeGetCurrent() - startTime);
         print("Line generation processing time : \(1000.0 * currentFrameTime) ms for \(linePairsToRender) lines");
-
         renderFramebuffer = sharedImageProcessingContext.framebufferCache.requestFramebufferWithProperties(orientation:framebuffer.orientation, size:inputSize, stencil:mask != nil)
         releaseIncomingFramebuffers()
         renderFramebuffer.activateFramebufferForRendering()
-
-        clearFramebufferWithColor(Color.Black)
+//        clearFramebufferWithColor(Color.Black)
 
         // do we need this:
 //        [self setUniformsForProgramAtIndex:0];
@@ -160,11 +142,11 @@ public class ParallelCoordinateLineTransform: BasicOperation {
 
         //
         // can we get rid of this from clearFrameBufferWithColor
-//        glClearColor(0.0, 0.0, 0.0, 1.0);
-//        glClear(GL_COLOR_BUFFER_BIT);
+        glClearColor(0.0, 0.0, 0.0, 1.0);
+        glClear(GLenum(GL_COLOR_BUFFER_BIT));
         //
         let supportsFrameBufferReads = sharedImageProcessingContext.deviceSupportsFramebufferReads()
-        if (supportsFrameBufferReads) {
+        if (!supportsFrameBufferReads) {
             glBlendEquation(GLenum(GL_FUNC_ADD))
             glBlendFunc(GLenum(GL_ONE), GLenum(GL_ONE))
             glEnable(GLenum(GL_BLEND))
@@ -183,6 +165,7 @@ public class ParallelCoordinateLineTransform: BasicOperation {
         {
             glDisable(GLenum(GL_BLEND))
         }
+
 //        [firstInputFramebuffer unlock];
 //        if (usingNextFrameForImageCapture)
 //        {
