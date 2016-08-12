@@ -68,7 +68,7 @@ func extractLinesFromImage(framebuffer: Framebuffer) -> [Line] {
     glReadPixels(0, 0, frameSize.width, frameSize.height, GLenum(GL_RGBA), GLenum(GL_UNSIGNED_BYTE), rawImagePixels)
     // since we only set one position with each iteration of the loop, we'll have ot set positions then combine into lines
     //    linesArray = calloc(1024 * 2, sizeof(GLfloat)); - lines is 2048 floats - which is 1024 positions or 528 lines
-    var positions = Array<Position>()
+//    var positions = Array<Position>()
     var lines = Array<Line>()
 
     let imageWidthInt = Int(framebuffer.size.width * 4)
@@ -86,29 +86,26 @@ func extractLinesFromImage(framebuffer: Framebuffer) -> [Line] {
             let normalizedXCoordinate = -1.0 + 2.0 * (Float)(xCoordinate / 4) / Float(frameSize.width)
             let normalizedYCoordinate = -1.0 + 2.0 * (Float)(yCoordinate) / Float(frameSize.height)
 //            print("(\(xCoordinate), \(yCoordinate)), [\(rawImagePixels[currentByte]), \(rawImagePixels[currentByte+1]), \(rawImagePixels[currentByte+2]), \(rawImagePixels[currentByte+3]) ] ")
-            let nextPosition =
+            let nextLine =
                 ( normalizedXCoordinate < 0.0
                 ? ( normalizedXCoordinate > -0.05
                     // T space
                     // m = -1 - d/u
                     // b = d * v/u
-                    ? Position(100000.0, normalizedYCoordinate)
-                    : Position(-1.0 - 1.0 / normalizedXCoordinate, 1.0 * normalizedYCoordinate / normalizedXCoordinate)
+                    ? Line.Infinite(slope:100000.0, intercept: normalizedYCoordinate)
+                    : Line.Infinite(slope: -1.0 - 1.0 / normalizedXCoordinate, intercept: 1.0 * normalizedYCoordinate / normalizedXCoordinate)
                 )
                 : ( normalizedXCoordinate < 0.05
                     // S space
                     // m = 1 - d/u
                     // b = d * v/u
-                    ? Position(100000.0, normalizedYCoordinate)
-                    : Position(1.0 - 1.0 / normalizedXCoordinate,1.0 * normalizedYCoordinate / normalizedXCoordinate)
+                    ? Line.Infinite(slope: 100000.0, intercept: normalizedYCoordinate)
+                    : Line.Infinite(slope: 1.0 - 1.0 / normalizedXCoordinate,intercept: 1.0 * normalizedYCoordinate / normalizedXCoordinate)
                     )
                 )
-            positions.append(nextPosition)
+            lines.append(nextLine)
         }
         currentByte += 4
-    }
-    for (var i = 0; i < positions.count-1; i += 2) {
-        lines.append( Line.Segment(p1: positions[i], p2: positions[i+1]))
     }
     return lines
 }
