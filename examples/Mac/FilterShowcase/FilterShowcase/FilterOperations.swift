@@ -529,7 +529,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Hough Line Detector",
         sliderConfiguration:.Enabled(minimumValue:0.01, maximumValue:0.70, initialValue:0.20),
         sliderUpdateCallback: {(filter, sliderValue) in
-//            filter.threshold = sliderValue
+            filter.lineDetectionThreshold = sliderValue
         },
         filterOperationType:.Custom(filterSetupFunction:{(camera, filter, outputView) in
             let castFilter = filter as! HoughTransformLineDetector
