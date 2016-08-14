@@ -1,9 +1,11 @@
 import AVFoundation
 
+
 public class MovieInput: ImageSource {
     public let targets = TargetContainer()
     public var runBenchmark = false
-    
+
+    public var endProcessingCallback:(Int -> ())?
     let yuvConversionShader:ShaderProgram
     let asset:AVAsset
     let assetReader:AVAssetReader
@@ -83,7 +85,10 @@ public class MovieInput: ImageSource {
     }
     
     func endProcessing() {
-        
+        if let cb = self.endProcessingCallback {
+            dispatch_async(dispatch_get_main_queue(), { cb(self.numberOfFramesCaptured) })
+//            SerialDispatch.runOperationAsynchronously({ cb(numberOfFramesCaptured) })
+        }
     }
     
     // MARK: -
