@@ -116,7 +116,7 @@ public class ParallelCoordinateLineTransform: BasicOperation {
         //    NSLog(@"Line pairs to render: %d out of max: %d", linePairsToRender, maxLinePairsToRender);
 
         let currentFrameTime = (CFAbsoluteTimeGetCurrent() - startTime);
-        print("Line generation processing time : \(1000.0 * currentFrameTime) ms for \(linePairsToRender) lines");
+        print("Line generation processing time : \(1000.0 * currentFrameTime) ms for \(linePairsToRender) PC space lines (1 px each)");
         renderFramebuffer = sharedImageProcessingContext.framebufferCache.requestFramebufferWithProperties(orientation:framebuffer.orientation, size:inputSize, stencil:mask != nil)
         releaseIncomingFramebuffers()
         renderFramebuffer.activateFramebufferForRendering()

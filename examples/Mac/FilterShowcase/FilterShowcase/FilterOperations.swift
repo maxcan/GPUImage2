@@ -679,6 +679,38 @@ let filterOperations: Array<FilterOperationInterface> = [
     // TODO: Motion detector
 
     FilterOperation(
+        filter:{MotionDetector()},
+        listName:"Motion detector",
+        titleName:"Motion Detector",
+        sliderConfiguration:.Enabled(minimumValue:0.01, maximumValue:0.70, initialValue:0.20),
+        sliderUpdateCallback: {(filter, sliderValue) in
+            filter.lowPassStrength = sliderValue
+        },
+        filterOperationType:.Custom(filterSetupFunction:{(camera, filter, outputView) in
+            let castFilter = filter as! MotionDetector
+//             TODO: Get this more dynamically sized
+            #if os(iOS)
+                let crosshairGenerator = CrosshairGenerator(size:Size(width:480, height:640))
+            #else
+                let crosshairGenerator = CrosshairGenerator(size:Size(width:1280, height:720))
+            #endif
+
+            castFilter.motionDetectedCallback = { (pos:Position, str: Float) in
+                crosshairGenerator.renderCrosshairs([pos])
+            }
+//
+
+            let blendFilter = AlphaBlend()
+            camera --> castFilter --> blendFilter
+
+//            camera --> blendFilter --> outputView
+            crosshairGenerator --> blendFilter
+            blendFilter --> outputView
+            return blendFilter
+        })
+    ),
+
+    FilterOperation(
         filter:{SketchFilter()},
         listName:"Sketch",
         titleName:"Sketch",
